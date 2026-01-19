@@ -158,7 +158,7 @@ export const TargetAudienceSection = () => {
               {
                 icon: DollarSign,
                 title: "Valor Promocional Garantido",
-                description: "Ao se tornar um dos 60 membros fundadores, você trava o preço mais baixo de toda a história da formação. Assim que o grupo dos fundadores for fechado, o valor irá subir entre 25% e 50% de forma definitiva."
+                description: "Ao se tornar um dos 100 membros fundadores, você trava o preço mais baixo de toda a história da formação. Assim que o grupo dos fundadores for fechado, o valor irá subir entre 25% e 50% de forma definitiva."
               }
             ].map((feature, index) => (
               <div key={index} className="bg-gradient-primary p-1 rounded-xl">
