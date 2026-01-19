@@ -48,69 +48,6 @@ export const MethodologySection = () => {
   }];
   return <section className="py-12 md:py-16 bg-background">
       <div className="container mx-auto max-w-6xl">
-        {/* Choice Paths */}
-        <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center leading-tight">
-            Suas Escolhas Definem Seu <span className="gradient-text">Futuro</span>
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Path 1: Amateur */}
-            <div className="bg-card p-8 rounded-xl border border-red-200 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
-              <div className="relative z-10">
-                <div className="mb-6">
-                  <div className="flex md:items-center md:gap-4 mb-2 md:flex-row flex-col items-center text-center md:text-left">
-                    <div className="relative p-3 bg-gradient-to-br from-red-100 to-red-200 rounded-xl shadow-sm md:mb-0 mb-4">
-                      <TrendingDown className="w-7 h-7 text-red-600" />
-                      <div className="absolute inset-0 bg-red-600/10 rounded-xl animate-pulse"></div>
-                    </div>
-                    <h3 className="text-xl font-bold text-red-600">Caminho 1: O Amador</h3>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <p className="text-muted-foreground leading-relaxed">
-                    Continuar usando a IA no modo básico, observando outros profissionais lucrarem milhões com ferramentas e estratégias avançadas que você poderia estar dominando agora. Seu negócio fica estagnado, perdendo a janela de oportunidade histórica que está criando mais milionários do que qualquer revolução tecnológica anterior.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Nesse cenário, a frustração cresce e você começa a acreditar que o problema está em você, quando na verdade está apenas no nível de conhecimento que você escolheu ter.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Path 2: Maestro */}
-            <div className="bg-gradient-primary p-1 rounded-xl relative overflow-hidden">
-              <div className="bg-background rounded-lg p-8 relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -translate-y-16 translate-x-16"></div>
-                <div className="relative z-10">
-                  <div className="mb-6">
-                    <div className="flex md:items-center md:gap-4 mb-2 md:flex-row flex-col items-center text-center md:text-left">
-                      <div className="relative p-3 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl shadow-sm hover:scale-105 transition-transform duration-300 md:mb-0 mb-4">
-                        <div className="relative">
-                          <Crown className="w-7 h-7 text-primary" />
-                          <Zap className="w-4 h-4 text-primary absolute -top-1 -right-1 animate-pulse" />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl"></div>
-                      </div>
-                      <h3 className="text-xl font-bold gradient-text">Caminho 2: O Maestro</h3>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <p className="text-muted-foreground leading-relaxed">Ao invés de ficar na arquibancada observando, você se torna protagonista da maior revolução tecnológica e financeira da nossa era.</p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Enquanto milhões de pessoas desperdiçam tempo tentando decifrar a IA sozinhas sem resultados – perdendo oportunidades valiosas a cada dia – você acelera sua jornada através de uma formação estruturada.
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Você se transforma em um verdadeiro maestro da Inteligência Artificial, dominando as ferramentas mais poderosas que estão redefinindo indústrias inteiras e criando fortunas do zero.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Methodology */}
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center leading-tight">
