@@ -6,7 +6,7 @@ export const AboutUsSection = () => {
     { icon: Users, label: "Do Zero", description: "Início da jornada" },
     { icon: Music, label: "Infoproduto", description: "Primeiro negócio" },
     { icon: TrendingUp, label: "R$2,5M", description: "Em 15 meses" },
-    { icon: Rocket, label: "Piloto Automático", description: "0 trabalho, 6 dígitos/mês" },
+    { icon: Rocket, label: "Piloto Automático", description: "6 dígitos/mês sem trabalho" },
     { icon: GraduationCap, label: "Maestros", description: "Ensinando IA" }
   ];
 
