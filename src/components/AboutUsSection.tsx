@@ -7,7 +7,10 @@ export const AboutUsSection = () => {
     { icon: Music, label: "Infoproduto", description: "Primeiro negócio" },
     { icon: TrendingUp, label: "R$2,5M", description: "Em 15 meses" },
     { icon: Rocket, label: "Piloto Automático", description: "6 dígitos/mês 100% com Agente de IA" },
-    { icon: GraduationCap, label: "Maestros", description: "Ensinando IA" }
+    { icon: GraduationCap, label: "Maestros", description: "Ensinando IA" },
+    { icon: Users, label: "Mentores de Empresários", description: "Dezenas de cases" },
+    { icon: Sparkles, label: "Parceiros de Grandes Marcas", description: "Hostinger e Pipefy" },
+    { icon: TrendingUp, label: "150.000+ seguidores", description: "em 4 meses" }
   ];
 
   return (
