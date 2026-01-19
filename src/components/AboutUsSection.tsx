@@ -1,16 +1,18 @@
 import { motion } from "framer-motion";
-import { Quote, Users, Music, TrendingUp, Sparkles, Rocket, GraduationCap } from "lucide-react";
+import { Users, Music, TrendingUp, Sparkles, Rocket, GraduationCap, Handshake } from "lucide-react";
 
 export const AboutUsSection = () => {
-  const timelineSteps = [
+  const mainTimeline = [
     { icon: Users, label: "Do Zero", description: "Início da jornada" },
     { icon: Music, label: "Infoproduto", description: "Primeiro negócio" },
     { icon: TrendingUp, label: "R$2,5M", description: "Em 15 meses" },
     { icon: Rocket, label: "Piloto Automático", description: "6 dígitos/mês 100% com Agente de IA" },
-    { icon: GraduationCap, label: "Maestros", description: "Ensinando IA" },
+  ];
+
+  const maestrosBranches = [
     { icon: Users, label: "Mentores de Empresários", description: "Dezenas de cases" },
-    { icon: Sparkles, label: "Parceiros de Grandes Marcas", description: "Hostinger e Pipefy" },
-    { icon: TrendingUp, label: "150.000+ seguidores", description: "em 4 meses" }
+    { icon: Handshake, label: "Parceiros de Grandes Marcas", description: "Hostinger e Pipefy" },
+    { icon: TrendingUp, label: "150.000+ seguidores", description: "em 4 meses" },
   ];
 
   return (
@@ -61,15 +63,17 @@ export const AboutUsSection = () => {
               </div>
             </div>
 
-            {/* Visual Timeline */}
+            {/* Visual Timeline with Hub Pattern */}
             <div className="bg-card/50 border border-border rounded-2xl p-6">
               <h4 className="text-lg font-semibold mb-6 text-center text-foreground">Nossa Jornada</h4>
-              <div className="relative pt-4">
-                {/* Timeline Line - positioned behind icons */}
-                <div className="absolute top-12 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-primary via-accent to-primary hidden md:block" />
+              
+              {/* Main Linear Timeline */}
+              <div className="relative mb-8">
+                {/* Timeline Line */}
+                <div className="absolute top-7 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-primary via-accent to-primary hidden md:block" />
                 
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-                  {timelineSteps.map((step, index) => (
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {mainTimeline.map((step, index) => (
                     <motion.div
                       key={step.label}
                       initial={{ opacity: 0, y: 20 }}
@@ -83,6 +87,63 @@ export const AboutUsSection = () => {
                       </div>
                       <p className="font-bold text-foreground text-sm leading-tight">{step.label}</p>
                       <p className="text-xs text-muted-foreground leading-tight mt-0.5">{step.description}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Maestros Hub with Branches */}
+              <div className="relative">
+                {/* Connection line from timeline to Maestros */}
+                <div className="absolute top-0 left-1/2 w-0.5 h-4 bg-gradient-to-b from-primary to-accent hidden md:block" style={{ transform: 'translateX(-50%)' }} />
+                
+                {/* Maestros Central Hub */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className="flex flex-col items-center mb-6 pt-4"
+                >
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 border-3 border-primary flex items-center justify-center shadow-xl shadow-primary/30 relative z-20">
+                    <GraduationCap className="w-10 h-10 text-amber-400" />
+                  </div>
+                  <p className="font-bold text-foreground text-lg mt-2">Maestros</p>
+                  <p className="text-sm text-muted-foreground">Ensinando IA</p>
+                </motion.div>
+
+                {/* Branch Lines SVG */}
+                <svg className="absolute top-24 left-1/2 w-full h-16 hidden md:block" style={{ transform: 'translateX(-50%)', maxWidth: '400px' }}>
+                  {/* Left branch */}
+                  <path d="M 200 0 Q 200 30 60 50" stroke="url(#branchGradient)" strokeWidth="2" fill="none" />
+                  {/* Center branch */}
+                  <path d="M 200 0 L 200 50" stroke="url(#branchGradient)" strokeWidth="2" fill="none" />
+                  {/* Right branch */}
+                  <path d="M 200 0 Q 200 30 340 50" stroke="url(#branchGradient)" strokeWidth="2" fill="none" />
+                  <defs>
+                    <linearGradient id="branchGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="hsl(var(--primary))" />
+                      <stop offset="100%" stopColor="hsl(var(--accent))" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+                {/* Branch Items */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+                  {maestrosBranches.map((branch, index) => (
+                    <motion.div
+                      key={branch.label}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.6 + 0.1 * index }}
+                      className="text-center flex flex-col items-center"
+                    >
+                      <div className="w-14 h-14 rounded-full bg-card border-2 border-accent/50 flex items-center justify-center mb-2 shadow-lg shadow-accent/20">
+                        <branch.icon className="w-6 h-6 text-amber-400" />
+                      </div>
+                      <p className="font-bold text-foreground text-sm leading-tight">{branch.label}</p>
+                      <p className="text-xs text-muted-foreground leading-tight mt-0.5">{branch.description}</p>
                     </motion.div>
                   ))}
                 </div>
