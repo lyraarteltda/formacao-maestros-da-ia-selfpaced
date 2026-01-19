@@ -1,80 +1,174 @@
 import { motion } from "framer-motion";
+import { Quote, Users, Music, TrendingUp, Sparkles } from "lucide-react";
 
 export const AboutUsSection = () => {
-  const founders = [
-    {
-      name: "Lyria Zoccal",
-      title: "Co-Fundadora Lyra Academy | Especialista em IA e Automação",
-      points: [
-        "Graduação em Administração (UFPR)",
-        "Experiência em TI: Consultoria (ERP - SAP Business One)",
-        "Transição estratégica para mercado de IA e Automação",
-        "Visão empresarial focada em inovação e eficiência"
-      ]
-    },
-    {
-      name: "Arthur Endo",
-      title: "Co-Fundador Lyra Academy | Especialista em IA e Automação",
-      points: [
-        "Violonista clássico premiado nacional e internacionalmente",
-        "3 discos gravados e turnês internacionais",
-        "Doutor Honoris Causa pela Universidade FACEI",
-        "Pioneiro em aplicação prática de IA em operações empresariais"
-      ]
-    }
+  const timelineSteps = [
+    { icon: Users, label: "Do Zero", description: "Sem conhecimento de IA" },
+    { icon: Music, label: "Curso de Violão", description: "Primeiro negócio online" },
+    { icon: TrendingUp, label: "R$2,5M", description: "Em 15 meses" },
+    { icon: Sparkles, label: "Maestros da IA", description: "Ensinando o método" }
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background via-secondary/20 to-background">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-20 px-4 bg-gradient-to-b from-background via-amber-950/10 to-background relative overflow-hidden">
+      {/* Warm background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.3) 0%, transparent 50%),
+                           radial-gradient(circle at 80% 50%, hsl(var(--accent) / 0.2) 0%, transparent 50%)`
+        }} />
+      </div>
+
+      <div className="container mx-auto max-w-6xl relative z-10">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            Os Maestros
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-400 via-primary to-amber-400 bg-clip-text text-transparent">
+            Conheça Arthur e Lyria — De Curso de Violão a R$2,5 Milhões com IA
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Conheça os especialistas por trás da Lyra Academy
+          <p className="text-lg text-muted-foreground">
+            Uma história real de transformação
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {founders.map((founder, index) => (
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Left Column - Visual Elements */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-8"
+          >
+            {/* Founders Photo Placeholder */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/50 via-primary/50 to-amber-500/50 rounded-2xl blur-lg opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative bg-gradient-to-br from-card via-card to-amber-950/20 border border-amber-500/30 rounded-2xl p-8 text-center">
+                <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-amber-500/20 to-primary/20 border-2 border-dashed border-amber-500/50 flex items-center justify-center mb-4">
+                  <Users className="w-20 h-20 text-amber-500/60" />
+                </div>
+                <p className="text-lg font-semibold text-foreground">Arthur Endo & Lyria Zoccal</p>
+                <p className="text-sm text-muted-foreground">Fundadores da Lyra Academy</p>
+              </div>
+            </div>
+
+            {/* Visual Timeline */}
+            <div className="bg-card/50 border border-border rounded-2xl p-6">
+              <h4 className="text-lg font-semibold mb-6 text-center text-foreground">Nossa Jornada</h4>
+              <div className="relative">
+                {/* Timeline Line */}
+                <div className="absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-primary to-accent hidden md:block" />
+                
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {timelineSteps.map((step, index) => (
+                    <motion.div
+                      key={step.label}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.1 * index }}
+                      className="text-center relative"
+                    >
+                      <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-amber-500/20 to-primary/20 border border-amber-500/50 flex items-center justify-center mb-3 relative z-10">
+                        <step.icon className="w-7 h-7 text-amber-400" />
+                      </div>
+                      <p className="font-bold text-foreground text-sm">{step.label}</p>
+                      <p className="text-xs text-muted-foreground">{step.description}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Revenue Screenshot Placeholder */}
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-green-500/30 to-emerald-500/30 rounded-xl blur opacity-50 group-hover:opacity-100 transition-opacity" />
+              <div className="relative bg-card border border-green-500/30 rounded-xl p-6">
+                <div className="aspect-video bg-gradient-to-br from-green-950/30 to-emerald-950/20 rounded-lg border border-dashed border-green-500/30 flex items-center justify-center mb-3">
+                  <div className="text-center">
+                    <TrendingUp className="w-12 h-12 text-green-500/60 mx-auto mb-2" />
+                    <p className="text-green-400/80 text-sm">Screenshot de Resultados</p>
+                  </div>
+                </div>
+                <p className="text-center text-sm text-muted-foreground italic">
+                  Resultados reais — não promessas
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Column - Narrative */}
+          <div className="space-y-8">
+            {/* Feel Paragraph */}
             <motion.div
-              key={founder.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="relative group"
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-card/30 border border-border/50 rounded-xl p-6 hover:border-amber-500/30 transition-colors"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative bg-card border border-border rounded-2xl p-8 h-full hover:border-primary/50 transition-all duration-300 shadow-lg">
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold mb-2 text-foreground">
-                    {founder.name}
-                  </h3>
-                  <p className="text-sm text-primary font-semibold">
-                    {founder.title}
-                  </p>
-                </div>
+              <p className="text-lg leading-relaxed text-foreground/90">
+                Nós entendemos como você se <span className="text-amber-400 font-bold">SENTE</span>. Ver todo mundo falando de IA, testar mil ferramentas, mas nunca conseguir transformar isso em lucro real. A sensação de estar ficando para trás enquanto outros parecem estar ganhando milhões...
+              </p>
+            </motion.div>
 
-                <ul className="space-y-3">
-                  {founder.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-primary mt-1 flex-shrink-0">•</span>
-                      <span className="text-muted-foreground">{point}</span>
-                    </li>
-                  ))}
-                </ul>
+            {/* Felt Paragraph */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="bg-card/30 border border-border/50 rounded-xl p-6 hover:border-amber-500/30 transition-colors"
+            >
+              <p className="text-lg leading-relaxed text-foreground/90">
+                Nós <span className="text-amber-400 font-bold">SENTÍAMOS</span> exatamente assim. Quando começamos, não sabíamos nada de tecnologia. Arthur tinha um doutorado Honoris Causa, Lyria tinha background em TI e medicina — mas nenhum de nós sabia como usar IA para vender. Nosso primeiro negócio foi um curso de <span className="text-primary font-semibold">VIOLÃO</span>, não de tecnologia.
+              </p>
+            </motion.div>
+
+            {/* Found Paragraph */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="bg-card/30 border border-border/50 rounded-xl p-6 hover:border-amber-500/30 transition-colors"
+            >
+              <p className="text-lg leading-relaxed text-foreground/90">
+                Mas então <span className="text-amber-400 font-bold">DESCOBRIMOS</span> algo: o segredo não era a ferramenta, era o <span className="text-primary font-bold">SISTEMA</span>. Criamos um método de automação que funcionava em qualquer nicho. Aplicamos no curso de violão e fizemos <span className="text-green-400 font-bold">R$2,5 milhões em 15 meses</span>. Depois percebemos: esse mesmo sistema podia ser ensinado para qualquer empreendedor.
+              </p>
+            </motion.div>
+
+            {/* Quote Callout Box */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="relative"
+            >
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-accent to-primary rounded-full" />
+              <div className="bg-gradient-to-r from-primary/10 to-transparent border border-primary/20 rounded-r-xl p-6 pl-8">
+                <Quote className="w-8 h-8 text-primary/60 mb-3" />
+                <p className="text-xl md:text-2xl font-medium italic text-foreground leading-relaxed">
+                  "O método que usamos para vender violão é o <span className="text-primary font-bold">MESMO</span> que ensinamos para IA"
+                </p>
+                <div className="mt-4 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500/30 to-primary/30 flex items-center justify-center">
+                    <Users className="w-5 h-5 text-amber-400" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">Arthur & Lyria</p>
+                    <p className="text-sm text-muted-foreground">Fundadores, Lyra Academy</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
