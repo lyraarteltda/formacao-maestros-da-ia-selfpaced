@@ -5,47 +5,143 @@ import { CTAPopup } from "@/components/CTAPopup";
 
 export const MethodologySection = () => {
   const [popupOpen, setPopupOpen] = useState(false);
-  const weeklyContent = [{
-    week: 1,
-    title: "Fundamentos da IA e Setup Estratégico",
-    items: ["Fundamentos da IA: Como funciona, onde aplicar e oportunidades de lucro", "Visão estratégica: Como usar IA como vantagem competitiva", "Setup do Ambiente: Configure contas, ferramentas e integrações", "Plataformas Essenciais: Make, n8n", "Primeira Automação: Aprenda a implementar seu primeiro workflow do zero dentro do seu negócio"]
-  }, {
-    week: 2,
-    title: "Automações Básicas e Primeiros Resultados",
-    items: ["Ferramentas e Plataformas de IA/Automação: OpenRouter, Fal.ai, Manychat, Metricool, Airtable…", "Engenharia de Prompt: Entenda a estrutura ideal para gerar resultados 10x melhores", "Automação Nível 2: Crie automações mais elaboradas e coloque-as para trabalhar por você"]
-  }, {
-    week: 3,
-    title: "Arsenal de Ferramentas de IA",
-    items: ["TOP 15 Ferramentas de IA: Lovable, Netlify, GitHub, 21st.dev, ChatGPT, Claude, Gemini, Grok, VEO3, Runway… (atualizadas frequentemente)", "Assistentes Personalizados: Crie assistentes específicos para seu negócio com GPTs e Projetos (Claude)", "Automação de Postagem: Reduza o trabalho de redes sociais ao máximo", "Templates Prontos: Copie e cole automações que já validamos"]
-  }, {
-    week: 4,
-    title: "Marketing Automatizado - Fundamentos",
-    items: ["Funil de Marketing Automatizado: Da captação à conversão", "Produção de vídeos com IA: VEO3, Runway, HeyGen…", "100% da Produção de Conteúdo Automatizada: Instagram, TikTok, YouTube"]
-  }, {
-    week: 5,
-    title: "Marketing Automatizado - Avançado",
-    items: ["Análise Qualificatória: IA para selecionar Smart Leads pós-formulários", "Agente de Gestão de Tráfego: Facebook Ads otimizado automaticamente por IA"]
-  }, {
-    week: 6,
-    title: "Sales Automation e CRM Inteligente",
-    items: ["Agente SDR com IA: Prospecção e qualificação automatizada", "Recuperação de Carrinho: Converta clientes perdidos automaticamente", "CRM Inteligente: Abordagem e segmentação automática de leads", "Follow-up Personalizado: Mensagens customizadas em escala", "Chatbot com voz: Clone sua voz ou gere respostas automáticas e personalizadas em áudio para seus clientes"]
-  }, {
-    week: 7,
-    title: "Agentes Inteligentes e Assistentes Avançados",
-    items: ["Agente de Vendas Completo: Da apresentação ao fechamento", "Assistente de Atendimento: Suporte Personalizado 24/7 com IA", "Databases Inteligentes (Vetoriais) e RAG: Armazenamento de conversas para respostas humanizadas"]
-  }, {
-    week: 8,
-    title: "Sistemas de Escala e Otimização",
-    items: ["Sistemas de Escala: Multiplique resultados sem aumentar equipe", "Otimização Contínua: IA que analisa e melhora seus processos automaticamente", "Relatório de Desempenho Automatizado: Monitore o desempenho de sua equipe e seus agentes"]
-  }, {
-    week: 9,
-    title: "Business Intelligence e Dashboard Executivo",
-    items: ["BI com IA Avançado: Análises preditivas da operação com sugestões automáticas de otimização, projeções de receita e identificação de gargalos", "Dashboard CEO Completo: Métricas em tempo real, KPIs automatizados, alertas inteligentes e relatórios executivos que se geram sozinhos", "Conselho de IA (AI Board): Crie um board de diretores AI para receber insights estratégicos, análise de cenários e recomendações de crescimento", "Análise Competitiva Automatizada: Monitore concorrentes, preços e tendências de mercado automaticamente"]
-  }, {
-    week: 10,
-    title: "Monetização e Aquisição de Clientes",
-    items: ["Prospecção de Clientes Automatizada: Como buscar clientes para sua empresa/nicho de forma 100% automatizada", "Pitch de Vendas: Apresentações com IA que convertem", "Folder de Projetos: Acesso exclusivo ao nosso formulário com propostas de empresas buscando automatizar seus negócios"]
-  }];
+  const weeklyContent = [
+    {
+      week: 1,
+      title: "Fundamentos da IA e Setup Estratégico",
+      items: [
+        "Introdução - Boas-Vindas",
+        "Fundamentos da IA: Como funciona, onde aplicar e oportunidades de lucro",
+        "Como Transformar IA em Vantagem Competitiva",
+        "A Ferramenta de Automações Mais Robusta do Mercado",
+        "A Plataforma Mais Veloz Para Criar Seus Agentes de IA",
+        "Preparando Seu Arsenal IA",
+        "Introdução ao n8n",
+        "Criando seu primeiro agente de IA [n8n]",
+        "Como conectar ferramentas do google no n8n sem ter um domínio",
+        "Introdução ao make.com",
+        "Criando seu Email Assistant [make.com]",
+        "Como conectar ferramentas do google no make sem ter um domínio"
+      ]
+    },
+    {
+      week: 2,
+      title: "Automações e Primeiros Resultados",
+      items: [
+        "Como Mudamos o Jogo da Nossa Empresa com IA e Automação",
+        "Engenharia de Prompt: Entenda a estrutura ideal para gerar resultados 10x melhores",
+        "Crie sua primeira automação no Manychat",
+        "Conceitos Essenciais: APIs, Webhooks e Https requests",
+        "Use qualquer modelo de LLM no seu WhatsApp [n8n]",
+        "Automatize suas Postagens nas Redes Sociais [make.com]",
+        "As 2 Melhores Ferramentas Para Automatizar Seus Posts (Blotato x Metricool)"
+      ]
+    },
+    {
+      week: 3,
+      title: "Arsenal de Ferramentas de IA",
+      items: [
+        "As Melhores LLMs",
+        "3 Ferramentas que Substituem uma Equipe Inteira: Lovable, GitHub e Netlify",
+        "Setup do Ambiente: Lovable, Github e Netlify",
+        "Nosso Agente Copywriter (100% validado) - RAG Iniciante",
+        "Criando sua Primeira Página no Lovable (HTML + Domínio Próprio)",
+        "Como Editar Seus Sites no Lovable",
+        "Captura de Leads com Pop-up no Lovable + n8n",
+        "Como Usar Templates Prontos (Make, n8n, JSON)"
+      ]
+    },
+    {
+      week: 4,
+      title: "Marketing Automatizado - Fundamentos",
+      items: [
+        "Estratégia de Crescimento Orgânico",
+        "Como Fazer o Algoritmo Trabalhar Por Você",
+        "Criando Seu Agente Roteirista",
+        "A Habilidade que Você Precisa Dominar",
+        "Geração de Vídeos com Automação"
+      ]
+    },
+    {
+      week: 5,
+      title: "Marketing Automatizado (Avançado)",
+      items: [
+        "Construa Experiências Interativas no Lovable com Efeitos Profissionais",
+        "Como Criar Formulários com Alta Taxa de Resposta",
+        "Como Vender Mais com Um Time de Vendas Menor (Qualificação de Leads) - n8n",
+        "Automatize a Extração de Dados do Gerenciador de Anúncios [Meta Ads] - make.com",
+        "Lógica Condicional: A Base de Toda Decisão Automatizada",
+        "O Gestor de Tráfego Que Nunca Dorme [Meta Ads]"
+      ]
+    },
+    {
+      week: 6,
+      title: "Vendas e CRM Inteligente",
+      items: [
+        "Criando Sistemas de Automação do WhatsApp",
+        "Como Extrair Informações da Web com Agentes Inteligentes",
+        "O Que É Possível Fazer ao Conectar Agentes Detetives com Automações",
+        "Como Projetar Um Sistema Autônomo de Captação de Clientes",
+        "Chatbot [Nível 1] - Atendimento no Whatsapp",
+        "Chatbot [Nível 2] - Escuta de Áudios e Mensagens de Voz com IA"
+      ]
+    },
+    {
+      week: 7,
+      title: "Agentes Inteligentes e Assistentes Avançados",
+      items: [
+        "A Automação de Follow-up que Converte",
+        "Chatbot [Nível 3] - Mais de 90% das pessoas pensarão que é uma pessoa",
+        "Como Personalizar a Inteligência Artificial - RAG",
+        "RAG {Nível 1.1} - Agente de Análise de Dados",
+        "RAG {Nível 1.2} - Agente com Dados da Empresa",
+        "Como Criar um Agente de RAG em 5 minutos"
+      ]
+    },
+    {
+      week: 8,
+      title: "Sistemas de Escala e Otimização",
+      items: [
+        "Avatares de IA - O Futuro da Produção de Conteúdo",
+        "Criando seu Primeiro Clone de IA",
+        "Conteúdo 100% Automatizado com Avatares de IA",
+        "Como Grandes Empresas Armazenam Informações?",
+        "Alimentando sua Database (Pinecone)",
+        "Criando um Segundo Cérebro Confiável - RAG {Nível 2}"
+      ]
+    },
+    {
+      week: 9,
+      title: "BI e Dashboard Executivo",
+      items: [
+        "Carrosséis Para as Redes Sociais com IA",
+        "Carrosséis que Se Publicam Sozinhos em Todas as Redes (Blotato)",
+        "Posts de Forma 100% Automática (Metricool)",
+        "Como Criar Seu Próprio CRM com IA (Supabase + Lovable)",
+        "Sistema Inteligente que Captura e Organiza Leads no CRM",
+        "Como Unir Todos os Dados da Empresa em 1 Só Lugar",
+        "Automação Infinita + Extraindo os Dados da Meta",
+        "Dashboard em Tempo Real - (1/2)"
+      ]
+    },
+    {
+      week: 10,
+      title: "Monetização e Aquisição de Clientes",
+      items: [
+        "Pesquisa de Anúncios Lucrativos dos Concorrentes",
+        "Anúncios Estáticos que Geram Vendas",
+        "Relatório de Movimentos Estratégicos dos Competidores",
+        "Sistema de Inteligência Competitiva 100% Completo",
+        "A Dashboard Absoluta",
+        "Seu Time de Agentes de IA",
+        "Seu Assistente Pessoal de Alto Nível",
+        "Um Exército de Agentes no Seu Whatsapp",
+        "Memória Infinita Para Seus Agentes de IA",
+        "O Conselho de Diretores AI Perfeito Para sua Empresa",
+        "Encerramento"
+      ]
+    }
+  ];
   return <section className="py-12 md:py-16 bg-background">
       <div className="container mx-auto max-w-6xl">
         {/* Methodology */}
@@ -62,7 +158,7 @@ export const MethodologySection = () => {
             <div className="bg-card p-8 rounded-xl border border-border/50">
               <div className="flex items-center gap-4 mb-6">
                 <Calendar className="w-8 h-8 text-primary" />
-                <h3 className="text-2xl font-bold text-foreground">Cronograma de 10 Semanas</h3>
+                <h3 className="text-2xl font-bold text-foreground">10 Módulos • 75 Aulas</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 As aulas são 100% práticas e aplicáveis. Elas são liberadas semana após semana para que você tenha tempo de absorver cada detalhe, aplicar na prática e internalizar o conteúdo antes de avançar. Seu objetivo a cada semana será garantir que o conteúdo foi compreendido e implementado antes da próxima etapa.
