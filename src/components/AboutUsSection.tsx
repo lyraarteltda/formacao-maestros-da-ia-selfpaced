@@ -3,8 +3,8 @@ import { Quote, Users, Music, TrendingUp, Sparkles } from "lucide-react";
 
 export const AboutUsSection = () => {
   const timelineSteps = [
-    { icon: Users, label: "Do Zero", description: "Sem conhecimento de IA" },
-    { icon: Music, label: "Curso de Violão", description: "Primeiro negócio online" },
+    { icon: Users, label: "Do Zero", description: "" },
+    { icon: Music, label: "Empresa de Infoprodutos", description: "Primeiro negócio online" },
     { icon: TrendingUp, label: "R$2,5M", description: "Em 15 meses" },
     { icon: Sparkles, label: "Maestros da IA", description: "Ensinando o método" }
   ];
