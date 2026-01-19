@@ -60,9 +60,9 @@ export const AboutUsSection = () => {
             {/* Visual Timeline */}
             <div className="bg-card/50 border border-border rounded-2xl p-6">
               <h4 className="text-lg font-semibold mb-6 text-center text-foreground">Nossa Jornada</h4>
-              <div className="relative">
-                {/* Timeline Line */}
-                <div className="absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-primary to-accent hidden md:block" />
+              <div className="relative pt-4">
+                {/* Timeline Line - positioned behind icons */}
+                <div className="absolute top-12 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary via-accent to-primary hidden md:block" />
                 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {timelineSteps.map((step, index) => (
@@ -74,7 +74,7 @@ export const AboutUsSection = () => {
                       transition={{ duration: 0.4, delay: 0.1 * index }}
                       className="text-center relative"
                     >
-                      <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-amber-500/20 to-primary/20 border border-amber-500/50 flex items-center justify-center mb-3 relative z-10">
+                      <div className="w-16 h-16 mx-auto rounded-full bg-card border-2 border-primary/50 flex items-center justify-center mb-3 relative z-10 shadow-lg shadow-primary/20">
                         <step.icon className="w-7 h-7 text-amber-400" />
                       </div>
                       <p className="font-bold text-foreground text-sm">{step.label}</p>
