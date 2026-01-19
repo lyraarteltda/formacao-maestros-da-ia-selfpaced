@@ -3,25 +3,30 @@ import { ProblemSolutionSection } from "@/components/ProblemSolutionSection";
 import { TargetAudienceSection } from "@/components/TargetAudienceSection";
 import { MethodologySection } from "@/components/MethodologySection";
 import { VideoTeaserSection } from "@/components/VideoTeaserSection";
+import { ValueStackSection } from "@/components/ValueStackSection";
 import { PricingSection } from "@/components/PricingSection";
 import { BonusSection } from "@/components/BonusSection";
 import { FAQSection } from "@/components/FAQSection";
 import { AboutUsSection } from "@/components/AboutUsSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
+
 const Index = () => {
-  return <main className="min-h-screen">
+  return (
+    <main className="min-h-screen">
       <HeroSection />
       <ProblemSolutionSection />
       <TargetAudienceSection />
       <MethodologySection />
       <VideoTeaserSection />
+      <ValueStackSection />
       <PricingSection />
       <BonusSection />
       <FAQSection />
-      
       <FinalCTASection />
       <Footer />
-    </main>;
+    </main>
+  );
 };
+
 export default Index;
