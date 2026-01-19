@@ -1,3 +1,4 @@
+import { LeadCaptureSection } from "@/components/LeadCaptureSection";
 import { HeroSection } from "@/components/HeroSection";
 import { ProblemSolutionSection } from "@/components/ProblemSolutionSection";
 import { TargetAudienceSection } from "@/components/TargetAudienceSection";
@@ -15,6 +16,7 @@ import { Footer } from "@/components/Footer";
 const Index = () => {
   return (
     <main className="min-h-screen">
+      <LeadCaptureSection />
       <HeroSection />
       <ProblemSolutionSection />
       <TargetAudienceSection />
