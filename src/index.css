@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* AI Maestros Brand Colors */
+    --background: 0 0% 0%; /* Black background */
+    --foreground: 0 0% 100%; /* White text */
+
+    --card: 0 0% 5%; /* Very dark gray for cards */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 155 100% 50%; /* Bright Green #00FF94 */
+    --primary-foreground: 0 0% 0%; /* Black text on green */
+
+    --secondary: 0 0% 10%; /* Dark gray */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 155 100% 50%; /* Green accent */
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 10%;
+    --ring: 155 100% 50%;
+
+    /* Design System Enhancements */
+    --gradient-primary: linear-gradient(135deg, hsl(155 100% 25%), hsl(155 80% 35%));
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 0%), hsl(155 100% 50% / 0.1));
+    --gradient-cta: linear-gradient(90deg, hsl(155 100% 50%), hsl(155 100% 40%));
+    
+    --shadow-glow: 0 0 40px hsl(155 100% 50% / 0.3);
+    --shadow-elegant: 0 10px 30px hsl(0 0% 0% / 0.5);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Same as light mode since we're using black theme by default */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 155 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 155 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 10%;
+    --ring: 155 100% 50%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
+  }
+  
+  html {
+    @apply overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-foreground bg-clip-text text-transparent;
+  }
+  
+  .hero-glow {
+    @apply shadow-[0_0_40px_hsl(155_100%_50%_/_0.3)];
+  }
+  
+  .section-padding {
+    @apply py-12 px-4 md:py-20 md:px-12 lg:px-24;
+  }
+}

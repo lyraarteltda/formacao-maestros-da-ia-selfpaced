@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://load.st.lyra.academy/9ppagwize.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','68ihcvn=DB5UMDMsXTspLF49NTIiVhNHW1lWRxQeWBYQBQZPERMEHgwaHg%3D%3D');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "u3psnpe3xl");
+    </script>
+    <!-- End Microsoft Clarity -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formação Maestros da IA</title>
+    <meta name="description" content="O único ecossistema do Brasil que te entrega um plano de ação validado, automações prontas para aplicar e suporte diário de especialistas para você escalar seu negócio com IA." />
+    <meta name="author" content="Formação Maestros da IA" />
+    <meta name="keywords" content="inteligência artificial, automação, IA, curso online, formação, tecnologia, negócios digitais, maestros da IA" />
+
+    <meta property="og:title" content="Formação Maestros da IA" />
+    <meta property="og:description" content="Torne-se um Maestro da IA e Faça a Inteligência Artificial Trabalhar por Você" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/lovable-uploads/f3b2c877-3564-40ef-8dab-1ee449dbc40a.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Formação Maestros da IA - Torne-se um especialista em Inteligência Artificial" />
+    <meta property="og:site_name" content="Maestros da IA" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Formação Maestros da IA" />
+    <meta name="twitter:description" content="Torne-se um Maestro da IA e Faça a Inteligência Artificial Trabalhar por Você" />
+    <meta name="twitter:image" content="/lovable-uploads/f3b2c877-3564-40ef-8dab-1ee449dbc40a.png" />
+    <meta name="twitter:image:alt" content="Formação Maestros da IA - Torne-se um especialista em Inteligência Artificial" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://load.st.lyra.academy/ns.html?id=GTM-KLV7JRSR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Generate UUID for sck if doesn't exist
+        if (!window.globalSck) {
+          window.globalSck = crypto.randomUUID();
+        }
+        
+        // Get UTMs from current URL
+        const params = new URLSearchParams(window.location.search);
+        const utms = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
+          .map(param => `${param}=${params.get(param) || ''}`)
+          .join('&');
+        
+        // Update OnProfit links
+        document.querySelectorAll('a[href*="pay.onprofit.com.br"]').forEach(link => {
+          const [base, query] = link.href.split('?');
+          const existing = query ? `&${query}` : '';
+          link.href = `${base}?${utms}&sck=${window.globalSck}${existing}`;
+          
+          link.addEventListener('click', e => {
+            e.preventDefault();
+            window.location.href = link.href;
+          });
+        });
+        
+        // Handle button with id="onprofit"
+        const onprofitBtn = document.getElementById('onprofit');
+        if(onprofitBtn) {
+          onprofitBtn.addEventListener('click', e => {
+            e.preventDefault();
+            const baseURL = 'https://pay.onprofit.com.br/M5Ene7El?off=MPTa5';
+            window.location.href = `${baseURL}&${utms}&sck=${window.globalSck}`;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
