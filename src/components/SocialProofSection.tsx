@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Star, Play, TrendingUp, Award, Users, ChevronLeft, ChevronRight, Quote, Image } from "lucide-react";
+import { Star, Play, TrendingUp, Award, Users, ChevronLeft, ChevronRight, Quote, Image, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { CTAPopup } from "./CTAPopup";
 
 export const SocialProofSection = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const credibilityBadges = [
@@ -286,7 +288,7 @@ export const SocialProofSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="text-center"
+          className="text-center mb-16"
         >
           <h3 className="text-xl text-muted-foreground mb-8">
             Como visto em:
@@ -306,7 +308,31 @@ export const SocialProofSection = () => {
             ))}
           </div>
         </motion.div>
+
+        {/* CTA After Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center"
+        >
+          <div className="flex flex-col items-center gap-3">
+            <Button
+              onClick={() => setPopupOpen(true)}
+              className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
+            >
+              QUERO RESULTADOS COMO ESSES
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <p className="text-sm text-muted-foreground">
+              Acesso imediato + Garantia de 7 dias
+            </p>
+          </div>
+        </motion.div>
       </div>
+
+      <CTAPopup open={popupOpen} onOpenChange={setPopupOpen} />
     </section>
   );
 };

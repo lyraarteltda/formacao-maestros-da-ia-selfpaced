@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Calendar, Target, Users, TrendingUp, Clock, CheckCircle, ArrowRight, AlertTriangle, Crown, TrendingDown, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CTAPopup } from "@/components/CTAPopup";
+
 export const MethodologySection = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   const weeklyContent = [{
     week: 1,
     title: "Fundamentos da IA e Setup Estratégico",
@@ -259,6 +263,24 @@ export const MethodologySection = () => {
             </div>
           </div>
         </div>
+
+        {/* CTA After Curriculum */}
+        <div className="text-center mt-12">
+          <div className="flex flex-col items-center gap-3">
+            <Button
+              onClick={() => setPopupOpen(true)}
+              className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
+            >
+              COMEÇAR MINHA TRANSFORMAÇÃO AGORA
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <p className="text-sm text-muted-foreground">
+              Acesso imediato + Garantia de 7 dias
+            </p>
+          </div>
+        </div>
       </div>
+
+      <CTAPopup open={popupOpen} onOpenChange={setPopupOpen} />
     </section>;
 };
