@@ -3,11 +3,11 @@ import { Quote, Users, Music, TrendingUp, Sparkles, Rocket, GraduationCap } from
 
 export const AboutUsSection = () => {
   const timelineSteps = [
-    { icon: Users, label: "Do Zero", description: "" },
-    { icon: Music, label: "Empresa de Infoprodutos", description: "Primeiro negócio online" },
+    { icon: Users, label: "Do Zero", description: "Início da jornada" },
+    { icon: Music, label: "Infoproduto", description: "Primeiro negócio" },
     { icon: TrendingUp, label: "R$2,5M", description: "Em 15 meses" },
-    { icon: Rocket, label: "Piloto Automático", description: "R$100k+/mês • 60% margem • 2h/semana" },
-    { icon: GraduationCap, label: "Maestros da IA", description: "Ensinando o método" }
+    { icon: Rocket, label: "Automático", description: "R$100k+/mês" },
+    { icon: GraduationCap, label: "Maestros", description: "Ensinando IA" }
   ];
 
   return (
@@ -63,9 +63,9 @@ export const AboutUsSection = () => {
               <h4 className="text-lg font-semibold mb-6 text-center text-foreground">Nossa Jornada</h4>
               <div className="relative pt-4">
                 {/* Timeline Line - positioned behind icons */}
-                <div className="absolute top-12 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary via-accent to-primary hidden md:block" />
+                <div className="absolute top-12 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-primary via-accent to-primary hidden md:block" />
                 
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
                   {timelineSteps.map((step, index) => (
                     <motion.div
                       key={step.label}
@@ -73,13 +73,13 @@ export const AboutUsSection = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: 0.1 * index }}
-                      className="text-center relative"
+                      className="text-center relative flex flex-col items-center"
                     >
-                      <div className="w-16 h-16 mx-auto rounded-full bg-card border-2 border-primary/50 flex items-center justify-center mb-3 relative z-10 shadow-lg shadow-primary/20">
-                        <step.icon className="w-7 h-7 text-amber-400" />
+                      <div className="w-14 h-14 mx-auto rounded-full bg-card border-2 border-primary/50 flex items-center justify-center mb-2 relative z-10 shadow-lg shadow-primary/20">
+                        <step.icon className="w-6 h-6 text-amber-400" />
                       </div>
-                      <p className="font-bold text-foreground text-sm">{step.label}</p>
-                      <p className="text-xs text-muted-foreground">{step.description}</p>
+                      <p className="font-bold text-foreground text-sm leading-tight">{step.label}</p>
+                      <p className="text-xs text-muted-foreground leading-tight mt-0.5">{step.description}</p>
                     </motion.div>
                   ))}
                 </div>
