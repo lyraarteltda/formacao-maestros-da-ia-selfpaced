@@ -1,4 +1,3 @@
-import { LeadCaptureSection } from "@/components/LeadCaptureSection";
 import { HeroSection } from "@/components/HeroSection";
 import { ProblemSolutionSection } from "@/components/ProblemSolutionSection";
 import { TwoPathsSection } from "@/components/TwoPathsSection";
@@ -21,7 +20,6 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 const Index = () => {
   return (
     <main className="min-h-screen pb-16 md:pb-0">
-      <LeadCaptureSection />
       <HeroSection />
       <ProblemSolutionSection />
       <TwoPathsSection />
