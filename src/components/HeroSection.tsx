@@ -37,15 +37,19 @@ export const HeroSection = () => {
       {/* Hero Content */}
       <div className="flex-1 flex items-center justify-center relative z-20 section-padding pt-4 md:pt-16 lg:pt-20">
         <div className="container mx-auto text-center max-w-4xl">
-          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-3 md:mb-6 leading-tight">
-            <span className="gradient-text">
-              Torne-se um Maestro da IA
-            </span>{" "}
-            e Faça a Inteligência Artificial Trabalhar por Você
+          <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-8 leading-[1.1] tracking-tight">
+            <span className="text-foreground">
+              Domine a IA e a Automação para Escalar Seu Negócio em{" "}
+            </span>
+            <span className="gradient-text">10 Semanas</span>
+            <span className="text-foreground">
+              {" "}— Sem Precisar de Conhecimento Técnico Prévio
+            </span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl lg:text-3xl mb-4 md:mb-8 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            O único ecossistema do Brasil que te entrega um plano de ação validado, automações prontas para aplicar e suporte diário de especialistas para você escalar seu negócio com IA.
+          <h2 className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-10 text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium">
+            O Único Ecossistema no Brasil com Planos de Ação Validados e Automações Prontas para Copiar e Colar — 
+            <span className="text-primary font-semibold"> Aprenda o Sistema que Gerou R$2,5 Milhões em 15 Meses</span>
           </h2>
         </div>
       </div>
