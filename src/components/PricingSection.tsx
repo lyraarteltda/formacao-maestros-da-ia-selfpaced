@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check, Crown, MessageCircle, CreditCard, Shield, Lock, Smartphone } from "lucide-react";
+import { Check, Crown, MessageCircle, CreditCard, Shield, Lock, Smartphone, ArrowRight } from "lucide-react";
 import { CheckoutDialog } from "@/components/CheckoutDialog";
 import { CTAPopup } from "@/components/CTAPopup";
 
@@ -157,23 +157,36 @@ export const PricingSection = () => {
                   </motion.p>
                 </div>
 
-                {/* CTA Button */}
+                {/* CTA Buttons */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 1.1 }}
-                  className="mb-8"
+                  className="mb-8 space-y-4"
                 >
+                  {/* Primary CTA */}
                   <Button 
-                    variant="cta" 
-                    size="xl" 
-                    className="w-full text-lg py-6 h-auto"
                     onClick={() => setPopupOpen(true)}
+                    className="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
                   >
-                    <Crown className="w-5 h-5 mr-2" />
-                    GARANTIR MINHA VAGA DE FUNDADOR
+                    GARANTIR MINHA VAGA COM DESCONTO
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
+                  
+                  {/* Secondary CTA - Installment focus */}
+                  <Button 
+                    onClick={() => setPopupOpen(true)}
+                    variant="outline"
+                    className="w-full border-2 border-primary/50 hover:border-primary hover:bg-primary/10 font-bold text-base py-5 h-auto rounded-xl transition-all duration-300"
+                  >
+                    COMEÇAR POR APENAS R$323
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                  
+                  <p className="text-center text-sm text-muted-foreground">
+                    Acesso imediato + Garantia de 7 dias
+                  </p>
                 </motion.div>
 
                 {/* Payment Methods */}

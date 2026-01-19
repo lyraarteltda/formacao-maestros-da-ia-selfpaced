@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import { CTAPopup } from "@/components/CTAPopup";
 
 export const FinalCTASection = () => {
@@ -16,15 +17,17 @@ export const FinalCTASection = () => {
           Inscreva-se hoje e esteja à frente do mercado.
         </p>
         
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center gap-3">
           <Button 
-            variant="cta" 
-            size="xl" 
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 border-primary-foreground font-bold text-xl px-8 md:px-12 py-4 md:py-6 h-auto"
             onClick={() => setPopupOpen(true)}
+            className="bg-white text-primary hover:bg-white/90 font-bold text-lg md:text-xl px-8 md:px-12 py-5 md:py-6 h-auto rounded-xl shadow-lg hover:scale-105 transition-all duration-300"
           >
-            GARANTIR VAGA
+            COMEÇAR MINHA TRANSFORMAÇÃO AGORA
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
+          <p className="text-sm text-white/80">
+            Acesso imediato + Garantia de 7 dias
+          </p>
         </div>
         
         <CTAPopup open={popupOpen} onOpenChange={setPopupOpen} />

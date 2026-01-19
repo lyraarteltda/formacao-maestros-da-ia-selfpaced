@@ -15,10 +15,12 @@ import { BonusSection } from "@/components/BonusSection";
 import { FAQSection } from "@/components/FAQSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
+import { FloatingCTA } from "@/components/FloatingCTA";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pb-16 md:pb-0">
       <LeadCaptureSection />
       <HeroSection />
       <ProblemSolutionSection />
@@ -36,6 +38,10 @@ const Index = () => {
       <FAQSection />
       <FinalCTASection />
       <Footer />
+      
+      {/* Floating/Sticky CTAs */}
+      <FloatingCTA />
+      <StickyMobileCTA />
     </main>
   );
 };

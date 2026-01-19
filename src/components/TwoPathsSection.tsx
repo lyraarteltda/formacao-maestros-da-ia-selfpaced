@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { X, Check, User, Bot } from "lucide-react";
+import { X, Check, User, Bot, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { CTAPopup } from "./CTAPopup";
 
 export const TwoPathsSection = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
+
   const amateurPoints = [
     "Continua usando ChatGPT básico sem estratégia",
     "Assiste outros lucrando milhões enquanto fica parado",
@@ -18,13 +22,6 @@ export const TwoPathsSection = () => {
     "Negócio escalando no piloto automático",
     "30 minutos por dia para administrar tudo"
   ];
-
-  const scrollToPricing = () => {
-    const pricingSection = document.querySelector('[data-section="pricing"]');
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="py-20 px-4 bg-background relative overflow-hidden">
@@ -181,15 +178,23 @@ export const TwoPathsSection = () => {
             QUAL CAMINHO VOCÊ VAI ESCOLHER?
           </h3>
 
-          <Button
-            onClick={scrollToPricing}
-            size="lg"
-            className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-lg px-10 py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
-          >
-            QUERO SER UM MAESTRO
-          </Button>
+          <div className="flex flex-col items-center gap-3">
+            <Button
+              onClick={() => setPopupOpen(true)}
+              size="lg"
+              className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
+            >
+              ESCOLHO SER UM MAESTRO DA IA
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <p className="text-sm text-muted-foreground">
+              Acesso imediato + Garantia de 7 dias
+            </p>
+          </div>
         </motion.div>
       </div>
+
+      <CTAPopup open={popupOpen} onOpenChange={setPopupOpen} />
     </section>
   );
 };
