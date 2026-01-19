@@ -85,21 +85,6 @@ export const AboutUsSection = () => {
               </div>
             </div>
 
-            {/* Revenue Screenshot Placeholder */}
-            <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-green-500/30 to-emerald-500/30 rounded-xl blur opacity-50 group-hover:opacity-100 transition-opacity" />
-              <div className="relative bg-card border border-green-500/30 rounded-xl p-6">
-                <div className="aspect-video bg-gradient-to-br from-green-950/30 to-emerald-950/20 rounded-lg border border-dashed border-green-500/30 flex items-center justify-center mb-3">
-                  <div className="text-center">
-                    <TrendingUp className="w-12 h-12 text-green-500/60 mx-auto mb-2" />
-                    <p className="text-green-400/80 text-sm">Screenshot de Resultados</p>
-                  </div>
-                </div>
-                <p className="text-center text-sm text-muted-foreground italic">
-                  Resultados reais — não promessas
-                </p>
-              </div>
-            </div>
           </motion.div>
 
           {/* Right Column - Narrative */}
@@ -143,31 +128,6 @@ export const AboutUsSection = () => {
               </p>
             </motion.div>
 
-            {/* Quote Callout Box */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.9 }}
-              className="relative"
-            >
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-accent to-primary rounded-full" />
-              <div className="bg-gradient-to-r from-primary/10 to-transparent border border-primary/20 rounded-r-xl p-6 pl-8">
-                <Quote className="w-8 h-8 text-primary/60 mb-3" />
-                <p className="text-xl md:text-2xl font-medium italic text-foreground leading-relaxed">
-                  "O método que usamos para vender violão é o <span className="text-primary font-bold">MESMO</span> que ensinamos para IA"
-                </p>
-                <div className="mt-4 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500/30 to-primary/30 flex items-center justify-center">
-                    <Users className="w-5 h-5 text-amber-400" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">Arthur & Lyria</p>
-                    <p className="text-sm text-muted-foreground">Fundadores, Lyra Academy</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </div>
