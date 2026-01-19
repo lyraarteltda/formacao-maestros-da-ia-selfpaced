@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import { Quote, Users, Music, TrendingUp, Sparkles } from "lucide-react";
+import { Quote, Users, Music, TrendingUp, Sparkles, Rocket, GraduationCap } from "lucide-react";
 
 export const AboutUsSection = () => {
   const timelineSteps = [
     { icon: Users, label: "Do Zero", description: "" },
     { icon: Music, label: "Empresa de Infoprodutos", description: "Primeiro negócio online" },
     { icon: TrendingUp, label: "R$2,5M", description: "Em 15 meses" },
-    { icon: Sparkles, label: "Maestros da IA", description: "Ensinando o método" }
+    { icon: Rocket, label: "Piloto Automático", description: "R$100k+/mês • 60% margem • 2h/semana" },
+    { icon: GraduationCap, label: "Maestros da IA", description: "Ensinando o método" }
   ];
 
   return (
@@ -64,7 +65,7 @@ export const AboutUsSection = () => {
                 {/* Timeline Line - positioned behind icons */}
                 <div className="absolute top-12 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary via-accent to-primary hidden md:block" />
                 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                   {timelineSteps.map((step, index) => (
                     <motion.div
                       key={step.label}
