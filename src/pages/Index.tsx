@@ -6,6 +6,7 @@ import { MethodologySection } from "@/components/MethodologySection";
 import { VideoTeaserSection } from "@/components/VideoTeaserSection";
 import { AboutUsSection } from "@/components/AboutUsSection";
 import { SocialProofSection } from "@/components/SocialProofSection";
+import { VideoTestimonialsSection } from "@/components/VideoTestimonialsSection";
 import { ValueStackSection } from "@/components/ValueStackSection";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { FounderMemberSection } from "@/components/FounderMemberSection";
@@ -28,6 +29,7 @@ const Index = () => {
       <VideoTeaserSection />
       <AboutUsSection />
       <SocialProofSection />
+      <VideoTestimonialsSection />
       <ValueStackSection />
       <GuaranteeSection />
       <FounderMemberSection />
