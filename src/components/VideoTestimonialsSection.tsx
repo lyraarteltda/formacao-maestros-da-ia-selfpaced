@@ -60,8 +60,8 @@ const VideoCard = ({ testimonial, index }: { testimonial: VideoTestimonial; inde
       className={`group ${testimonial.isPlaceholder ? 'opacity-50' : ''}`}
     >
       <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-[0_10px_40px_-15px_hsl(var(--primary)/0.3)] hover:-translate-y-1">
-        {/* Video Container */}
-        <div className="relative aspect-video bg-gradient-to-br from-muted/80 to-muted/40 overflow-hidden">
+        {/* Video Container - Portrait 9:16 */}
+        <div className="relative aspect-[9/16] bg-gradient-to-br from-muted/80 to-muted/40 overflow-hidden">
           {/* Placeholder Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0" style={{
