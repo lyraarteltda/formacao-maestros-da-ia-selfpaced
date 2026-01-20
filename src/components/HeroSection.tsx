@@ -47,9 +47,6 @@ export const HeroSection = () => {
               Domine a IA e a Automação para Escalar Seu Negócio em{" "}
             </span>
             <span className="gradient-text">10 Semanas</span>
-            <span className="text-foreground">
-              {" "}— Sem Precisar de Conhecimento Técnico Prévio
-            </span>
           </h1>
           
           <h2 className="text-lg md:text-xl lg:text-2xl mb-8 md:mb-10 text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium">
