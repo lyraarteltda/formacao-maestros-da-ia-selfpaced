@@ -174,15 +174,6 @@ export const PricingSection = () => {
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                   
-                  {/* Secondary CTA - Installment focus */}
-                  <Button 
-                    onClick={() => setPopupOpen(true)}
-                    variant="outline"
-                    className="w-full border-2 border-primary/50 hover:border-primary hover:bg-primary/10 font-bold text-base py-5 h-auto rounded-xl transition-all duration-300"
-                  >
-                    COMEÇAR POR APENAS R$323
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
                   
                   <p className="text-center text-sm text-muted-foreground">
                     Acesso imediato + Garantia de 7 dias
