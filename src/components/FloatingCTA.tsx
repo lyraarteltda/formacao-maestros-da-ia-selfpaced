@@ -51,7 +51,7 @@ export const FloatingCTA = () => {
                 onClick={() => setPopupOpen(true)}
                 className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold px-6 py-4 h-auto rounded-xl shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105 animate-pulse hover:animate-none"
               >
-                GARANTIR MINHA VAGA
+                QUERO O SISTEMA COMPLETO
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>

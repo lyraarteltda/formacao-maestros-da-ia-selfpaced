@@ -101,7 +101,7 @@ export const AboutUsSection = () => {
               className="bg-card/30 border border-border/50 rounded-xl p-6 hover:border-amber-500/30 transition-colors"
             >
               <p className="text-lg leading-relaxed text-foreground/90">
-                Mas então <span className="text-amber-400 font-bold">DESCOBRIMOS</span> algo: o segredo não era a ferramenta, era o <span className="text-primary font-bold">SISTEMA</span>. Criamos um método de automação que funcionava em qualquer nicho. Aplicamos no curso de violão e fizemos <span className="text-green-400 font-bold">R$2,5 milhões em 15 meses</span>. Depois percebemos: esse mesmo sistema podia ser ensinado para qualquer empreendedor.
+                Mas então <span className="text-amber-400 font-bold">DESCOBRIMOS</span> algo: o segredo não era a ferramenta, era o <span className="text-primary font-bold">SISTEMA</span>. Criamos um método de automação que funcionava em qualquer nicho. Aplicamos no curso de violão e fizemos <span className="text-green-400 font-bold">R$2,5 milhões em 15 meses</span>, trabalhando menos de 30 minutos por dia. Documentamos cada agente, cada automação, cada workflow — e agora estamos entregando esse sistema inteiro para você implementar com autonomia total.
               </p>
             </motion.div>
 

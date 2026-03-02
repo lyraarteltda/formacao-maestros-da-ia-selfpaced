@@ -21,7 +21,7 @@ export const GuaranteeSection = () => {
           className="text-center mb-10"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            <span className="gradient-text">Garantia Dupla de Resultado</span>
+            <span className="gradient-text">Sua Decisão é Protegida por 7 Dias</span>
           </h2>
         </motion.div>
 
@@ -33,28 +33,27 @@ export const GuaranteeSection = () => {
           viewport={{ once: true }}
           className="relative"
         >
-          {/* Guarantee Seal - Positioned absolutely */}
+          {/* Guarantee Seal */}
           <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
             <div className="relative">
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600 flex items-center justify-center shadow-xl shadow-amber-500/30 border-4 border-amber-300">
                 <div className="text-center">
                   <Award className="w-8 h-8 md:w-10 md:h-10 text-amber-900 mx-auto mb-1" strokeWidth={2.5} />
                   <span className="text-[10px] md:text-xs font-bold text-amber-900 uppercase tracking-wider">
-                    100%<br />Garantido
+                    7 DIAS<br />Garantido
                   </span>
                 </div>
               </div>
-              {/* Seal Ribbon Effect */}
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-4 bg-gradient-to-b from-amber-600 to-amber-700 rounded-b-lg"></div>
             </div>
           </div>
 
           {/* Main Card */}
           <div className="bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100 dark:from-amber-950/40 dark:via-yellow-950/30 dark:to-amber-900/40 border-2 border-amber-400/60 rounded-3xl pt-16 md:pt-20 pb-8 px-6 md:px-10 shadow-2xl shadow-amber-500/10">
-            
+
             {/* Guarantees Grid */}
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8">
-              
+
               {/* Guarantee 1 */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -72,18 +71,20 @@ export const GuaranteeSection = () => {
                       Garantia #1
                     </span>
                     <h3 className="text-lg md:text-xl font-bold text-foreground">
-                      Garantia de 10 Semanas
+                      7 Dias Sem Risco
                     </h3>
                   </div>
                 </div>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Se você aplicar o Método, participar das Mentorias e não conseguir resultados em 10 semanas, 
-                  <span className="font-semibold text-foreground"> continuamos trabalhando com você em consultorias individuais GRATUITAMENTE até você conseguir</span> 
-                  {" "}(sem tempo limite) ou devolvemos 100% do seu dinheiro.
+                  Se nos primeiros 7 dias você sentir que a formação não é para você, devolvemos 100% do seu investimento.{" "}
+                  <span className="font-semibold text-foreground">Sem perguntas. Sem burocracia. Sem letras miúdas.</span>
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mt-3">
+                  Basta enviar um email e o valor volta para sua conta. Simples assim.
                 </p>
                 <div className="mt-4 flex items-center gap-2 text-primary">
                   <CheckCircle2 className="w-5 h-5" />
-                  <span className="text-sm font-medium">Compromisso até você ter resultado</span>
+                  <span className="text-sm font-medium">Risco zero para você</span>
                 </div>
               </motion.div>
 
@@ -104,21 +105,39 @@ export const GuaranteeSection = () => {
                       Garantia #2
                     </span>
                     <h3 className="text-lg md:text-xl font-bold text-foreground">
-                      Garantia Incondicional de 7 Dias
+                      Confiança Total
                     </h3>
                   </div>
                 </div>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Se nos primeiros 7 dias você sentir que isso não é para você, 
-                  <span className="font-semibold text-foreground"> basta enviar um e-mail e devolvemos 100% do seu investimento</span>. 
-                  Sem perguntas, sem burocracia.
+                  Se você assistir às 75 aulas, implementar os agentes e automações, e não gerar resultado — nós queremos saber o porquê.{" "}
+                  <span className="font-semibold text-foreground">Porque isso nunca aconteceu.</span>
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mt-3">
+                  Esse sistema já foi validado com R$ 2,5 milhões em vendas reais. Não é teoria. Não é promessa. É um sistema completo que funciona para quem executa.
                 </p>
                 <div className="mt-4 flex items-center gap-2 text-primary">
                   <CheckCircle2 className="w-5 h-5" />
-                  <span className="text-sm font-medium">Risco zero para você</span>
+                  <span className="text-sm font-medium">Sistema validado com resultados reais</span>
                 </div>
               </motion.div>
             </div>
+
+            {/* Bottom copy */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <p className="text-muted-foreground mb-3">
+                Nós assumimos 100% do risco. Se não funcionar para você, o prejuízo é nosso — não seu.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                7 dias é tempo suficiente para você acessar as primeiras 15+ aulas, ver os agentes de IA em ação e entender por que nossos alunos dizem que foi o melhor investimento profissional que já fizeram.
+              </p>
+            </motion.div>
 
             {/* Signature Section */}
             <motion.div
@@ -126,7 +145,7 @@ export const GuaranteeSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
-              className="text-center pt-6 border-t border-amber-300/50"
+              className="text-center pt-6 mt-6 border-t border-amber-300/50"
             >
               <p className="text-sm text-muted-foreground mb-3">
                 Assinado pessoalmente pelos fundadores
@@ -139,7 +158,7 @@ export const GuaranteeSection = () => {
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-amber-400"></div>
               </div>
               <p className="text-xs text-muted-foreground mt-2 uppercase tracking-wider">
-                Fundadores do Ecossistema Maestros da IA
+                Fundadores da Formação Maestros da IA
               </p>
             </motion.div>
           </div>
@@ -169,7 +188,7 @@ export const GuaranteeSection = () => {
           </div>
           <div className="flex items-center gap-2 text-muted-foreground">
             <Award className="w-5 h-5 text-primary" />
-            <span className="text-sm">+500 Alunos Satisfeitos</span>
+            <span className="text-sm">Acesso Imediato</span>
           </div>
         </motion.div>
       </div>

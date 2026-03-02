@@ -267,7 +267,7 @@ export const CheckoutDialog = ({ open, onOpenChange, checkoutUrl }: CheckoutDial
               disabled={isSubmitting}
               onClick={() => window.open('https://chat.whatsapp.com/COJc1AP9G1QJ1bX1ohg7DZ', '_blank')}
             >
-              {isSubmitting ? "Processando..." : "GARANTIR VAGA"}
+              {isSubmitting ? "Processando..." : "QUERO O SISTEMA COMPLETO"}
             </Button>
           </div>
         </form>

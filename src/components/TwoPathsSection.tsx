@@ -184,7 +184,7 @@ export const TwoPathsSection = () => {
               size="lg"
               className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
             >
-              ESCOLHO SER UM MAESTRO DA IA
+              QUERO O SISTEMA COMPLETO
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <p className="text-sm text-muted-foreground">

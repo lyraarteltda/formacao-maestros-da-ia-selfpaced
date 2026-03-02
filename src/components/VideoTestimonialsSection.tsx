@@ -38,26 +38,11 @@ const testimonials: VideoTestimonial[] = [
     videoUrl: "" // Placeholder - adicionar URL real aqui
   },
   {
-    name: "Lucas",
-    quote: "Foi a melhor aquisição que eu poderia ter feito para avançar nessa área. A mentoria deles é excelente",
-    videoUrl: "" // Placeholder - adicionar URL real aqui
-  },
-  {
     name: "Ricardo",
     quote: "Metade das coisas que eu achava impossível, hoje eu estou fazendo em casa e no trabalho. Quando você vê seu primeiro fluxo rodando sozinho, você nunca mais olha para a rotina da mesma forma",
     videoUrl: "" // Placeholder - adicionar URL real aqui
   },
   // Row 3
-  {
-    name: "Rodrigo",
-    quote: "Uma formação bem clara e bem prática. A comunidade no WhatsApp é muito forte, todo mundo se ajuda e troca informações",
-    videoUrl: "" // Placeholder - adicionar URL real aqui
-  },
-  {
-    name: "Rodrigo Eve",
-    quote: "Se eu consegui, tenha a certeza, você vai conseguir também. Todas as dificuldades foram superadas com o suporte da equipe",
-    videoUrl: "" // Placeholder - adicionar URL real aqui
-  },
   {
     name: "Em Breve",
     quote: "Mais histórias de sucesso chegando...",

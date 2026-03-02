@@ -14,7 +14,7 @@ export const BonusSection = () => {
                 Somos um casal por trás do Maestros da IA e provamos que é possível crescer rápido no digital: faturamos 2,5 milhões em apenas um ano, começando do absoluto zero e com poucos recursos.
               </p>
               <p className="text-lg md:text-base leading-relaxed text-white mt-6 md:mt-4">
-                Nossa virada veio quando automatizamos processos e aplicamos IA no nosso negócio. Agora, através do Maestros da IA, queremos compartilhar essas estratégias com você.
+                Nossa virada veio quando automatizamos processos e aplicamos IA no nosso negócio. Agora, através da Formação Maestros da IA, entregamos esse sistema completo para você implementar no seu ritmo.
               </p>
               <p className="text-lg md:text-base leading-relaxed text-white mt-6 md:mt-4">Mostramos como a Inteligência Artificial e a Automação podem transformar não só empresas, mas também a sua rotina de trabalho — tudo de forma simples e sem complicação.</p>
             </div>

@@ -61,13 +61,13 @@ export const TargetAudienceSection = () => {
     },
     {
       icon: HelpCircle,
-      title: "Suporte Técnico",
-      description: "Apoio de especialistas para resolver seus problemas técnicos."
+      title: "Arsenal IA Completo",
+      description: "+100 ferramentas selecionadas, prompts otimizados e códigos prontos para potencializar cada etapa do seu negócio."
     },
     {
       icon: Globe,
-      title: "Networking",
-      description: "Comunidade com os fundadores, empresários, especialistas e futuros líderes da IA no Brasil."
+      title: "Atualizações Constantes",
+      description: "Conteúdo atualizado com novos agentes validados, automações e ajustes estratégicos durante 1 ano de acesso."
     }
   ];
 
@@ -131,15 +131,10 @@ export const TargetAudienceSection = () => {
         {/* Highlighted Features */}
         <div className="mb-20">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center leading-tight">
-            <span className="gradient-text animate-pulse">Bônus Exclusivos de Lançamento</span>
+            <span className="gradient-text">O Que Mais Está Incluído</span>
           </h2>
           <div className="space-y-6">
             {[
-              {
-                icon: UserCheck,
-                title: "Mentoria com os Maestros",
-                description: "Reuniões ao vivo conduzidas por Arthur e Lyria, com foco em atualizações de mercado, networking e direcionamento estratégico."
-              },
               {
                 icon: Wrench,
                 title: "Arsenal IA Completo",
@@ -157,8 +152,8 @@ export const TargetAudienceSection = () => {
               },
               {
                 icon: DollarSign,
-                title: "Valor Promocional Garantido",
-                description: "Ao se tornar um dos 100 membros fundadores, você trava o preço mais baixo de toda a história da formação. Assim que o grupo dos fundadores for fechado, o valor irá subir entre 25% e 50% de forma definitiva."
+                title: "Preço de Lançamento: R$ 997",
+                description: "Acesse 100% do conteúdo, agentes e automações por R$ 997. Após o encerramento da oferta de lançamento, o valor sobe para R$ 1.497."
               }
             ].map((feature, index) => (
               <div key={index} className="bg-gradient-primary p-1 rounded-xl">
@@ -200,7 +195,7 @@ export const TargetAudienceSection = () => {
               pricingSection?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            GARANTIR VAGA
+            QUERO O SISTEMA COMPLETO
           </Button>
         </div>
       </div>

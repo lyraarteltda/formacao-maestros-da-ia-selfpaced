@@ -152,7 +152,7 @@ export const MethodologySection = () => {
           
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-8">
-              Nossa metodologia é baseada em implementação progressiva e resultados práticos. Cada semana você receberá conteúdo estratégico, ferramentas prontas e suporte para garantir que você não apenas aprenda, mas aplique e lucre com IA.
+              Nossa metodologia é baseada em implementação progressiva e resultados práticos. Cada módulo entrega conteúdo estratégico e ferramentas prontas para garantir que você não apenas aprenda, mas aplique e lucre com IA — no seu ritmo.
             </p>
             
             <div className="bg-card p-8 rounded-xl border border-border/50">
@@ -208,27 +208,27 @@ export const MethodologySection = () => {
           </div>
         </div>
 
-        {/* Support Section - Premium Card */}
+        {/* Content Evolution Card */}
         <div className="mb-8">
           <div className="bg-gradient-primary p-1 rounded-2xl shadow-glow">
             <div className="bg-background rounded-xl p-8 md:p-12">
               <div className="text-center mb-8">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full mb-6 shadow-lg">
-                  <Users className="w-8 h-8 text-white" />
+                  <TrendingUp className="w-8 h-8 text-white" />
                 </div>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
-                  <span className="gradient-text">Suporte Completo</span> e Evolução Constante
+                  <span className="gradient-text">Conteúdo que Evolui</span> com a Tecnologia
                 </h2>
               </div>
-              
+
               <div className="max-w-4xl mx-auto space-y-6 mb-8">
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                  Além do conteúdo estruturado das 10 semanas, você terá{" "}
-                  <span className="text-primary font-bold text-xl">1 ano inteiro</span> de suporte técnico especializado, mentorias mensais de negócios com os fundadores e atualizações contínuas do material conforme a IA evolui, garantindo que você esteja sempre à frente das estratégias e ferramentas mais atuais do mercado.
+                  O universo da IA muda em ritmo acelerado. Por isso, a formação recebe{" "}
+                  <span className="text-primary font-bold text-xl">atualizações constantes</span> com novos agentes validados em nossa operação, novas automações e ajustes estratégicos baseados nas mudanças do mercado. Você terá acesso a cada atualização durante seu ano de acesso.
                 </p>
-                
+
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                  Sabemos que o universo da Inteligência Artificial muda em ritmo acelerado. Por isso, nosso compromisso é mantê-lo sempre na vanguarda, com acesso às inovações mais recentes, novos agentes validados em nossa operação e ajustes estratégicos baseados nas mudanças do mercado.
+                  Nosso compromisso é mantê-lo sempre na vanguarda, com acesso às inovações mais recentes e ajustes estratégicos baseados nas mudanças do mercado.
                 </p>
               </div>
 
@@ -237,21 +237,21 @@ export const MethodologySection = () => {
                 <div className="bg-card p-6 rounded-xl border border-primary/20 hover:border-primary/40 transition-colors">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="p-2 bg-primary/10 rounded-lg">
-                      <Users className="w-5 h-5 text-primary" />
+                      <TrendingUp className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="font-bold text-foreground">Suporte Técnico</h3>
+                    <h3 className="font-bold text-foreground">Novos Agentes</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground">Ajuda especializada durante 1 ano completo</p>
+                  <p className="text-sm text-muted-foreground">Validados na nossa operação e adicionados à formação</p>
                 </div>
 
                 <div className="bg-card p-6 rounded-xl border border-primary/20 hover:border-primary/40 transition-colors">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="p-2 bg-primary/10 rounded-lg">
-                      <TrendingUp className="w-5 h-5 text-primary" />
+                      <Target className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="font-bold text-foreground">12 Mentorias</h3>
+                    <h3 className="font-bold text-foreground">Automações Atualizadas</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground">Sessões mensais com os fundadores</p>
+                  <p className="text-sm text-muted-foreground">Templates ajustados conforme ferramentas evoluem</p>
                 </div>
 
                 <div className="bg-card p-6 rounded-xl border border-primary/20 hover:border-primary/40 transition-colors">
@@ -259,39 +259,16 @@ export const MethodologySection = () => {
                     <div className="p-2 bg-primary/10 rounded-lg">
                       <Clock className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="font-bold text-foreground">Atualizações</h3>
+                    <h3 className="font-bold text-foreground">1 Ano de Acesso</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground">Conteúdo sempre atualizado com as novidades</p>
+                  <p className="text-sm text-muted-foreground">Absorva tudo no seu ritmo, com independência</p>
                 </div>
               </div>
 
-              {/* Value Highlight */}
-              <div className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20 mb-8">
-                <p className="text-center text-lg md:text-xl font-bold text-foreground leading-relaxed">
-                  Só o nosso suporte técnico já valeria muito mais do que o valor total da formação.
-                </p>
-              </div>
-              
               <div className="text-center space-y-6">
                 <p className="text-xl md:text-2xl font-bold text-foreground leading-relaxed">
-                  Você não fica apenas com o conhecimento de hoje, você evolui junto com a tecnologia.
+                  Você não fica apenas com o conhecimento de hoje — evolui junto com a tecnologia.
                 </p>
-                
-                <div className="relative inline-block">
-                  <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-3xl rounded-full"></div>
-                  <div className="relative bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 px-8 py-6 rounded-2xl border-2 border-primary/30">
-                    <div className="flex items-center justify-center gap-3 mb-2">
-                      <ArrowRight className="w-6 h-6 text-primary animate-pulse" />
-                      <p className="text-2xl md:text-3xl font-black gradient-text">
-                        A Decisão é Sua
-                      </p>
-                      <ArrowRight className="w-6 h-6 text-primary animate-pulse" />
-                    </div>
-                    <p className="text-sm md:text-base text-muted-foreground font-medium">
-                      Ficar para trás ou liderar o futuro?
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -304,7 +281,7 @@ export const MethodologySection = () => {
               onClick={() => setPopupOpen(true)}
               className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
             >
-              COMEÇAR MINHA TRANSFORMAÇÃO AGORA
+              QUERO O SISTEMA COMPLETO
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <p className="text-sm text-muted-foreground">

@@ -2,14 +2,14 @@ import { HeroSection } from "@/components/HeroSection";
 import { ProblemSolutionSection } from "@/components/ProblemSolutionSection";
 import { TwoPathsSection } from "@/components/TwoPathsSection";
 import { TargetAudienceSection } from "@/components/TargetAudienceSection";
-import { MethodologySection } from "@/components/MethodologySection";
+import { TheOneThingSection } from "@/components/TheOneThingSection";
 import { VideoTeaserSection } from "@/components/VideoTeaserSection";
+import { MethodologySection } from "@/components/MethodologySection";
 import { AboutUsSection } from "@/components/AboutUsSection";
 import { SocialProofSection } from "@/components/SocialProofSection";
 import { VideoTestimonialsSection } from "@/components/VideoTestimonialsSection";
 import { ValueStackSection } from "@/components/ValueStackSection";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { FounderMemberSection } from "@/components/FounderMemberSection";
 import { PricingSection } from "@/components/PricingSection";
 import { BonusSection } from "@/components/BonusSection";
 import { FAQSection } from "@/components/FAQSection";
@@ -24,21 +24,21 @@ const Index = () => {
       <HeroSection />
       <ProblemSolutionSection />
       <TwoPathsSection />
+      <TheOneThingSection />
+      <VideoTeaserSection />
       <TargetAudienceSection />
       <MethodologySection />
-      <VideoTeaserSection />
       <AboutUsSection />
       <SocialProofSection />
       <VideoTestimonialsSection />
       <ValueStackSection />
       <GuaranteeSection />
-      <FounderMemberSection />
       <PricingSection />
       <BonusSection />
       <FAQSection />
       <FinalCTASection />
       <Footer />
-      
+
       {/* Floating/Sticky CTAs */}
       <FloatingCTA />
       <StickyMobileCTA />

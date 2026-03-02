@@ -34,7 +34,7 @@ export const StickyMobileCTA = () => {
                 onClick={() => setPopupOpen(true)}
                 className="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold py-4 h-auto rounded-xl shadow-lg shadow-emerald-500/30 text-base"
               >
-                GARANTIR MINHA VAGA
+                QUERO O SISTEMA COMPLETO
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <p className="text-center text-xs text-muted-foreground mt-2">
