@@ -49,7 +49,7 @@ export const FloatingCTA = () => {
               </button>
               <Button
                 onClick={() => setPopupOpen(true)}
-                className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold px-6 py-4 h-auto rounded-xl shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105 animate-pulse hover:animate-none"
+                className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold px-6 py-4 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
               >
                 QUERO O SISTEMA COMPLETO
                 <ArrowRight className="w-5 h-5 ml-2" />

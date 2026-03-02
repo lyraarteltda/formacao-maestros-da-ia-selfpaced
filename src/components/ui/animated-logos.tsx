@@ -84,7 +84,7 @@ export const AnimatedLogos = () => {
         {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
           <motion.div
             key={index}
-            className="relative flex-shrink-0 w-36 h-36 bg-white/95 dark:bg-white rounded-2xl shadow-lg border border-border/20 p-6 hover:shadow-xl transition-all"
+            className="relative flex-shrink-0 w-36 h-36 bg-white rounded-2xl shadow-lg border border-white/10 p-6 hover:shadow-xl transition-all"
             whileHover={{ scale: 1.05, y: -4 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

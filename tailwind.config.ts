@@ -19,7 +19,19 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'Poppins', 'system-ui', 'sans-serif'],
+				sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				mono: ['JetBrains Mono', 'SF Mono', 'monospace'],
+			},
+			fontSize: {
+				'display-xl': ['4.5rem', { lineHeight: '1.05', letterSpacing: '-0.03em', fontWeight: '800' }],
+				'display':    ['3.5rem', { lineHeight: '1.1',  letterSpacing: '-0.025em', fontWeight: '700' }],
+				'heading-1':  ['2.5rem', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
+				'heading-2':  ['2rem',   { lineHeight: '1.2',  letterSpacing: '-0.015em', fontWeight: '700' }],
+				'heading-3':  ['1.5rem', { lineHeight: '1.3',  letterSpacing: '-0.01em', fontWeight: '600' }],
+				'body-lg':    ['1.25rem',{ lineHeight: '1.7',  letterSpacing: '0' }],
+				'body':       ['1rem',   { lineHeight: '1.7',  letterSpacing: '0' }],
+				'body-sm':    ['0.875rem',{ lineHeight: '1.6',  letterSpacing: '0.01em' }],
+				'caption':    ['0.75rem',{ lineHeight: '1.5',  letterSpacing: '0.02em' }],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -70,13 +82,14 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-cta': 'var(--gradient-cta)',
+				'gradient-surface': 'var(--gradient-surface)',
+				'gradient-section-alt': 'var(--gradient-section-alt)',
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
-				'elegant': 'var(--shadow-elegant)',
-			},
-			transitionTimingFunction: {
-				'smooth': 'var(--transition-smooth)',
+				'card': 'var(--shadow-card)',
+				'card-hover': 'var(--shadow-card-hover)',
+				'elevated': 'var(--shadow-elevated)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -102,8 +115,8 @@ export default {
 				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-down': 'accordion-down 0.3s ease-out',
+				'accordion-up': 'accordion-up 0.3s ease-out'
 			}
 		}
 	},

@@ -24,7 +24,7 @@ export const TwoPathsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-background relative overflow-hidden">
+    <section className="section-padding bg-background relative overflow-hidden">
       {/* Background gradient effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-0 top-0 bottom-0 w-1/2 bg-gradient-to-r from-red-950/20 to-transparent" />
@@ -40,13 +40,13 @@ export const TwoPathsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-heading-1 md:text-display font-bold mb-4">
             Suas Escolhas Definem{" "}
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-400 via-foreground to-emerald-400 bg-clip-text text-transparent">
               Seu Futuro
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-[hsl(215,12%,65%)] max-w-2xl mx-auto">
             Dois caminhos. Dois destinos completamente diferentes.
           </p>
         </motion.div>
@@ -55,7 +55,7 @@ export const TwoPathsSection = () => {
         <div className="grid md:grid-cols-2 gap-4 md:gap-0 relative">
           {/* Center Divider - Desktop Only */}
           <div className="hidden md:flex absolute left-1/2 top-0 bottom-0 -translate-x-1/2 z-20 items-center">
-            <div className="w-1 h-full bg-gradient-to-b from-red-500/50 via-muted to-emerald-500/50" />
+            <div className="w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent" />
           </div>
 
           {/* LEFT SIDE - O AMADOR */}
@@ -67,8 +67,8 @@ export const TwoPathsSection = () => {
             className="relative group"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-red-900/30 via-red-950/20 to-background rounded-2xl md:rounded-r-none opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
-            
-            <div className="relative bg-card/50 border border-red-500/30 rounded-2xl md:rounded-r-none p-6 md:p-8 h-full backdrop-blur-sm">
+
+            <div className="relative bg-card/50 border border-red-500/30 rounded-2xl md:rounded-r-none p-8 md:p-10 h-full backdrop-blur-sm">
               {/* Header */}
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 mb-4">
@@ -103,9 +103,6 @@ export const TwoPathsSection = () => {
                   </motion.li>
                 ))}
               </ul>
-
-              {/* Bottom fade effect */}
-              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-red-950/30 to-transparent rounded-b-2xl md:rounded-br-none pointer-events-none" />
             </div>
           </motion.div>
 
@@ -119,10 +116,10 @@ export const TwoPathsSection = () => {
           >
             {/* Glow effect for Maestro side */}
             <div className="absolute -inset-1 bg-gradient-to-br from-emerald-500/20 via-green-500/10 to-emerald-500/20 rounded-2xl md:rounded-l-none blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-            
+
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/30 via-emerald-950/20 to-background rounded-2xl md:rounded-l-none opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
-            
-            <div className="relative bg-card/50 border border-emerald-500/30 rounded-2xl md:rounded-l-none p-6 md:p-8 h-full backdrop-blur-sm">
+
+            <div className="relative bg-card/50 border border-emerald-500/30 rounded-2xl md:rounded-l-none p-8 md:p-10 h-full backdrop-blur-sm">
               {/* Header */}
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30 mb-4">
@@ -157,9 +154,6 @@ export const TwoPathsSection = () => {
                   </motion.li>
                 ))}
               </ul>
-
-              {/* Bottom glow effect */}
-              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-emerald-950/30 to-transparent rounded-b-2xl md:rounded-bl-none pointer-events-none" />
             </div>
           </motion.div>
         </div>
@@ -180,12 +174,12 @@ export const TwoPathsSection = () => {
             <Button
               onClick={() => setPopupOpen(true)}
               size="lg"
-              className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
+              className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
               QUERO O SISTEMA COMPLETO
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-[hsl(215,10%,45%)]">
               Acesso imediato + Garantia de 7 dias
             </p>
           </div>

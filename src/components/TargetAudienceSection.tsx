@@ -1,24 +1,25 @@
-import { 
-  Building2, 
-  Target, 
-  Rocket, 
-  Settings, 
-  Map, 
-  Bot, 
-  Copy, 
-  HelpCircle, 
-  Users, 
-  Handshake,
-  Globe, 
+import { useState } from "react";
+import {
+  Building2,
+  Target,
+  Rocket,
+  Settings,
+  Map,
+  Bot,
+  Copy,
+  HelpCircle,
+  Globe,
   Lock,
-  UserCheck,
   Folder,
-  Shield,
-  DollarSign
+  DollarSign,
+  ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CTAPopup } from "@/components/CTAPopup";
 
 export const TargetAudienceSection = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
+
   const profiles = [
     {
       icon: Building2,
@@ -71,32 +72,32 @@ export const TargetAudienceSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-card">
+    <section className="section-padding bg-background relative">
       <div className="container mx-auto max-w-6xl">
         {/* Target Audience */}
-        <div className="mb-20">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center leading-tight">
+        <div className="mb-24">
+          <h2 className="text-heading-1 md:text-display font-bold mb-12 text-center leading-tight">
             Esta Formação Foi Criada Especificamente Para:
           </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
             {profiles.map((profile, index) => (
-              <div key={index} className="bg-background p-8 rounded-xl border border-border/50 hover:border-primary/20 transition-all duration-300">
-                <div className="flex md:items-start md:gap-4 md:flex-row flex-col items-center text-center md:text-left">
-                  <div className="p-3 bg-gradient-primary rounded-lg flex-shrink-0 md:mb-0 mb-4">
-                    <profile.icon className="w-6 h-6 text-white" />
+              <div key={index} className="card-base p-8 group hover:border-emerald-500/20">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                    <profile.icon className="w-6 h-6 text-emerald-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">{profile.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{profile.description}</p>
+                    <h3 className="text-xl font-bold text-foreground mb-2">{profile.title}</h3>
+                    <p className="text-[hsl(215,12%,65%)] leading-relaxed">{profile.description}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          
+
           <div className="text-center">
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-[hsl(215,12%,65%)] max-w-4xl mx-auto leading-relaxed">
               Se você se identificou com pelo menos um desses perfis, a{" "}
               <span className="gradient-text font-semibold">Formação Maestros da IA</span> foi desenhada pensando exatamente em você. Não importa seu nível atual — vamos te levar ao próximo patamar.
             </p>
@@ -104,22 +105,22 @@ export const TargetAudienceSection = () => {
         </div>
 
         {/* Ecosystem Section */}
-        <div className="mb-20">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center leading-tight">
+        <div className="mb-24">
+          <h2 className="text-heading-1 md:text-display font-bold mb-12 text-center leading-tight">
             O Ecossistema Completo Para Você{" "}
             <span className="gradient-text">Escalar com IA e Automação</span>
           </h2>
-          
-          <div className="space-y-6">
+
+          <div className="space-y-4">
             {ecosystemFeatures.map((feature, index) => (
-              <div key={index} className="bg-background p-6 rounded-xl border border-border/50">
-                <div className="flex md:items-start md:gap-4 md:flex-row flex-col items-center text-center md:text-left">
-                  <div className="p-3 bg-gradient-primary rounded-lg flex-shrink-0 md:mb-0 mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
+              <div key={index} className="card-base p-6 group hover:border-emerald-500/20">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <feature.icon className="w-5 h-5 text-emerald-400" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-foreground mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                    <p className="text-[hsl(215,12%,65%)] leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
               </div>
@@ -128,11 +129,11 @@ export const TargetAudienceSection = () => {
         </div>
 
         {/* Highlighted Features */}
-        <div className="mb-20">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center leading-tight">
+        <div className="mb-24">
+          <h2 className="text-heading-1 md:text-display font-bold mb-12 text-center leading-tight">
             <span className="gradient-text">O Que Mais Está Incluído</span>
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-4">
             {[
               {
                 icon: Folder,
@@ -150,16 +151,14 @@ export const TargetAudienceSection = () => {
                 description: "Acesse 100% do conteúdo, agentes e automações por R$ 997. Após o encerramento da oferta de lançamento, o valor sobe para R$ 1.497."
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-gradient-primary p-1 rounded-xl">
-                <div className="bg-background rounded-lg p-6">
-                  <div className="flex md:items-start md:gap-4 md:flex-row flex-col items-center text-center md:text-left">
-                    <div className="p-3 bg-gradient-primary rounded-lg flex-shrink-0 md:mb-0 mb-4">
-                      <feature.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-foreground mb-2">{feature.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                    </div>
+              <div key={index} className="card-elevated p-6 md:p-8 border-emerald-500/20">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <feature.icon className="w-5 h-5 text-emerald-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground mb-2">{feature.title}</h3>
+                    <p className="text-[hsl(215,12%,65%)] leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
               </div>
@@ -168,31 +167,33 @@ export const TargetAudienceSection = () => {
         </div>
 
         {/* Accelerated Execution */}
-        <div className="bg-gradient-primary p-1 rounded-xl">
-          <div className="bg-background rounded-lg p-8 text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
-              <span className="gradient-text">Execução Acelerada:</span> Aplique Desde o Primeiro Dia
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-              Você não precisa esperar meses para ver os primeiros resultados. Nossa metodologia foi desenhada para acelerar sua execução desde o início, sem pular etapas cruciais. Você entra com a dedicação — nós entregamos o que há de mais avançado no Brasil em{" "}
-              <span className="text-primary font-semibold">Inteligência Artificial aplicada a negócios</span>.
+        <div className="card-elevated p-8 md:p-10 text-center border-emerald-500/20">
+          <h2 className="text-heading-2 md:text-heading-1 font-bold mb-6 leading-tight">
+            <span className="gradient-text">Execução Acelerada:</span> Aplique Desde o Primeiro Dia
+          </h2>
+          <p className="text-lg md:text-xl text-[hsl(215,12%,65%)] leading-relaxed max-w-4xl mx-auto">
+            Você não precisa esperar meses para ver os primeiros resultados. Nossa metodologia foi desenhada para acelerar sua execução desde o início, sem pular etapas cruciais. Você entra com a dedicação — nós entregamos o que há de mais avançado no Brasil em{" "}
+            <span className="text-emerald-400 font-semibold">Inteligência Artificial aplicada a negócios</span>.
+          </p>
+        </div>
+
+        <div className="flex justify-center mt-8">
+          <div className="flex flex-col items-center gap-3">
+            <Button
+              onClick={() => setPopupOpen(true)}
+              className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+            >
+              QUERO O SISTEMA COMPLETO
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <p className="text-sm text-[hsl(215,10%,45%)]">
+              Acesso imediato + Garantia de 7 dias
             </p>
           </div>
         </div>
-        
-        <div className="flex justify-center mt-8">
-          <Button 
-            variant="cta" 
-            size="xl"
-            onClick={() => {
-              const pricingSection = document.querySelector('[data-section="pricing"]');
-              pricingSection?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            QUERO O SISTEMA COMPLETO
-          </Button>
-        </div>
       </div>
+
+      <CTAPopup open={popupOpen} onOpenChange={setPopupOpen} />
     </section>
   );
 };

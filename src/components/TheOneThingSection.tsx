@@ -8,8 +8,11 @@ export const TheOneThingSection = () => {
   const [popupOpen, setPopupOpen] = useState(false);
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background via-secondary/10 to-background">
-      <div className="container mx-auto max-w-5xl">
+    <section className="section-padding bg-gradient-to-b from-background via-[hsl(220,16%,6%)] to-background relative overflow-hidden">
+      {/* Subtle ambient glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-emerald-500/[0.03] rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="container mx-auto max-w-5xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +20,7 @@ export const TheOneThingSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-heading-1 md:text-display font-bold mb-4">
             <span className="gradient-text">A Verdade Que Ninguém Conta</span>
             <br />
             <span className="text-foreground">Sobre Cursos de IA</span>
@@ -30,7 +33,7 @@ export const TheOneThingSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg md:text-xl leading-relaxed text-muted-foreground"
+            className="text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]"
           >
             A maioria dos cursos de IA cobra R$ 3.000, R$ 5.000, até R$ 10.000. Sabe por quê? Porque eles incluem "mentoria". Reuniões ao vivo. Suporte individual. Parece valioso, certo?
           </motion.p>
@@ -40,7 +43,7 @@ export const TheOneThingSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl leading-relaxed text-muted-foreground"
+            className="text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]"
           >
             Mas aqui está a verdade: <span className="text-foreground font-semibold">os alunos que mais cresceram não foram os que mais usaram a mentoria. Foram os que mais EXECUTARAM o conteúdo.</span> Que pegaram os agentes prontos, ativaram as automações, e colocaram para rodar.
           </motion.p>
@@ -50,19 +53,21 @@ export const TheOneThingSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg md:text-xl leading-relaxed text-muted-foreground"
+            className="text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]"
           >
-            A maioria dos cursos usa mentoria como muleta. Eles precisam de suporte porque o conteúdo não se sustenta sozinho. <span className="text-primary font-semibold">O nosso se sustenta.</span> 75 aulas passo a passo, cada uma com implementação prática. Se você sabe apertar play e seguir instruções, você não precisa de ninguém te guiando.
+            A maioria dos cursos usa mentoria como muleta. Eles precisam de suporte porque o conteúdo não se sustenta sozinho. <span className="text-emerald-400 font-semibold">O nosso se sustenta.</span> 75 aulas passo a passo, cada uma com implementação prática. Se você sabe apertar play e seguir instruções, você não precisa de ninguém te guiando.
           </motion.p>
 
+          {/* Pull quote — premium elevated card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-card p-8 rounded-xl border-2 border-primary/30"
+            className="card-elevated p-8 md:p-10 border-emerald-500/30 relative overflow-hidden"
           >
-            <p className="text-lg md:text-xl leading-relaxed text-foreground font-bold text-center">
+            <div className="absolute -top-4 -left-2 text-8xl font-serif text-emerald-500/10 select-none">&ldquo;</div>
+            <p className="relative text-xl md:text-2xl leading-relaxed text-foreground font-bold text-center">
               Você não está comprando acesso a PESSOAS. Você está comprando acesso a um SISTEMA validado que já gerou R$ 2,5 milhões.
             </p>
           </motion.div>
@@ -138,9 +143,9 @@ export const TheOneThingSection = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-12 max-w-4xl mx-auto"
         >
-          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground text-center">
+          <p className="text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)] text-center">
             Pense em como você aprendeu a usar seu smartphone. Alguém te deu uma mentoria? Não. Você pegou, explorou, e aprendeu fazendo. A diferença é que com um smartphone você não tinha um passo a passo — com a Formação Maestros, você tem.{" "}
-            <span className="text-primary font-semibold">São 75 aulas mostrando exatamente o que fazer, na ordem certa, com templates prontos.</span>
+            <span className="text-emerald-400 font-semibold">São 75 aulas mostrando exatamente o que fazer, na ordem certa, com templates prontos.</span>
           </p>
         </motion.div>
 
@@ -155,12 +160,12 @@ export const TheOneThingSection = () => {
           <div className="flex flex-col items-center gap-3">
             <Button
               onClick={() => setPopupOpen(true)}
-              className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
+              className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
               QUERO O SISTEMA COMPLETO
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-[hsl(215,10%,45%)]">
               Acesso imediato + Garantia de 7 dias
             </p>
           </div>

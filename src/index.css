@@ -2,91 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* AI Maestros Brand Colors */
-    --background: 0 0% 0%; /* Black background */
-    --foreground: 0 0% 100%; /* White text */
+    /* BACKGROUNDS — Deep navy-charcoal gradient, NOT pure black */
+    --background: 220 20% 4%;         /* #0A0E17 — deep navy-black */
+    --foreground: 210 20% 95%;        /* #EFF2F7 — warm white, not pure white */
 
-    --card: 0 0% 5%; /* Very dark gray for cards */
-    --card-foreground: 0 0% 100%;
+    --card: 220 18% 7%;               /* #101725 — slightly lighter navy */
+    --card-foreground: 210 20% 95%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 220 18% 7%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 155 100% 50%; /* Bright Green #00FF94 */
-    --primary-foreground: 0 0% 0%; /* Black text on green */
+    /* PRIMARY — Refined emerald, not neon green */
+    --primary: 160 84% 39%;           /* #10B981 — emerald-500 */
+    --primary-foreground: 220 20% 4%;
 
-    --secondary: 0 0% 10%; /* Dark gray */
-    --secondary-foreground: 0 0% 100%;
+    /* SECONDARY */
+    --secondary: 220 16% 12%;         /* #171E2E — dark slate */
+    --secondary-foreground: 210 20% 95%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
+    /* MUTED */
+    --muted: 220 14% 16%;             /* #1E2636 */
+    --muted-foreground: 215 15% 55%;  /* #7B8BA4 — blue-gray, not pure gray */
 
-    --accent: 155 100% 50%; /* Green accent */
-    --accent-foreground: 0 0% 0%;
+    /* ACCENT — warm gold for premium feel */
+    --accent: 43 96% 56%;             /* #F5A623 — gold accent */
+    --accent-foreground: 220 20% 4%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 20% 95%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 10%;
-    --ring: 155 100% 50%;
+    /* BORDERS */
+    --border: 220 14% 18%;            /* #252D3F — visible but subtle */
+    --input: 220 16% 12%;
+    --ring: 160 84% 39%;
 
-    /* Design System Enhancements */
-    --gradient-primary: linear-gradient(135deg, hsl(155 100% 25%), hsl(155 80% 35%));
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 0%), hsl(155 100% 50% / 0.1));
-    --gradient-cta: linear-gradient(90deg, hsl(155 100% 50%), hsl(155 100% 40%));
-    
-    --shadow-glow: 0 0 40px hsl(155 100% 50% / 0.3);
-    --shadow-elegant: 0 10px 30px hsl(0 0% 0% / 0.5);
-    
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* NEW TOKENS */
+    --surface-elevated: 220 16% 10%;  /* For elevated cards, modals */
+    --text-secondary: 215 12% 65%;    /* For descriptions, secondary copy */
+    --text-tertiary: 215 10% 45%;     /* For fine print, hints */
+    --emerald-glow: 160 84% 39%;
+    --gold-accent: 43 96% 56%;
+
+    /* GRADIENTS */
+    --gradient-primary: linear-gradient(135deg, hsl(160 84% 25%), hsl(160 70% 35%));
+    --gradient-hero: linear-gradient(180deg, hsl(220 20% 4% / 0.95), hsl(220 20% 4% / 0.7));
+    --gradient-cta: linear-gradient(135deg, hsl(160 84% 35%), hsl(160 84% 45%));
+    --gradient-surface: linear-gradient(180deg, hsl(220 18% 7%), hsl(220 20% 5%));
+    --gradient-section-alt: linear-gradient(180deg, hsl(220 18% 6%), hsl(220 20% 4%));
+
+    /* SHADOWS */
+    --shadow-glow: 0 0 60px hsl(160 84% 39% / 0.15);
+    --shadow-card: 0 1px 3px hsl(0 0% 0% / 0.3), 0 4px 16px hsl(0 0% 0% / 0.2);
+    --shadow-card-hover: 0 4px 12px hsl(0 0% 0% / 0.4), 0 8px 32px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 8px 32px hsl(0 0% 0% / 0.5), 0 0 0 1px hsl(220 14% 18% / 0.5);
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    /* Same as light mode since we're using black theme by default */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 155 100% 50%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
-    --accent: 155 100% 50%;
-    --accent-foreground: 0 0% 0%;
+    --background: 220 20% 4%;
+    --foreground: 210 20% 95%;
+    --card: 220 18% 7%;
+    --card-foreground: 210 20% 95%;
+    --popover: 220 18% 7%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 220 20% 4%;
+    --secondary: 220 16% 12%;
+    --secondary-foreground: 210 20% 95%;
+    --muted: 220 14% 16%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 43 96% 56%;
+    --accent-foreground: 220 20% 4%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 20%;
-    --input: 0 0% 10%;
-    --ring: 155 100% 50%;
+    --destructive-foreground: 210 20% 95%;
+    --border: 220 14% 18%;
+    --input: 220 16% 12%;
+    --ring: 160 84% 39%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -106,7 +113,7 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground font-sans overflow-x-hidden;
   }
-  
+
   html {
     @apply overflow-x-hidden;
   }
@@ -114,14 +121,37 @@ All colors MUST be HSL.
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-foreground bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-400 bg-clip-text text-transparent;
   }
-  
+
   .hero-glow {
-    @apply shadow-[0_0_40px_hsl(155_100%_50%_/_0.3)];
+    @apply shadow-[0_0_60px_hsl(160_84%_39%_/_0.15)];
   }
-  
+
   .section-padding {
-    @apply py-12 px-4 md:py-20 md:px-12 lg:px-24;
+    @apply py-24 px-6 md:py-32 md:px-12 lg:py-40 lg:px-24;
+  }
+
+  .card-base {
+    @apply bg-card border border-border/50 rounded-2xl;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .card-base:hover {
+    border-color: hsl(var(--border) / 0.8);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .card-elevated {
+    @apply bg-[hsl(220,16%,10%)] border border-emerald-500/20 rounded-2xl;
+    box-shadow: var(--shadow-elevated);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .card-elevated:hover {
+    @apply border-emerald-500/40;
+  }
+
+  .card-glass {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl;
   }
 }

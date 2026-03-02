@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Calendar, Target, Users, TrendingUp, Clock, CheckCircle, ArrowRight, AlertTriangle, Crown, TrendingDown, Zap } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTAPopup } from "@/components/CTAPopup";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 export const MethodologySection = () => {
   const [popupOpen, setPopupOpen] = useState(false);
@@ -142,149 +143,111 @@ export const MethodologySection = () => {
       ]
     }
   ];
-  return <section className="py-12 md:py-16 bg-background">
-      <div className="container mx-auto max-w-6xl">
-        {/* Methodology */}
-        <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center leading-tight">
-            Como a Formação Funciona: <span className="gradient-text">Metodologia Testada e Comprovada</span>
+
+  return (
+    <section className="section-padding bg-background">
+      <div className="container mx-auto max-w-5xl">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide uppercase mb-6">
+            10 Módulos &middot; 75 Aulas Práticas
+          </span>
+          <h2 className="text-heading-1 md:text-display font-bold mb-6 leading-tight">
+            Metodologia{" "}
+            <span className="gradient-text">Testada e Comprovada</span>
           </h2>
-          
-          <div className="max-w-4xl mx-auto mb-12">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-8">
-              Nossa metodologia é baseada em implementação progressiva e resultados práticos. Cada módulo entrega conteúdo estratégico e ferramentas prontas para garantir que você não apenas aprenda, mas aplique e lucre com IA — no seu ritmo.
-            </p>
-            
-            <div className="bg-card p-8 rounded-xl border border-border/50">
-              <div className="flex items-center gap-4 mb-6">
-                <Calendar className="w-8 h-8 text-primary" />
-                <h3 className="text-2xl font-bold text-foreground">10 Módulos • 75 Aulas</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                As aulas são 100% práticas e aplicáveis. Elas são liberadas semana após semana para que você tenha tempo de absorver cada detalhe, aplicar na prática e internalizar o conteúdo antes de avançar. Seu objetivo a cada semana será garantir que o conteúdo foi compreendido e implementado antes da próxima etapa.
-              </p>
-              <p className="text-sm text-primary font-semibold">
-                (Você tem 1 ano completo para absorver todo o conteúdo e implementar as estratégias no seu próprio ritmo)
-              </p>
+          <p className="text-body-lg text-[hsl(215,12%,65%)] max-w-3xl mx-auto leading-relaxed">
+            Cada módulo entrega conteúdo estratégico e ferramentas prontas para garantir que você não apenas aprenda, mas aplique e lucre com IA — no seu ritmo.
+          </p>
+        </div>
+
+        {/* Progress bar showing 10 modules */}
+        <div className="flex items-center gap-1 mb-12 max-w-2xl mx-auto">
+          {weeklyContent.map((_, i) => (
+            <div key={i} className="flex-1 h-1.5 rounded-full bg-emerald-500/20 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-full" />
             </div>
-          </div>
+          ))}
         </div>
 
-        {/* Weekly Curriculum */}
-        <div className="mb-12">
-          <div className="grid gap-6">
-            {weeklyContent.map((content, index) => <div key={index} className="bg-card p-6 rounded-xl border border-border/50">
-                <div className="flex md:items-start md:gap-4 md:flex-row flex-col items-center text-center md:text-left">
-                  <div className="p-3 bg-gradient-primary rounded-lg flex-shrink-0 md:mb-0 mb-4">
-                    <span className="text-white font-bold text-lg">S{content.week}</span>
+        {/* Accordion Curriculum */}
+        <Accordion type="single" collapsible className="space-y-3">
+          {weeklyContent.map((content, index) => (
+            <AccordionItem
+              key={index}
+              value={`module-${index}`}
+              className="border-0 card-base p-0 overflow-hidden data-[state=open]:border-emerald-500/30 data-[state=open]:bg-[hsl(220,16%,8%)]"
+            >
+              <AccordionTrigger className="w-full p-0 hover:no-underline [&>svg]:text-[hsl(215,10%,45%)] [&>svg]:w-5 [&>svg]:h-5 [&>svg]:mr-5 [&>svg]:md:mr-6">
+                <div className="flex items-center gap-4 md:gap-6 p-5 md:p-6 w-full">
+                  {/* Module Number Badge */}
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+                    <span className="text-emerald-400 font-bold text-xl font-mono">{String(content.week).padStart(2, '0')}</span>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-foreground mb-4">{content.title}</h3>
-                    <ul className="space-y-2">
-                      {content.items.map((item, itemIndex) => <li key={itemIndex} className="flex items-start gap-3">
-                          <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground leading-relaxed">{item}</span>
-                        </li>)}
-                    </ul>
+
+                  {/* Title + Meta */}
+                  <div className="flex-1 text-left">
+                    <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">{content.title}</h3>
+                    <p className="text-sm text-[hsl(215,10%,45%)]">{content.items.length} aulas</p>
                   </div>
                 </div>
-              </div>)}
-          </div>
-        </div>
+              </AccordionTrigger>
 
-        {/* Guaranteed Results */}
-        <div className="mb-12">
-          <div className="bg-gradient-primary p-1 rounded-xl">
-            <div className="bg-background rounded-lg p-8 text-center">
-              <div className="flex items-center justify-center gap-4 mb-6">
-                <Target className="w-8 h-8 text-primary" />
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground">Sua Jornada de Transformação com IA</h2>
-              </div>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-                Ao completar os 10 módulos, você terá todo o conhecimento necessário para gerir um negócio digital completamente automatizado, gerando receita recorrente, com pipeline de clientes qualificados e sistemas que funcionam 24/7. Não é teoria - é um{" "}
-                <span className="text-primary font-semibold">sistema completo e validado</span> que já gerou milhões em receita.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Content Evolution Card */}
-        <div className="mb-8">
-          <div className="bg-gradient-primary p-1 rounded-2xl shadow-glow">
-            <div className="bg-background rounded-xl p-8 md:p-12">
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full mb-6 shadow-lg">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
-                  <span className="gradient-text">Conteúdo que Evolui</span> com a Tecnologia
-                </h2>
-              </div>
-
-              <div className="max-w-4xl mx-auto space-y-6 mb-8">
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                  O universo da IA muda em ritmo acelerado. Por isso, a formação recebe{" "}
-                  <span className="text-primary font-bold text-xl">atualizações constantes</span> com novos agentes validados em nossa operação, novas automações e ajustes estratégicos baseados nas mudanças do mercado. Você terá acesso a cada atualização durante seu ano de acesso.
-                </p>
-
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                  Nosso compromisso é mantê-lo sempre na vanguarda, com acesso às inovações mais recentes e ajustes estratégicos baseados nas mudanças do mercado.
-                </p>
-              </div>
-
-              {/* Key Benefits Grid */}
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-card p-6 rounded-xl border border-primary/20 hover:border-primary/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <TrendingUp className="w-5 h-5 text-primary" />
+              {/* Expanded lesson list */}
+              <AccordionContent className="px-5 md:px-6 pb-6">
+                <div className="ml-[4.5rem] md:ml-[5.5rem] space-y-0">
+                  {content.items.map((item, itemIndex) => (
+                    <div key={itemIndex} className="flex items-center gap-3 py-2.5 border-b border-border/30 last:border-0 group/item">
+                      <div className="w-6 h-6 rounded-md bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-xs text-emerald-400/70 font-mono font-medium">{String(itemIndex + 1).padStart(2, '0')}</span>
+                      </div>
+                      <span className="text-foreground/80 leading-relaxed group-hover/item:text-foreground transition-colors">{item}</span>
                     </div>
-                    <h3 className="font-bold text-foreground">Novos Agentes</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Validados na nossa operação e adicionados à formação</p>
+                  ))}
                 </div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
 
-                <div className="bg-card p-6 rounded-xl border border-primary/20 hover:border-primary/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Target className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="font-bold text-foreground">Automações Atualizadas</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Templates ajustados conforme ferramentas evoluem</p>
-                </div>
+        {/* Overview Card */}
+        <div className="mt-12 card-elevated p-8 md:p-10 text-center border-emerald-500/20">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Calendar className="w-7 h-7 text-emerald-400" />
+            <h3 className="text-2xl font-bold text-foreground">1 Ano de Acesso Completo</h3>
+          </div>
+          <p className="text-[hsl(215,12%,65%)] leading-relaxed max-w-2xl mx-auto">
+            As aulas são liberadas progressivamente para que você absorva cada detalhe. Você tem 1 ano completo para implementar tudo no seu ritmo.
+          </p>
+        </div>
 
-                <div className="bg-card p-6 rounded-xl border border-primary/20 hover:border-primary/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Clock className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="font-bold text-foreground">1 Ano de Acesso</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Absorva tudo no seu ritmo, com independência</p>
-                </div>
-              </div>
-
-              <div className="text-center space-y-6">
-                <p className="text-xl md:text-2xl font-bold text-foreground leading-relaxed">
-                  Você não fica apenas com o conhecimento de hoje — evolui junto com a tecnologia.
-                </p>
-              </div>
-            </div>
+        {/* Content Evolution badges */}
+        <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+          <span className="text-sm text-[hsl(215,10%,45%)]">Conteúdo que evolui:</span>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
+              Novos Agentes
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
+              Automações Atualizadas
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
+              1 Ano de Acesso
+            </span>
           </div>
         </div>
 
-        {/* CTA After Curriculum */}
+        {/* CTA */}
         <div className="text-center mt-12">
           <div className="flex flex-col items-center gap-3">
             <Button
               onClick={() => setPopupOpen(true)}
-              className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
+              className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
               QUERO O SISTEMA COMPLETO
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-[hsl(215,10%,45%)]">
               Acesso imediato + Garantia de 7 dias
             </p>
           </div>
@@ -292,5 +255,6 @@ export const MethodologySection = () => {
       </div>
 
       <CTAPopup open={popupOpen} onOpenChange={setPopupOpen} />
-    </section>;
+    </section>
+  );
 };
