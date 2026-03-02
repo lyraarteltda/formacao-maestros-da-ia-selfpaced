@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { X, Check, User, Bot, ArrowRight } from "lucide-react";
+import { X, Check, User, Rocket, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { CTAPopup } from "./CTAPopup";
 
@@ -78,11 +78,10 @@ export const TwoPathsSection = () => {
                 <h3 className="text-2xl md:text-3xl font-bold text-red-400">O AMADOR</h3>
               </div>
 
-              {/* Image Placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-red-950/40 to-red-900/20 rounded-xl border border-dashed border-red-500/30 flex items-center justify-center mb-8">
-                <div className="text-center">
-                  <User className="w-16 h-16 text-red-500/40 mx-auto mb-2" />
-                  <p className="text-red-400/60 text-sm">Pessoa frustrada no computador</p>
+              {/* Icon */}
+              <div className="flex justify-center mb-8">
+                <div className="w-20 h-20 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center">
+                  <User className="w-10 h-10 text-red-400" />
                 </div>
               </div>
 
@@ -133,11 +132,10 @@ export const TwoPathsSection = () => {
                 <h3 className="text-2xl md:text-3xl font-bold text-emerald-400">O MAESTRO</h3>
               </div>
 
-              {/* Image Placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-emerald-950/40 to-emerald-900/20 rounded-xl border border-dashed border-emerald-500/30 flex items-center justify-center mb-8">
-                <div className="text-center">
-                  <Bot className="w-16 h-16 text-emerald-500/40 mx-auto mb-2" />
-                  <p className="text-emerald-400/60 text-sm">Pessoa confiante com dashboard automatizado</p>
+              {/* Icon */}
+              <div className="flex justify-center mb-8">
+                <div className="w-20 h-20 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
+                  <Rocket className="w-10 h-10 text-emerald-400" />
                 </div>
               </div>
 

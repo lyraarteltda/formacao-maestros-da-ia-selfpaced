@@ -8,8 +8,7 @@ import {
   Copy, 
   HelpCircle, 
   Users, 
-  Wrench, 
-  Handshake, 
+  Handshake,
   Globe, 
   Lock,
   UserCheck,
@@ -135,11 +134,6 @@ export const TargetAudienceSection = () => {
           </h2>
           <div className="space-y-6">
             {[
-              {
-                icon: Wrench,
-                title: "Arsenal IA Completo",
-                description: "+100 ferramentas selecionadas, prompts e códigos para potencializar seus resultados."
-              },
               {
                 icon: Folder,
                 title: "Folder de Projetos",

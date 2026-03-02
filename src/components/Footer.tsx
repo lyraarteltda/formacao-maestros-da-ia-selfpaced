@@ -22,9 +22,9 @@ export const Footer = () => {
             Ao adquirir este produto, você concorda com os nossos Termos de Uso e Política de Privacidade.
           </p>
           <div className="flex items-center justify-center gap-4 pt-4">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacidade</a>
+            <a href="mailto:contato@lyraarte.com?subject=Pol%C3%ADtica%20de%20Privacidade" className="text-muted-foreground hover:text-primary transition-colors">Privacidade</a>
             <span className="text-muted-foreground">·</span>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Termos de Uso</a>
+            <a href="mailto:contato@lyraarte.com?subject=Termos%20de%20Uso" className="text-muted-foreground hover:text-primary transition-colors">Termos de Uso</a>
             <span className="text-muted-foreground">·</span>
             <a href="mailto:contato@lyraarte.com" className="text-muted-foreground hover:text-primary transition-colors">Contato</a>
           </div>

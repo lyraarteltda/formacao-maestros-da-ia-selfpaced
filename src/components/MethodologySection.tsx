@@ -198,10 +198,10 @@ export const MethodologySection = () => {
             <div className="bg-background rounded-lg p-8 text-center">
               <div className="flex items-center justify-center gap-4 mb-6">
                 <Target className="w-8 h-8 text-primary" />
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground">Resultado Garantido em 10 Semanas</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground">Sua Jornada de Transformação com IA</h2>
               </div>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-                Ao final das 10 semanas, você terá todo o conhecimento necessário para gerir um negócio digital completamente automatizado, gerando receita recorrente, com pipeline de clientes qualificados e sistemas que funcionam 24/7. Não é teoria - é um{" "}
+                Ao completar os 10 módulos, você terá todo o conhecimento necessário para gerir um negócio digital completamente automatizado, gerando receita recorrente, com pipeline de clientes qualificados e sistemas que funcionam 24/7. Não é teoria - é um{" "}
                 <span className="text-primary font-semibold">sistema completo e validado</span> que já gerou milhões em receita.
               </p>
             </div>
