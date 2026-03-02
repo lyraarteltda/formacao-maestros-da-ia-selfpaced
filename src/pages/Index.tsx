@@ -1,15 +1,13 @@
 import { HeroSection } from "@/components/HeroSection";
 import { ProblemSolutionSection } from "@/components/ProblemSolutionSection";
-import { TwoPathsSection } from "@/components/TwoPathsSection";
-import { TargetAudienceSection } from "@/components/TargetAudienceSection";
+import { AboutUsSection } from "@/components/AboutUsSection";
 import { TheOneThingSection } from "@/components/TheOneThingSection";
 import { VideoTeaserSection } from "@/components/VideoTeaserSection";
+import { TargetAudienceSection } from "@/components/TargetAudienceSection";
 import { MethodologySection } from "@/components/MethodologySection";
-import { AboutUsSection } from "@/components/AboutUsSection";
+import { TwoPathsSection } from "@/components/TwoPathsSection";
 import { ValueStackSection } from "@/components/ValueStackSection";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { PricingSection } from "@/components/PricingSection";
-import { BonusSection } from "@/components/BonusSection";
 import { FAQSection } from "@/components/FAQSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
@@ -21,16 +19,14 @@ const Index = () => {
     <main className="min-h-screen pb-20 md:pb-0">
       <HeroSection />
       <ProblemSolutionSection />
-      <TwoPathsSection />
+      <AboutUsSection />
       <TheOneThingSection />
       <VideoTeaserSection />
       <TargetAudienceSection />
       <MethodologySection />
-      <AboutUsSection />
+      <TwoPathsSection />
       <ValueStackSection />
       <GuaranteeSection />
-      <PricingSection />
-      <BonusSection />
       <FAQSection />
       <FinalCTASection />
       <Footer />

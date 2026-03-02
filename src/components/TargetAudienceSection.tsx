@@ -11,7 +11,6 @@ import {
   Globe,
   Lock,
   Folder,
-  DollarSign,
   ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -107,8 +106,8 @@ export const TargetAudienceSection = () => {
         {/* Ecosystem Section */}
         <div className="mb-16 sm:mb-24">
           <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-8 sm:mb-12 text-center leading-tight">
-            O Ecossistema Completo Para Você{" "}
-            <span className="gradient-text">Escalar com IA e Automação</span>
+            Tudo Que Usamos Para Sair de Zero a R$ 2,5M —{" "}
+            <span className="gradient-text">Documentado e Pronto</span>
           </h2>
 
           <div className="space-y-3 sm:space-y-4">
@@ -131,24 +130,19 @@ export const TargetAudienceSection = () => {
         {/* Highlighted Features */}
         <div className="mb-16 sm:mb-24">
           <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-8 sm:mb-12 text-center leading-tight">
-            <span className="gradient-text">O Que Mais Está Incluído</span>
+            <span className="gradient-text">Alem das 75 Aulas, Voce Tambem Recebe:</span>
           </h2>
           <div className="space-y-3 sm:space-y-4">
             {[
               {
                 icon: Folder,
                 title: "Folder de Projetos",
-                description: "Acesso exclusivo ao nosso formulário com propostas de empresas buscando automatizar seus negócios (todos os dias inúmeras empresas preenchem nossa aplicação e atendemos apenas 5% delas)."
+                description: "Acesso ao nosso pipeline de empresas buscando automacao com IA. Todos os dias inumeras empresas preenchem nossa aplicacao e atendemos apenas 5% delas. As outras 95%? Oportunidades para um Maestro como voce."
               },
               {
                 icon: Lock,
-                title: "Arquivos confidenciais",
-                description: "Todos os sistemas, automações, estratégias e números da nossa empresa que nos demanda menos de 30 minutos por dia e faturou mais de 2,5 M nos últimos 12 meses."
-              },
-              {
-                icon: DollarSign,
-                title: "Preço de Lançamento: R$ 997",
-                description: "Acesse 100% do conteúdo, agentes e automações por R$ 997. Após o encerramento da oferta de lançamento, o valor sobe para R$ 1.497."
+                title: "Arquivos Confidenciais",
+                description: "Todos os sistemas, automacoes, estrategias e numeros da nossa empresa. A mesma operacao que nos demanda menos de 30 minutos por dia e faturou mais de R$ 2,5 milhoes."
               }
             ].map((feature, index) => (
               <div key={index} className="card-elevated p-4 sm:p-6 md:p-8 border-emerald-500/20">
@@ -183,7 +177,7 @@ export const TargetAudienceSection = () => {
               onClick={() => setPopupOpen(true)}
               className="relative overflow-hidden w-full sm:w-auto min-h-[52px] bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
-              QUERO O SISTEMA COMPLETO
+              QUERO ESCALAR COM IA
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <p className="text-sm text-[hsl(215,10%,45%)]">

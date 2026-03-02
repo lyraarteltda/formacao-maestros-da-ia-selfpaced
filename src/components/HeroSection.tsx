@@ -43,20 +43,23 @@ export const HeroSection = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-xs sm:text-sm text-emerald-400 font-medium tracking-wide uppercase">
-              O sistema que já gerou R$ 2,5M em vendas com IA
+              Criado por dois musicos que nunca programaram uma linha de codigo
             </span>
           </div>
 
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-5 md:mb-8 leading-[1.08] tracking-tight">
             <span className="text-foreground">
-              Domine a IA no Seu Ritmo — Com o Mesmo Sistema que Gerou{" "}
+              Copie o Sistema de IA que Transformou um Curso de Violao em{" "}
             </span>
-            <span className="gradient-text">R$ 2,5 Milhões em 15 Meses</span>
+            <span className="gradient-text">R$ 2,5 Milhoes</span>
+            <span className="text-foreground">
+              {" "}— e Coloque Seu Negocio no Piloto Automatico
+            </span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-xl lg:text-2xl mb-8 md:mb-12 text-[hsl(215,12%,65%)] max-w-3xl mx-auto leading-relaxed font-normal">
-            75 aulas práticas, agentes de IA prontos para usar, templates de automação copie-e-cole — tudo que usamos para faturar 6 dígitos por mês trabalhando 30 minutos por dia.{" "}
-            <span className="text-emerald-400 font-semibold">Sem enrolação. Só o sistema.</span>
+            75 aulas praticas. Agentes de IA prontos para copiar e ativar. Templates de automacao testados em uma operacao real de R$ 2,5 milhoes. Tudo para voce implementar no seu ritmo — sem depender de mentor, programador ou equipe tecnica.{" "}
+            <span className="text-emerald-400 font-semibold">Sem enrolacao. So o sistema.</span>
           </p>
 
           {/* CTA Group */}
@@ -65,7 +68,7 @@ export const HeroSection = () => {
               onClick={() => setPopupOpen(true)}
               className="relative overflow-hidden w-full sm:w-auto min-h-[52px] bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
-              QUERO O SISTEMA COMPLETO
+              QUERO COPIAR O SISTEMA
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm text-[hsl(215,10%,45%)]">

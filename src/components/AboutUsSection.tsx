@@ -89,7 +89,7 @@ export const AboutUsSection = () => {
               className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
             >
               <p className="text-body-lg leading-relaxed text-foreground/90">
-                Nós entendemos como você se <span className="text-emerald-400 font-bold">SENTE</span>. Ver todo mundo falando de IA, testar mil ferramentas, mas nunca conseguir transformar isso em lucro real. A sensação de estar ficando para trás enquanto outros parecem estar ganhando milhões...
+                Nos entendemos como voce se <span className="text-emerald-400 font-bold">SENTE</span>. Ver todo mundo falando de IA, testar mil ferramentas, mas nunca conseguir transformar isso em lucro real. A sensacao de estar ficando para tras enquanto outros parecem estar ganhando milhoes...
               </p>
             </motion.div>
 
@@ -102,7 +102,7 @@ export const AboutUsSection = () => {
               className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
             >
               <p className="text-body-lg leading-relaxed text-foreground/90">
-                Nós <span className="text-emerald-400 font-bold">SENTÍAMOS</span> exatamente assim. Quando começamos, não sabíamos nada de tecnologia. Arthur tinha um doutorado Honoris Causa, Lyria tinha background em TI e medicina — mas nenhum de nós sabia como usar IA para vender. Nosso primeiro negócio foi um curso de <span className="text-emerald-400 font-semibold">VIOLÃO</span>, não de tecnologia.
+                Nos <span className="text-emerald-400 font-bold">SENTIAMOS</span> exatamente assim. Quando comecamos, nao sabiamos nada de IA. Nosso escritorio era a mesa da sala. Nosso primeiro produto era um curso de <span className="text-emerald-400 font-semibold">VIOLAO</span>, nao de tecnologia. Ninguem olhava para nos e pensava "esses dois vao faturar milhoes com inteligencia artificial."
               </p>
             </motion.div>
 
@@ -115,7 +115,7 @@ export const AboutUsSection = () => {
               className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
             >
               <p className="text-body-lg leading-relaxed text-foreground/90">
-                Mas então <span className="text-emerald-400 font-bold">DESCOBRIMOS</span> algo: o segredo não era a ferramenta, era o <span className="text-emerald-400 font-bold">SISTEMA</span>. Criamos um método de automação que funcionava em qualquer nicho. Aplicamos no curso de violão e fizemos <span className="text-emerald-400 font-bold">R$2,5 milhões em 15 meses</span>, trabalhando menos de 30 minutos por dia. Documentamos cada agente, cada automação, cada workflow — e agora estamos entregando esse sistema inteiro para você implementar com autonomia total.
+                Mas entao <span className="text-emerald-400 font-bold">DESCOBRIMOS</span> algo: o segredo nao era a ferramenta, era o <span className="text-emerald-400 font-bold">SISTEMA</span>. Criamos um metodo de automacao que funcionava em qualquer nicho. Aplicamos no curso de violao e fizemos <span className="text-emerald-400 font-bold">R$2,5 milhoes em 15 meses</span>, trabalhando menos de 30 minutos por dia. Documentamos cada agente, cada automacao, cada workflow — e agora estamos entregando esse sistema inteiro para voce implementar com autonomia total.
               </p>
             </motion.div>
           </div>

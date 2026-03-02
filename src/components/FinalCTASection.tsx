@@ -38,7 +38,7 @@ export const FinalCTASection = () => {
             onClick={() => setPopupOpen(true)}
             className="w-full sm:w-auto min-h-[52px] bg-white text-emerald-700 hover:bg-white/95 font-bold text-base sm:text-lg md:text-xl px-10 md:px-14 py-5 md:py-6 h-auto rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
           >
-            QUERO O SISTEMA COMPLETO
+            GARANTIR MEU ACESSO AGORA
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
           <p className="text-sm text-white/60">

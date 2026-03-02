@@ -55,7 +55,7 @@ export const TheOneThingSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]"
           >
-            A maioria dos cursos usa mentoria como muleta. Eles precisam de suporte porque o conteúdo não se sustenta sozinho. <span className="text-emerald-400 font-semibold">O nosso se sustenta.</span> 75 aulas passo a passo, cada uma com implementação prática. Se você sabe apertar play e seguir instruções, você não precisa de ninguém te guiando.
+            A mentoria foi so a cereja no bolo — <span className="text-emerald-400 font-semibold">o bolo e o sistema.</span> 75 aulas passo a passo, cada uma com implementacao pratica. Se voce sabe apertar play e seguir instrucoes, voce nao precisa de ninguem te guiando. O conteudo se sustenta sozinho.
           </motion.p>
 
           {/* Pull quote — premium elevated card */}
@@ -149,6 +149,27 @@ export const TheOneThingSection = () => {
           </p>
         </motion.div>
 
+        {/* False Belief #3 — Self-paced dropout */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.65 }}
+          className="mt-12 max-w-4xl mx-auto"
+        >
+          <div className="card-base p-5 sm:p-8 border-emerald-500/10">
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-foreground font-semibold mb-4">
+              "Mas e se eu nao terminar?"
+            </p>
+            <p className="text-base sm:text-lg leading-relaxed text-[hsl(215,12%,65%)]">
+              Essa e a preocupacao mais comum sobre cursos self-paced — e a mais facil de resolver. A maioria dos cursos online sao 40 horas de teoria que ninguem aplica. Nossas 75 aulas sao diferentes: cada uma termina com algo funcionando. Na aula 3, seu primeiro agente de IA esta ativo. Na aula 7, sua primeira automacao esta rodando. Na aula 15, voce ja tem um sistema de vendas no WhatsApp.
+            </p>
+            <p className="text-base sm:text-lg leading-relaxed text-[hsl(215,12%,65%)] mt-4">
+              Nossos alunos nao terminam porque sao disciplinados. <span className="text-emerald-400 font-semibold">Terminam porque e dificil parar quando cada aula melhora seu negocio de forma visivel.</span>
+            </p>
+          </div>
+        </motion.div>
+
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -162,7 +183,7 @@ export const TheOneThingSection = () => {
               onClick={() => setPopupOpen(true)}
               className="relative overflow-hidden w-full sm:w-auto min-h-[52px] bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
-              QUERO O SISTEMA COMPLETO
+              QUERO ACESSO AO SISTEMA COMPLETO
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <p className="text-sm text-[hsl(215,10%,45%)]">
