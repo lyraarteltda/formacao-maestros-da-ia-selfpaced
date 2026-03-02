@@ -42,7 +42,7 @@ export const SocialProofSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background via-secondary/10 to-background">
+    <section className="section-padding bg-[hsl(220,18%,6%)]">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <motion.div
@@ -50,14 +50,16 @@ export const SocialProofSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              Veja o Que Alunos Conquistaram com o Conteúdo da Formação
-            </span>
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide uppercase mb-6">
+            Resultados Reais
+          </span>
+          <h2 className="text-heading-1 md:text-display font-bold mb-4">
+            Veja o Que Alunos Conquistaram com o{" "}
+            <span className="gradient-text">Conteúdo da Formação</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-body-lg text-[hsl(215,12%,65%)] max-w-3xl mx-auto">
             Estes resultados foram alcançados com o conteúdo da formação — as mesmas 75 aulas, agentes e automações que você vai acessar.
           </p>
         </motion.div>
@@ -71,23 +73,16 @@ export const SocialProofSection = () => {
           className="grid md:grid-cols-3 gap-6 mb-16"
         >
           {credibilityBadges.map((badge, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-              className="relative group"
+              className="card-base p-8 text-center"
             >
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-2xl blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="relative bg-card border border-border rounded-2xl p-6 text-center hover:border-primary/50 transition-colors">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <badge.icon className="w-8 h-8 text-primary" />
-                </div>
-                <p className="text-3xl md:text-4xl font-bold text-foreground mb-2">{badge.value}</p>
-                <p className="text-muted-foreground">{badge.label}</p>
+              <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+                <badge.icon className="w-7 h-7 text-emerald-400" />
               </div>
-            </motion.div>
+              <p className="text-4xl font-bold text-foreground font-mono mb-2">{badge.value}</p>
+              <p className="text-sm text-[hsl(215,12%,65%)]">{badge.label}</p>
+            </div>
           ))}
         </motion.div>
 
@@ -99,13 +94,13 @@ export const SocialProofSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="grid grid-cols-2 gap-4 mb-16 max-w-2xl mx-auto"
         >
-          <div className="bg-card border border-border rounded-xl p-4 text-center">
-            <p className="text-2xl font-bold text-primary">30 min/dia</p>
-            <p className="text-sm text-muted-foreground">tempo dedicado à operação</p>
+          <div className="card-base p-5 text-center">
+            <p className="text-2xl font-bold text-emerald-400 font-mono">30 min/dia</p>
+            <p className="text-sm text-[hsl(215,12%,65%)]">tempo dedicado à operação</p>
           </div>
-          <div className="bg-card border border-border rounded-xl p-4 text-center">
-            <p className="text-2xl font-bold text-primary">+100</p>
-            <p className="text-sm text-muted-foreground">ferramentas, prompts e códigos</p>
+          <div className="card-base p-5 text-center">
+            <p className="text-2xl font-bold text-emerald-400 font-mono">+100</p>
+            <p className="text-sm text-[hsl(215,12%,65%)]">ferramentas, prompts e códigos</p>
           </div>
         </motion.div>
 
@@ -117,36 +112,33 @@ export const SocialProofSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mb-16"
         >
-          {/* Desktop Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                className="bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-colors"
+                className="card-base p-6 flex flex-col"
               >
-                <Quote className="w-8 h-8 text-primary/40 mb-4" />
-                <p className="text-foreground/90 mb-6 leading-relaxed italic">
-                  "{testimonial.quote}"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border border-border flex items-center justify-center flex-shrink-0">
-                    <Users className="w-6 h-6 text-primary/60" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  </div>
-                </div>
-                <div className="flex gap-1 mt-4">
+                {/* Stars */}
+                <div className="flex gap-0.5 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
+                    <Star key={i} className="w-3.5 h-3.5 text-amber-400/60 fill-amber-400/60" />
                   ))}
                 </div>
-              </motion.div>
+
+                <Quote className="w-6 h-6 text-emerald-500/30 mb-3" />
+                <p className="text-foreground/90 mb-6 leading-relaxed flex-1">
+                  {testimonial.quote}
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500/30 to-emerald-600/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm font-bold text-emerald-300">{testimonial.name[0]}</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground text-sm">{testimonial.name}</p>
+                    <p className="text-xs text-[hsl(215,10%,45%)]">{testimonial.role}</p>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </motion.div>
@@ -156,17 +148,19 @@ export const SocialProofSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           className="flex flex-wrap items-center justify-center gap-6 mb-16"
         >
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
+          <div className="flex items-center gap-2 text-[hsl(215,12%,65%)]">
+            <Star className="w-4 h-4 text-amber-400/60 fill-amber-400/60" />
             <span className="text-sm">Único curso de violão com 5 estrelas no TOP 10 Hotmart</span>
           </div>
-          <div className="flex items-center gap-2 text-muted-foreground">
+          <span className="w-1 h-1 rounded-full bg-white/10" />
+          <div className="flex items-center gap-2 text-[hsl(215,12%,65%)]">
             <span className="text-sm">Garantia incondicional de 7 dias</span>
           </div>
-          <div className="flex items-center gap-2 text-muted-foreground">
+          <span className="w-1 h-1 rounded-full bg-white/10" />
+          <div className="flex items-center gap-2 text-[hsl(215,12%,65%)]">
             <span className="text-sm">Acesso imediato após a compra</span>
           </div>
         </motion.div>
@@ -176,18 +170,18 @@ export const SocialProofSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center"
         >
           <div className="flex flex-col items-center gap-3">
             <Button
               onClick={() => setPopupOpen(true)}
-              className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
               QUERO O SISTEMA COMPLETO
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-[hsl(215,10%,45%)]">
               Acesso imediato + Garantia de 7 dias
             </p>
           </div>

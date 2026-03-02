@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check, MessageCircle, CreditCard, Shield, Lock, Smartphone, ArrowRight } from "lucide-react";
+import { Check, MessageCircle, Shield, Lock, ArrowRight } from "lucide-react";
 import { CTAPopup } from "@/components/CTAPopup";
 
 export const PricingSection = () => {
@@ -16,11 +16,9 @@ export const PricingSection = () => {
     { item: "Atualizações de Conteúdo por 1 Ano", value: "R$ 997" },
   ];
 
-  const totalValue = "R$ 14.482";
-
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background via-card to-background" data-section="pricing">
-      <div className="container mx-auto max-w-4xl">
+    <section className="section-padding bg-background" data-section="pricing">
+      <div className="container mx-auto max-w-lg">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,214 +27,102 @@ export const PricingSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              RESUMO DO SEU INVESTIMENTO
-            </span>
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide uppercase mb-6">
+            Investimento
+          </span>
+          <h2 className="text-heading-1 md:text-display font-bold">
+            <span className="gradient-text">Resumo do Seu Investimento</span>
           </h2>
         </motion.div>
 
-        <div className="max-w-2xl mx-auto">
-          {/* Value Stack Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-2xl blur-xl opacity-50" />
+        {/* Single Pricing Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative"
+        >
+          {/* Subtle glow */}
+          <div className="absolute -inset-px bg-gradient-to-b from-emerald-500/30 via-emerald-500/10 to-emerald-500/30 rounded-3xl blur-sm" />
 
-            <div className="relative bg-card border border-border rounded-2xl overflow-hidden">
-              {/* Launch Badge */}
-              <div className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-600 text-white font-bold py-3 text-center">
-                <div className="flex items-center justify-center gap-2">
-                  <span>OFERTA DE LANÇAMENTO</span>
-                </div>
-              </div>
-
-              <div className="p-6 md:p-8">
-                {/* Value Stack List */}
-                <div className="space-y-3 mb-6">
-                  {valueStack.map((item, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                      className="flex items-center justify-between py-2 border-b border-border/50"
-                    >
-                      <div className="flex items-center gap-3">
-                        <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground text-sm md:text-base">{item.item}</span>
-                      </div>
-                      <span className="text-muted-foreground text-sm md:text-base">{item.value}</span>
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Total Value Line */}
-                <div className="flex items-center justify-between py-4 border-t-2 border-primary/30 mb-8">
-                  <span className="text-lg font-bold text-foreground">VALOR TOTAL:</span>
-                  <span className="text-2xl font-bold text-red-400 line-through">{totalValue}</span>
-                </div>
-
-                {/* Price Anchoring */}
-                <div className="text-center space-y-4 mb-8">
-                  {/* Original Price */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.6 }}
-                  >
-                    <span className="text-xl text-muted-foreground">De </span>
-                    <span className="text-3xl md:text-4xl text-red-400 line-through font-semibold">R$ 2.997</span>
-                  </motion.div>
-
-                  {/* "Por apenas" */}
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.7 }}
-                    className="text-lg text-muted-foreground"
-                  >
-                    por apenas
-                  </motion.p>
-
-                  {/* Final Price */}
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    className="relative inline-block"
-                  >
-                    <div className="absolute -inset-4 bg-emerald-500/20 rounded-2xl blur-2xl" />
-                    <div className="relative">
-                      <span className="text-6xl md:text-7xl lg:text-8xl font-black text-emerald-400 drop-shadow-[0_0_30px_rgba(52,211,153,0.5)]">
-                        R$ 997
-                      </span>
-                    </div>
-                  </motion.div>
-
-                  {/* Installment Option */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.9 }}
-                    className="relative inline-block"
-                  >
-                    <div className="absolute -inset-2 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-xl blur-lg opacity-70" />
-                    <div className="relative bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 border-2 border-primary/50 rounded-xl px-6 py-4">
-                      <p className="text-lg text-muted-foreground mb-1">ou</p>
-                      <p className="text-2xl md:text-3xl font-bold text-foreground">
-                        12x de <span className="text-primary">R$ 97,42</span>
-                      </p>
-                      <p className="text-sm text-muted-foreground mt-1">no cartão de crédito</p>
-                    </div>
-                  </motion.div>
-
-                  {/* Comparison */}
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 1 }}
-                    className="text-lg text-muted-foreground mt-4"
-                  >
-                    Menos de <span className="text-emerald-400 font-bold">R$ 97 por mês</span> — menos que um jantar
-                  </motion.p>
-                </div>
-
-                {/* CTA Button */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 1.1 }}
-                  className="mb-8 space-y-4"
-                >
-                  <Button
-                    onClick={() => setPopupOpen(true)}
-                    className="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg py-6 h-auto rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105"
-                  >
-                    QUERO O SISTEMA COMPLETO
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-
-                  <p className="text-center text-sm text-muted-foreground">
-                    Acesso imediato · Garantia de 7 dias · 75 aulas práticas · 12x de R$ 97,42
-                  </p>
-                </motion.div>
-
-                {/* Payment Methods */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 1.2 }}
-                  className="space-y-4"
-                >
-                  <p className="text-center text-sm text-muted-foreground">Formas de pagamento aceitas:</p>
-
-                  <div className="flex flex-wrap items-center justify-center gap-3">
-                    <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-2">
-                      <Smartphone className="w-5 h-5 text-emerald-400" />
-                      <span className="text-sm font-medium text-foreground">Pix</span>
-                    </div>
-
-                    <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-2">
-                      <CreditCard className="w-5 h-5 text-blue-400" />
-                      <span className="text-sm font-medium text-foreground">Cartão de Crédito</span>
-                    </div>
-
-                    <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-2">
-                      <svg className="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <rect x="3" y="4" width="18" height="16" rx="2" />
-                        <line x1="7" y1="8" x2="7" y2="16" />
-                        <line x1="11" y1="8" x2="11" y2="16" />
-                        <line x1="15" y1="8" x2="15" y2="16" />
-                      </svg>
-                      <span className="text-sm font-medium text-foreground">Boleto</span>
-                    </div>
-                  </div>
-
-                  {/* Trust Badges */}
-                  <div className="flex flex-wrap items-center justify-center gap-6 pt-4 border-t border-border/50">
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Shield className="w-5 h-5 text-emerald-500" />
-                      <span className="text-xs">Compra 100% Segura</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Lock className="w-5 h-5 text-emerald-500" />
-                      <span className="text-xs">Dados Criptografados</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Check className="w-5 h-5 text-emerald-500" />
-                      <span className="text-xs">Garantia de 7 Dias</span>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
+          <div className="relative bg-card border border-emerald-500/20 rounded-3xl overflow-hidden">
+            {/* Top badge */}
+            <div className="bg-emerald-600 text-white font-bold py-3 text-center text-sm tracking-wider uppercase">
+              Oferta de Lançamento
             </div>
-          </motion.div>
 
-          {/* Doubts Button */}
-          <div className="flex justify-center mt-6">
-            <Button
-              onClick={() => window.open("https://wa.me/5511942131610", '_blank')}
-              variant="outline"
-              size="lg"
-              className="gap-2"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Tenho Dúvidas
-            </Button>
+            <div className="p-6 md:p-8">
+              {/* Value Stack — compact list */}
+              <div className="space-y-2.5 mb-6">
+                {valueStack.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-between py-2 border-b border-border/30 last:border-0"
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                      <span className="text-sm text-foreground/80">{item.item}</span>
+                    </div>
+                    <span className="text-sm text-[hsl(215,10%,45%)] line-through font-mono">{item.value}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Divider */}
+              <div className="h-px bg-border/50 mb-8" />
+
+              {/* Price */}
+              <div className="text-center mb-8">
+                <p className="text-sm text-[hsl(215,10%,45%)] line-through mb-1">De R$ 2.997</p>
+                <p className="text-6xl md:text-7xl font-black text-emerald-400 font-mono mb-2">
+                  R$ 997
+                </p>
+                <p className="text-lg text-[hsl(215,12%,65%)]">
+                  ou <span className="text-emerald-400 font-semibold">12x de R$ 97,42</span>
+                </p>
+              </div>
+
+              {/* CTA */}
+              <Button
+                onClick={() => setPopupOpen(true)}
+                className="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+              >
+                QUERO O SISTEMA COMPLETO
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+
+              <p className="text-center text-xs text-[hsl(215,10%,45%)] mt-4">
+                Acesso imediato · Garantia de 7 dias · 12x de R$ 97,42
+              </p>
+            </div>
+
+            {/* Payment methods — bottom strip */}
+            <div className="border-t border-border/50 px-6 md:px-8 py-5 flex flex-wrap items-center justify-center gap-4">
+              <span className="flex items-center gap-1.5 text-xs text-[hsl(215,10%,45%)]">
+                <Shield className="w-4 h-4 text-emerald-500/60" /> Compra Segura
+              </span>
+              <span className="flex items-center gap-1.5 text-xs text-[hsl(215,10%,45%)]">
+                <Lock className="w-4 h-4 text-emerald-500/60" /> Dados Criptografados
+              </span>
+              <span className="flex items-center gap-1.5 text-xs text-[hsl(215,10%,45%)]">
+                <Check className="w-4 h-4 text-emerald-500/60" /> 7 Dias Garantia
+              </span>
+            </div>
           </div>
+        </motion.div>
+
+        {/* Doubts Button */}
+        <div className="flex justify-center mt-6">
+          <Button
+            onClick={() => window.open("https://wa.me/5511942131610", '_blank')}
+            variant="outline"
+            size="lg"
+            className="gap-2 border-border/50 text-[hsl(215,12%,65%)] hover:text-emerald-400 hover:border-emerald-500/30 transition-all duration-300"
+          >
+            <MessageCircle className="w-5 h-5" />
+            Tenho Dúvidas
+          </Button>
         </div>
 
         <CTAPopup open={popupOpen} onOpenChange={setPopupOpen} />

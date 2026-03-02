@@ -53,22 +53,25 @@ export const FAQSection = () => {
     <section className="section-padding bg-background">
       <div className="container mx-auto max-w-3xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide uppercase mb-6">
+            FAQ
+          </span>
+          <h2 className="text-heading-1 md:text-display font-bold">
             Perguntas <span className="gradient-text">Frequentes</span>
           </h2>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-3">
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border border-border rounded-lg px-6"
+              className="card-base px-6 py-1 data-[state=open]:border-emerald-500/20 transition-all duration-300"
             >
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-emerald-400 py-5 transition-colors">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
+              <AccordionContent className="text-[hsl(215,12%,65%)] leading-relaxed pb-5">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
