@@ -132,7 +132,7 @@ export const CheckoutDialog = ({ open, onOpenChange, checkoutUrl }: CheckoutDial
       });
 
       // Build personalized checkout URL with only name and email
-      const baseUrl = "https://pay.onprofit.com.br/M5Ene7El?off=MPTa5";
+      const baseUrl = "https://pay.onprofit.com.br/M5Ene7El?off=m0koTN";
       const url = new URL(baseUrl);
       
       if (data.nome) url.searchParams.set("name", data.nome);

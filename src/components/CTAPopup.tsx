@@ -19,7 +19,7 @@ export const CTAPopup = ({ open, onOpenChange }: CTAPopupProps) => {
         .map(param => `${param}=${params.get(param) || ''}`)
         .join('&');
       
-      const baseURL = 'https://pay.onprofit.com.br/M5Ene7El?off=l6y2P7';
+      const baseURL = 'https://pay.onprofit.com.br/M5Ene7El?off=m0koTN';
       const finalURL = `${baseURL}&${utms}&sck=${(window as any).globalSck}`;
       
       window.open(finalURL, '_blank');
