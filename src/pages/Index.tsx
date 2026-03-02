@@ -6,7 +6,6 @@ import { TheOneThingSection } from "@/components/TheOneThingSection";
 import { VideoTeaserSection } from "@/components/VideoTeaserSection";
 import { MethodologySection } from "@/components/MethodologySection";
 import { AboutUsSection } from "@/components/AboutUsSection";
-import { SocialProofSection } from "@/components/SocialProofSection";
 // VideoTestimonialsSection removed — no video URLs available yet (QA HIGH-1)
 import { ValueStackSection } from "@/components/ValueStackSection";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
@@ -20,7 +19,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 
 const Index = () => {
   return (
-    <main className="min-h-screen pb-16 md:pb-0">
+    <main className="min-h-screen pb-20 md:pb-0">
       <HeroSection />
       <ProblemSolutionSection />
       <TwoPathsSection />
@@ -29,7 +28,6 @@ const Index = () => {
       <TargetAudienceSection />
       <MethodologySection />
       <AboutUsSection />
-      <SocialProofSection />
       {/* VideoTestimonialsSection removed — no video URLs available yet (QA HIGH-1) */}
       <ValueStackSection />
       <GuaranteeSection />

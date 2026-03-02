@@ -148,11 +148,11 @@ export const MethodologySection = () => {
     <section className="section-padding bg-background">
       <div className="container mx-auto max-w-5xl">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide uppercase mb-6">
             10 Módulos &middot; 75 Aulas Práticas
           </span>
-          <h2 className="text-heading-1 md:text-display font-bold mb-6 leading-tight">
+          <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-6 leading-tight">
             Metodologia{" "}
             <span className="gradient-text">Testada e Comprovada</span>
           </h2>
@@ -181,8 +181,8 @@ export const MethodologySection = () => {
               <AccordionTrigger className="w-full p-0 hover:no-underline [&>svg]:text-[hsl(215,10%,45%)] [&>svg]:w-5 [&>svg]:h-5 [&>svg]:mr-5 [&>svg]:md:mr-6">
                 <div className="flex items-center gap-4 md:gap-6 p-5 md:p-6 w-full">
                   {/* Module Number Badge */}
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
-                    <span className="text-emerald-400 font-bold text-xl font-mono">{String(content.week).padStart(2, '0')}</span>
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+                    <span className="text-emerald-400 font-bold text-base sm:text-xl font-mono">{String(content.week).padStart(2, '0')}</span>
                   </div>
 
                   {/* Title + Meta */}
@@ -194,14 +194,14 @@ export const MethodologySection = () => {
               </AccordionTrigger>
 
               {/* Expanded lesson list */}
-              <AccordionContent className="px-5 md:px-6 pb-6">
-                <div className="ml-[4.5rem] md:ml-[5.5rem] space-y-0">
+              <AccordionContent className="px-4 sm:px-5 md:px-6 pb-5 sm:pb-6">
+                <div className="ml-[3.5rem] sm:ml-[4.5rem] md:ml-[5.5rem] space-y-0">
                   {content.items.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex items-center gap-3 py-2.5 border-b border-border/30 last:border-0 group/item">
                       <div className="w-6 h-6 rounded-md bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
                         <span className="text-xs text-emerald-400/70 font-mono font-medium">{String(itemIndex + 1).padStart(2, '0')}</span>
                       </div>
-                      <span className="text-foreground/80 leading-relaxed group-hover/item:text-foreground transition-colors">{item}</span>
+                      <span className="text-sm sm:text-base text-foreground/80 leading-relaxed group-hover/item:text-foreground transition-colors">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -211,7 +211,7 @@ export const MethodologySection = () => {
         </Accordion>
 
         {/* Overview Card */}
-        <div className="mt-12 card-elevated p-8 md:p-10 text-center border-emerald-500/20">
+        <div className="mt-8 sm:mt-12 card-elevated p-5 sm:p-8 md:p-10 text-center border-emerald-500/20">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Calendar className="w-7 h-7 text-emerald-400" />
             <h3 className="text-2xl font-bold text-foreground">1 Ano de Acesso Completo</h3>
@@ -222,7 +222,7 @@ export const MethodologySection = () => {
         </div>
 
         {/* Content Evolution badges */}
-        <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+        <div className="mt-8 sm:mt-12 flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-4 text-center">
           <span className="text-sm text-[hsl(215,10%,45%)]">Conteúdo que evolui:</span>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
@@ -238,11 +238,11 @@ export const MethodologySection = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 sm:mt-12">
           <div className="flex flex-col items-center gap-3">
             <Button
               onClick={() => setPopupOpen(true)}
-              className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+              className="relative overflow-hidden w-full sm:w-auto min-h-[52px] bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
               QUERO O SISTEMA COMPLETO
               <ArrowRight className="w-5 h-5 ml-2" />

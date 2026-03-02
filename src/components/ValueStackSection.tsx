@@ -105,7 +105,7 @@ export const ValueStackSection = () => {
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide uppercase mb-6">
             O Que Está Incluído
           </span>
-          <h2 className="text-heading-1 md:text-display font-bold mb-4">
+          <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-4">
             <span className="gradient-text">Veja Tudo Que Você Recebe Hoje</span>
           </h2>
           <p className="text-body-lg text-[hsl(215,12%,65%)] max-w-2xl mx-auto">
@@ -122,12 +122,12 @@ export const ValueStackSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className={`card-base p-5 md:p-6 flex items-start gap-4 ${
+              className={`card-base p-4 sm:p-5 md:p-6 flex items-start gap-3 sm:gap-4 ${
                 item.isMain ? "border-emerald-500/30 bg-emerald-500/[0.03]" : ""
               }`}
             >
               {/* Icon */}
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
+              <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
                 item.isMain ? "bg-emerald-500 text-white" : "bg-[hsl(220,16%,12%)] text-emerald-400"
               }`}>
                 {item.icon}
@@ -146,7 +146,7 @@ export const ValueStackSection = () => {
                       {item.description}
                     </p>
                   </div>
-                  <span className="text-lg font-semibold text-[hsl(215,10%,45%)] line-through whitespace-nowrap font-mono">
+                  <span className="text-sm sm:text-lg font-semibold text-[hsl(215,10%,45%)] line-through whitespace-nowrap font-mono">
                     {formatCurrency(item.value)}
                   </span>
                 </div>
@@ -162,10 +162,10 @@ export const ValueStackSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <div className="card-elevated p-8 md:p-12 text-center border-emerald-500/30">
+          <div className="card-elevated p-5 sm:p-8 md:p-12 text-center border-emerald-500/30">
             {/* Total crossed out */}
             <p className="text-sm text-[hsl(215,10%,45%)] uppercase tracking-wider mb-2">Valor Total</p>
-            <p className="text-3xl md:text-4xl font-bold text-[hsl(215,10%,45%)] line-through mb-6 font-mono">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-[hsl(215,10%,45%)] line-through mb-4 sm:mb-6 font-mono">
               {formatCurrency(totalValue)}
             </p>
 
@@ -185,8 +185,8 @@ export const ValueStackSection = () => {
             <div className="mb-2">
               <span className="text-lg text-[hsl(215,10%,45%)] line-through">De R$ 2.997</span>
             </div>
-            <p className="text-5xl md:text-6xl font-black gradient-text font-mono mb-2">R$ 997</p>
-            <p className="text-lg text-[hsl(215,12%,65%)] mb-4">
+            <p className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text font-mono mb-2">R$ 997</p>
+            <p className="text-base sm:text-lg text-[hsl(215,12%,65%)] mb-4">
               ou <span className="text-emerald-400 font-semibold">12x de R$ 97,42</span>
             </p>
 

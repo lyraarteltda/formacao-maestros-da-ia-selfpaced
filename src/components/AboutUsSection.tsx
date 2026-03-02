@@ -16,12 +16,12 @@ export const AboutUsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide uppercase mb-6">
             Nossa História
           </span>
-          <h2 className="text-heading-1 md:text-display font-bold mb-4">
+          <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-4">
             De Curso de Violão a{" "}
             <span className="gradient-text">R$2,5 Milhões com IA</span>
           </h2>
@@ -30,7 +30,7 @@ export const AboutUsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Left Column - Founders Photo + Timeline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -56,8 +56,8 @@ export const AboutUsSection = () => {
             </div>
 
             {/* Clean Horizontal Timeline */}
-            <div className="card-base p-6 md:p-8">
-              <div className="grid grid-cols-4 gap-4 relative">
+            <div className="card-base p-4 sm:p-6 md:p-8">
+              <div className="grid grid-cols-4 gap-2 sm:gap-4 relative">
                 {/* Connecting line */}
                 <div className="absolute top-6 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-emerald-500/40 via-emerald-500/20 to-emerald-500/40" />
 
@@ -68,10 +68,10 @@ export const AboutUsSection = () => {
                   { year: "2025", label: "Formação Maestros" },
                 ].map((step, i) => (
                   <div key={i} className="flex flex-col items-center relative z-10">
-                    <div className="w-12 h-12 rounded-full bg-[hsl(220,16%,10%)] border-2 border-emerald-500/40 flex items-center justify-center mb-3">
-                      <span className="text-emerald-400 font-bold text-xs font-mono">{step.year}</span>
+                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-[hsl(220,16%,10%)] border-2 border-emerald-500/40 flex items-center justify-center mb-2 sm:mb-3">
+                      <span className="text-emerald-400 font-bold text-[10px] sm:text-xs font-mono">{step.year}</span>
                     </div>
-                    <p className="font-semibold text-xs text-foreground text-center">{step.label}</p>
+                    <p className="font-semibold text-[10px] sm:text-xs text-foreground text-center leading-tight">{step.label}</p>
                   </div>
                 ))}
               </div>
@@ -79,14 +79,14 @@ export const AboutUsSection = () => {
           </motion.div>
 
           {/* Right Column - Feel/Felt/Found Narrative */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Feel Paragraph */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="card-base p-6 hover:border-emerald-500/20"
+              className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
             >
               <p className="text-body-lg leading-relaxed text-foreground/90">
                 Nós entendemos como você se <span className="text-emerald-400 font-bold">SENTE</span>. Ver todo mundo falando de IA, testar mil ferramentas, mas nunca conseguir transformar isso em lucro real. A sensação de estar ficando para trás enquanto outros parecem estar ganhando milhões...
@@ -99,7 +99,7 @@ export const AboutUsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="card-base p-6 hover:border-emerald-500/20"
+              className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
             >
               <p className="text-body-lg leading-relaxed text-foreground/90">
                 Nós <span className="text-emerald-400 font-bold">SENTÍAMOS</span> exatamente assim. Quando começamos, não sabíamos nada de tecnologia. Arthur tinha um doutorado Honoris Causa, Lyria tinha background em TI e medicina — mas nenhum de nós sabia como usar IA para vender. Nosso primeiro negócio foi um curso de <span className="text-emerald-400 font-semibold">VIOLÃO</span>, não de tecnologia.
@@ -112,7 +112,7 @@ export const AboutUsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="card-base p-6 hover:border-emerald-500/20"
+              className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
             >
               <p className="text-body-lg leading-relaxed text-foreground/90">
                 Mas então <span className="text-emerald-400 font-bold">DESCOBRIMOS</span> algo: o segredo não era a ferramenta, era o <span className="text-emerald-400 font-bold">SISTEMA</span>. Criamos um método de automação que funcionava em qualquer nicho. Aplicamos no curso de violão e fizemos <span className="text-emerald-400 font-bold">R$2,5 milhões em 15 meses</span>, trabalhando menos de 30 minutos por dia. Documentamos cada agente, cada automação, cada workflow — e agora estamos entregando esse sistema inteiro para você implementar com autonomia total.

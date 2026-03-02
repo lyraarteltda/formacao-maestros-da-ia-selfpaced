@@ -73,7 +73,7 @@ export const AnimatedLogos = () => {
   return (
     <div className="w-full overflow-hidden py-8 relative">
       <motion.div
-        className="flex gap-8 items-center cursor-grab active:cursor-grabbing"
+        className="flex gap-4 sm:gap-8 items-center cursor-grab active:cursor-grabbing"
         style={{ x: baseX }}
         drag="x"
         dragElastic={0.1}
@@ -84,7 +84,7 @@ export const AnimatedLogos = () => {
         {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
           <motion.div
             key={index}
-            className="relative flex-shrink-0 w-36 h-36 bg-white rounded-2xl shadow-lg border border-white/10 p-6 hover:shadow-xl transition-all"
+            className="relative flex-shrink-0 w-24 h-24 sm:w-36 sm:h-36 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-white/10 p-4 sm:p-6 hover:shadow-xl transition-all"
             whileHover={{ scale: 1.05, y: -4 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

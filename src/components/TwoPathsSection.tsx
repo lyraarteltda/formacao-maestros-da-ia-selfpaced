@@ -40,7 +40,7 @@ export const TwoPathsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-heading-1 md:text-display font-bold mb-4">
+          <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-4">
             Suas Escolhas Definem{" "}
             <span className="bg-gradient-to-r from-red-400 via-foreground to-emerald-400 bg-clip-text text-transparent">
               Seu Futuro
@@ -68,9 +68,9 @@ export const TwoPathsSection = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-red-900/30 via-red-950/20 to-background rounded-2xl md:rounded-r-none opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
 
-            <div className="relative bg-card/50 border border-red-500/30 rounded-2xl md:rounded-r-none p-8 md:p-10 h-full backdrop-blur-sm">
+            <div className="relative bg-card/50 border border-red-500/30 rounded-2xl md:rounded-r-none p-5 sm:p-8 md:p-10 h-full backdrop-blur-sm">
               {/* Header */}
-              <div className="text-center mb-8">
+              <div className="text-center mb-5 sm:mb-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 mb-4">
                   <X className="w-5 h-5 text-red-400" />
                   <span className="text-red-400 font-bold text-sm uppercase tracking-wider">O Caminho Errado</span>
@@ -79,9 +79,9 @@ export const TwoPathsSection = () => {
               </div>
 
               {/* Icon */}
-              <div className="flex justify-center mb-8">
-                <div className="w-20 h-20 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center">
-                  <User className="w-10 h-10 text-red-400" />
+              <div className="flex justify-center mb-5 sm:mb-8">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center">
+                  <User className="w-8 h-8 sm:w-10 sm:h-10 text-red-400" />
                 </div>
               </div>
 
@@ -119,9 +119,9 @@ export const TwoPathsSection = () => {
 
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/30 via-emerald-950/20 to-background rounded-2xl md:rounded-l-none opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
 
-            <div className="relative bg-card/50 border border-emerald-500/30 rounded-2xl md:rounded-l-none p-8 md:p-10 h-full backdrop-blur-sm">
+            <div className="relative bg-card/50 border border-emerald-500/30 rounded-2xl md:rounded-l-none p-5 sm:p-8 md:p-10 h-full backdrop-blur-sm">
               {/* Header */}
-              <div className="text-center mb-8">
+              <div className="text-center mb-5 sm:mb-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30 mb-4">
                   <Check className="w-5 h-5 text-emerald-400" />
                   <span className="text-emerald-400 font-bold text-sm uppercase tracking-wider">O Caminho Certo</span>
@@ -130,9 +130,9 @@ export const TwoPathsSection = () => {
               </div>
 
               {/* Icon */}
-              <div className="flex justify-center mb-8">
-                <div className="w-20 h-20 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
-                  <Rocket className="w-10 h-10 text-emerald-400" />
+              <div className="flex justify-center mb-5 sm:mb-8">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
+                  <Rocket className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-400" />
                 </div>
               </div>
 
@@ -174,7 +174,7 @@ export const TwoPathsSection = () => {
             <Button
               onClick={() => setPopupOpen(true)}
               size="lg"
-              className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+              className="relative overflow-hidden w-full sm:w-auto min-h-[52px] bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
               QUERO O SISTEMA COMPLETO
               <ArrowRight className="w-5 h-5 ml-2" />

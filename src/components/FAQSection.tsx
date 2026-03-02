@@ -52,11 +52,11 @@ export const FAQSection = () => {
   return (
     <section className="section-padding bg-background">
       <div className="container mx-auto max-w-3xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide uppercase mb-6">
             FAQ
           </span>
-          <h2 className="text-heading-1 md:text-display font-bold">
+          <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold">
             Perguntas <span className="gradient-text">Frequentes</span>
           </h2>
         </div>
@@ -66,12 +66,12 @@ export const FAQSection = () => {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="card-base px-6 py-1 data-[state=open]:border-emerald-500/20 transition-all duration-300"
+              className="card-base px-4 sm:px-6 py-1 data-[state=open]:border-emerald-500/20 transition-all duration-300"
             >
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-emerald-400 py-5 transition-colors">
+              <AccordionTrigger className="text-left text-sm sm:text-base font-semibold text-foreground hover:text-emerald-400 py-4 sm:py-5 transition-colors min-h-[44px]">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-[hsl(215,12%,65%)] leading-relaxed pb-5">
+              <AccordionContent className="text-sm sm:text-base text-[hsl(215,12%,65%)] leading-relaxed pb-4 sm:pb-5">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

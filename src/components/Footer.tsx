@@ -2,7 +2,7 @@ import { Logo } from "@/components/Logo";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[hsl(220,20%,3%)] border-t border-border/30 py-16 px-6 md:px-12">
+    <footer className="bg-[hsl(220,20%,3%)] border-t border-border/30 py-10 sm:py-16 px-4 sm:px-6 md:px-12">
       <div className="container mx-auto max-w-4xl">
         {/* Logo */}
         <div className="text-center mb-8">
@@ -10,7 +10,7 @@ export const Footer = () => {
         </div>
 
         {/* Links */}
-        <div className="flex items-center justify-center gap-6 mb-8">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
           <a href="mailto:contato@lyraarte.com?subject=Pol%C3%ADtica%20de%20Privacidade" className="text-sm text-[hsl(215,10%,45%)] hover:text-emerald-400 transition-colors">Privacidade</a>
           <span className="w-1 h-1 rounded-full bg-white/10" />
           <a href="mailto:contato@lyraarte.com?subject=Termos%20de%20Uso" className="text-sm text-[hsl(215,10%,45%)] hover:text-emerald-400 transition-colors">Termos de Uso</a>

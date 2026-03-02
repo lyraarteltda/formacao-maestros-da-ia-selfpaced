@@ -12,7 +12,7 @@ export const GuaranteeSection = () => {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <h2 className="text-heading-1 md:text-display font-bold">
+          <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold">
             <span className="gradient-text">Sua Decisão é Protegida por 7 Dias</span>
           </h2>
         </motion.div>
@@ -26,20 +26,20 @@ export const GuaranteeSection = () => {
           className="relative"
         >
           {/* Guarantee Seal */}
-          <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-xl shadow-amber-500/20">
-              <Shield className="w-8 h-8 text-amber-900" />
+          <div className="absolute -top-7 sm:-top-8 left-1/2 -translate-x-1/2 z-20">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-xl shadow-amber-500/20">
+              <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-amber-900" />
             </div>
           </div>
 
           {/* Main Card */}
-          <div className="card-elevated pt-16 md:pt-20 pb-8 px-6 md:px-10 border-amber-500/20">
+          <div className="card-elevated pt-14 sm:pt-16 md:pt-20 pb-6 sm:pb-8 px-4 sm:px-6 md:px-10 border-amber-500/20">
 
             {/* Guarantees Grid */}
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8">
 
               {/* Guarantee 1 */}
-              <div className="card-base p-6 border-amber-500/10 hover:border-amber-500/20 transition-all duration-300">
+              <div className="card-base p-4 sm:p-6 border-amber-500/10 hover:border-amber-500/20 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
                     <ShieldCheck className="w-6 h-6 text-emerald-400" strokeWidth={2.5} />
@@ -67,7 +67,7 @@ export const GuaranteeSection = () => {
               </div>
 
               {/* Guarantee 2 */}
-              <div className="card-base p-6 border-amber-500/10 hover:border-amber-500/20 transition-all duration-300">
+              <div className="card-base p-4 sm:p-6 border-amber-500/10 hover:border-amber-500/20 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
                     <Award className="w-6 h-6 text-emerald-400" strokeWidth={2.5} />

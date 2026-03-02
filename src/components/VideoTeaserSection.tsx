@@ -65,10 +65,10 @@ export const VideoTeaserSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-heading-1 md:text-display font-bold text-center mb-4">
+        <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold text-center mb-4">
           Veja um Pouco da Formação <span className="gradient-text">Por Dentro</span>
         </h2>
-        <p className="text-lg md:text-xl text-[hsl(215,12%,65%)] text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-[hsl(215,12%,65%)] text-center max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed">
           Antes de decidir, assista. Veja com seus próprios olhos a qualidade das aulas, a profundidade do conteúdo e os agentes de IA que vão trabalhar por você — 24 horas por dia, 7 dias por semana.
         </p>
 
@@ -110,15 +110,15 @@ export const VideoTeaserSection = () => {
           </div>
 
           {/* Copy below video */}
-          <p className="text-lg text-[hsl(215,12%,65%)] text-center mt-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-[hsl(215,12%,65%)] text-center mt-6 sm:mt-8 max-w-3xl mx-auto leading-relaxed">
             Isso é apenas uma amostra. São 75 aulas práticas como essa — cada uma te entregando uma ferramenta, automação ou agente de IA pronto para gerar resultado no seu negócio. Tudo no seu ritmo. Sem depender de ninguém.
           </p>
 
           {/* CTA after video */}
-          <div className="flex flex-col items-center gap-3 mt-8">
+          <div className="flex flex-col items-center gap-3 mt-6 sm:mt-8">
             <Button
               onClick={() => setPopupOpen(true)}
-              className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+              className="relative overflow-hidden w-full sm:w-auto min-h-[52px] bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
               QUERO ACESSO ÀS 75 AULAS
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -130,8 +130,8 @@ export const VideoTeaserSection = () => {
         </div>
 
         {/* Tools Section */}
-        <div className="mt-20 max-w-6xl mx-auto">
-          <h3 className="text-heading-2 md:text-heading-1 font-bold mb-8 text-center">
+        <div className="mt-12 sm:mt-20 max-w-6xl mx-auto">
+          <h3 className="text-heading-3 sm:text-heading-2 md:text-heading-1 font-bold mb-6 sm:mb-8 text-center">
             Algumas das Ferramentas que você vai <span className="gradient-text">Dominar</span>
           </h3>
           <AnimatedLogos />

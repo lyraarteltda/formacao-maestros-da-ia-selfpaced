@@ -29,10 +29,10 @@ export const StickyMobileCTA = () => {
             transition={{ duration: 0.3 }}
             className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
           >
-            <div className="bg-background/95 backdrop-blur-lg border-t border-border/50 px-4 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
+            <div className="bg-background/95 backdrop-blur-lg border-t border-border/50 px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
               <Button
                 onClick={() => setPopupOpen(true)}
-                className="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold py-4 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] text-base transition-all duration-300"
+                className="w-full min-h-[52px] bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold py-4 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] text-base transition-all duration-300"
               >
                 QUERO O SISTEMA COMPLETO
                 <ArrowRight className="w-5 h-5 ml-2" />
