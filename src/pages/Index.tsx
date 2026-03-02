@@ -6,7 +6,6 @@ import { TheOneThingSection } from "@/components/TheOneThingSection";
 import { VideoTeaserSection } from "@/components/VideoTeaserSection";
 import { MethodologySection } from "@/components/MethodologySection";
 import { AboutUsSection } from "@/components/AboutUsSection";
-// VideoTestimonialsSection removed — no video URLs available yet (QA HIGH-1)
 import { ValueStackSection } from "@/components/ValueStackSection";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { PricingSection } from "@/components/PricingSection";
@@ -28,7 +27,6 @@ const Index = () => {
       <TargetAudienceSection />
       <MethodologySection />
       <AboutUsSection />
-      {/* VideoTestimonialsSection removed — no video URLs available yet (QA HIGH-1) */}
       <ValueStackSection />
       <GuaranteeSection />
       <PricingSection />
