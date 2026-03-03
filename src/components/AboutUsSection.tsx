@@ -53,6 +53,18 @@ export const AboutUsSection = () => {
                 <p className="text-lg font-semibold text-foreground">Arthur Endo & Lyria Zoccal</p>
                 <p className="text-sm text-[hsl(215,10%,45%)]">Fundadores da Lyra Academy</p>
               </div>
+
+              {/* Founder Credentials */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                <div className="card-base p-4 border-emerald-500/10">
+                  <p className="text-sm font-semibold text-emerald-400 mb-1">Arthur Endo</p>
+                  <p className="text-xs text-[hsl(215,12%,65%)] leading-relaxed">Músico premiado internacionalmente com 3 CDs gravados e diversas turnês internacionais. Trouxe a criatividade e visão artística para o mundo da IA.</p>
+                </div>
+                <div className="card-base p-4 border-emerald-500/10">
+                  <p className="text-sm font-semibold text-emerald-400 mb-1">Lyria Zoccal</p>
+                  <p className="text-xs text-[hsl(215,12%,65%)] leading-relaxed">Formada em Administração, com experiência em grandes empresas de tecnologia e desenvolvimento de software. Trouxe a mentalidade de negócios e tech para a operação.</p>
+                </div>
+              </div>
             </div>
 
             {/* Clean Horizontal Timeline */}

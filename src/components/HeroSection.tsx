@@ -43,7 +43,7 @@ export const HeroSection = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-xs sm:text-sm text-emerald-400 font-medium tracking-wide uppercase">
-              Criado por dois musicos que nunca programaram uma linha de codigo
+              Criado por um musico e uma executiva de tech — sem programar uma linha de codigo
             </span>
           </div>
 

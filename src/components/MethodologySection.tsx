@@ -170,7 +170,7 @@ export const MethodologySection = () => {
             <span className="gradient-text">em 10 Semanas</span>
           </h2>
           <p className="text-body-lg text-[hsl(215,12%,65%)] max-w-3xl mx-auto leading-relaxed">
-            O roteiro exato de 75 aulas que levou dois musicos a R$ 2,5 milhoes. Cada modulo entrega implementacoes praticas que funcionam no seu negocio — no seu ritmo.
+            O roteiro exato de 75 aulas que levou um musico e uma executiva de tech a R$ 2,5 milhoes. Cada modulo entrega implementacoes praticas que funcionam no seu negocio — no seu ritmo.
           </p>
         </div>
 

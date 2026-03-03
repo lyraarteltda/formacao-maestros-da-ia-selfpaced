@@ -91,7 +91,7 @@ export const ProblemSolutionSection = () => {
 
           <div className="space-y-8">
             <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]">
-              Somos um casal de músicos, não de programadores. Quando começamos, não sabíamos nada de IA. Tentamos consultorias genéricas, investimos em ferramentas caras, contratamos equipes que prometeram resultados e entregaram planilhas.
+              Arthur é músico premiado internacionalmente, com 3 CDs gravados e turnês pela Europa. Lyria é formada em Administração, com anos de experiência em grandes empresas de tecnologia e desenvolvimento de software. Nenhum de nós era especialista em IA. Quando começamos, tentamos consultorias genéricas, investimos em ferramentas caras, contratamos equipes que prometeram resultados e entregaram planilhas.
             </p>
 
             <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]">
