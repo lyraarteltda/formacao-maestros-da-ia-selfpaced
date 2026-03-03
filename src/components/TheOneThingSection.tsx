@@ -55,7 +55,7 @@ export const TheOneThingSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]"
           >
-            A mentoria foi so a cereja no bolo — <span className="text-emerald-400 font-semibold">o bolo e o sistema.</span> 75 aulas passo a passo, cada uma com implementacao pratica. Se voce sabe apertar play e seguir instrucoes, voce nao precisa de ninguem te guiando. O conteudo se sustenta sozinho.
+            A mentoria foi só a cereja no bolo — <span className="text-emerald-400 font-semibold">o bolo é o sistema.</span> 75 aulas passo a passo, cada uma com implementação prática. Se você sabe apertar play e seguir instruções, você não precisa de ninguém te guiando. O conteúdo se sustenta sozinho.
           </motion.p>
 
           {/* Pull quote — premium elevated card */}
@@ -159,13 +159,13 @@ export const TheOneThingSection = () => {
         >
           <div className="card-base p-5 sm:p-8 border-emerald-500/10">
             <p className="text-base sm:text-lg md:text-xl leading-relaxed text-foreground font-semibold mb-4">
-              "Mas e se eu nao terminar?"
+              "Mas e se eu não terminar?"
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-[hsl(215,12%,65%)]">
-              Essa e a preocupacao mais comum sobre cursos self-paced — e a mais facil de resolver. A maioria dos cursos online sao 40 horas de teoria que ninguem aplica. Nossas 75 aulas sao diferentes: cada uma termina com algo funcionando. Na aula 3, seu primeiro agente de IA esta ativo. Na aula 7, sua primeira automacao esta rodando. Na aula 15, voce ja tem um sistema de vendas no WhatsApp.
+              Essa é a preocupação mais comum sobre cursos self-paced — e a mais fácil de resolver. A maioria dos cursos online são 40 horas de teoria que ninguém aplica. Nossas 75 aulas são diferentes: cada uma termina com algo funcionando. Na aula 3, seu primeiro agente de IA está ativo. Na aula 7, sua primeira automação está rodando. Na aula 15, você já tem um sistema de vendas no WhatsApp.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-[hsl(215,12%,65%)] mt-4">
-              Nossos alunos nao terminam porque sao disciplinados. <span className="text-emerald-400 font-semibold">Terminam porque e dificil parar quando cada aula melhora seu negocio de forma visivel.</span>
+              Nossos alunos não terminam porque são disciplinados. <span className="text-emerald-400 font-semibold">Terminam porque é difícil parar quando cada aula melhora seu negócio de forma visível.</span>
             </p>
           </div>
         </motion.div>

@@ -74,14 +74,14 @@ export const AboutUsSection = () => {
                 <div className="absolute top-6 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-emerald-500/40 via-emerald-500/20 to-emerald-500/40" />
 
                 {[
-                  { year: "2022", label: "Curso de Violão" },
-                  { year: "2023", label: "Descoberta da IA" },
-                  { year: "2024", label: "R$ 2,5M Faturados" },
-                  { year: "2025", label: "Formação Maestros" },
+                  { year: "Início", label: "Curso de violão" },
+                  { year: "6 meses", label: "Implementação de sistemas de IA" },
+                  { year: "12 meses", label: "2,5 milhões faturados" },
+                  { year: "Agora", label: "Ensinando o sistema que criamos" },
                 ].map((step, i) => (
                   <div key={i} className="flex flex-col items-center relative z-10">
                     <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-[hsl(220,16%,10%)] border-2 border-emerald-500/40 flex items-center justify-center mb-2 sm:mb-3">
-                      <span className="text-emerald-400 font-bold text-[10px] sm:text-xs font-mono">{step.year}</span>
+                      <span className="text-emerald-400 font-bold text-[8px] sm:text-[10px] font-mono text-center leading-tight">{step.year}</span>
                     </div>
                     <p className="font-semibold text-[10px] sm:text-xs text-foreground text-center leading-tight">{step.label}</p>
                   </div>
@@ -101,7 +101,7 @@ export const AboutUsSection = () => {
               className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
             >
               <p className="text-body-lg leading-relaxed text-foreground/90">
-                Nos entendemos como voce se <span className="text-emerald-400 font-bold">SENTE</span>. Ver todo mundo falando de IA, testar mil ferramentas, mas nunca conseguir transformar isso em lucro real. A sensacao de estar ficando para tras enquanto outros parecem estar ganhando milhoes...
+                Nós entendemos como você se <span className="text-emerald-400 font-bold">SENTE</span>. Ver todo mundo falando de IA, testar mil ferramentas, mas nunca conseguir transformar isso em lucro real. A sensação de estar ficando para trás enquanto outros parecem estar ganhando milhões...
               </p>
             </motion.div>
 
@@ -114,7 +114,7 @@ export const AboutUsSection = () => {
               className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
             >
               <p className="text-body-lg leading-relaxed text-foreground/90">
-                Nos <span className="text-emerald-400 font-bold">SENTIAMOS</span> exatamente assim. Quando comecamos, nao sabiamos nada de IA. Nosso escritorio era a mesa da sala. Nosso primeiro produto era um curso de <span className="text-emerald-400 font-semibold">VIOLAO</span>, nao de tecnologia. Ninguem olhava para nos e pensava "esses dois vao faturar milhoes com inteligencia artificial."
+                Nós <span className="text-emerald-400 font-bold">SENTÍAMOS</span> exatamente assim. Quando começamos, não sabíamos nada de IA. Nosso escritório era a mesa da sala. Nosso primeiro produto era um curso de <span className="text-emerald-400 font-semibold">VIOLÃO</span>, não de tecnologia. Ninguém olhava para nós e pensava "esses dois vão faturar milhões com inteligência artificial."
               </p>
             </motion.div>
 
@@ -127,7 +127,7 @@ export const AboutUsSection = () => {
               className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
             >
               <p className="text-body-lg leading-relaxed text-foreground/90">
-                Mas entao <span className="text-emerald-400 font-bold">DESCOBRIMOS</span> algo: o segredo nao era a ferramenta, era o <span className="text-emerald-400 font-bold">SISTEMA</span>. Criamos um metodo de automacao que funcionava em qualquer nicho. Aplicamos no curso de violao e fizemos <span className="text-emerald-400 font-bold">R$2,5 milhoes em 15 meses</span>, trabalhando menos de 30 minutos por dia. Documentamos cada agente, cada automacao, cada workflow — e agora estamos entregando esse sistema inteiro para voce implementar com autonomia total.
+                Mas então <span className="text-emerald-400 font-bold">DESCOBRIMOS</span> algo: o segredo não era a ferramenta, era o <span className="text-emerald-400 font-bold">SISTEMA</span>. Criamos um método de automação que funcionava em qualquer nicho. Aplicamos no curso de violão e fizemos <span className="text-emerald-400 font-bold">R$2,5 milhões em 15 meses</span>, trabalhando menos de 30 minutos por dia. Documentamos cada agente, cada automação, cada workflow — e agora estamos entregando esse sistema inteiro para você implementar com autonomia total.
               </p>
             </motion.div>
           </div>

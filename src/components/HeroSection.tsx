@@ -39,27 +39,19 @@ export const HeroSection = () => {
       {/* Hero Content */}
       <div className="flex-1 flex items-center justify-center relative z-20 px-4 sm:px-6 md:px-12 pt-4 md:pt-16 lg:pt-20">
         <div className="container mx-auto text-center max-w-4xl">
-          {/* Eyebrow badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-xs sm:text-sm text-emerald-400 font-medium tracking-wide uppercase">
-              Criado por um musico e uma executiva de tech — sem programar uma linha de codigo
-            </span>
-          </div>
-
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-5 md:mb-8 leading-[1.08] tracking-tight">
             <span className="text-foreground">
-              Copie o Sistema de IA que Transformou um Curso de Violao em{" "}
+              Copie o Sistema de IA que Transformou um Curso de Violão em{" "}
             </span>
-            <span className="gradient-text">R$ 2,5 Milhoes</span>
+            <span className="gradient-text">R$ 2,5 Milhões</span>
             <span className="text-foreground">
-              {" "}— e Coloque Seu Negocio no Piloto Automatico
+              {" "}— e Coloque Seu Negócio no Piloto Automático
             </span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-xl lg:text-2xl mb-8 md:mb-12 text-[hsl(215,12%,65%)] max-w-3xl mx-auto leading-relaxed font-normal">
-            75 aulas praticas. Agentes de IA prontos para copiar e ativar. Templates de automacao testados em uma operacao real de R$ 2,5 milhoes. Tudo para voce implementar no seu ritmo — sem depender de mentor, programador ou equipe tecnica.{" "}
-            <span className="text-emerald-400 font-semibold">Sem enrolacao. So o sistema.</span>
+            75 aulas práticas. Agentes de IA prontos para copiar e ativar. Templates de automação testados em uma operação real de R$ 2,5 milhões. Tudo para você implementar no seu ritmo — sem depender de mentor, programador ou equipe técnica.{" "}
+            <span className="text-emerald-400 font-semibold">Sem enrolação. Só o sistema.</span>
           </p>
 
           {/* CTA Group */}

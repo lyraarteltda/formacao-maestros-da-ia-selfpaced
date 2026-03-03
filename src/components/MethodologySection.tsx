@@ -9,7 +9,7 @@ export const MethodologySection = () => {
   const weeklyContent = [
     {
       week: 1,
-      title: "Fundamentos da IA e Setup Estrategico",
+      title: "Fundamentos da IA e Setup Estratégico",
       outcome: "Resultado: Seu ambiente de IA configurado e primeiro agente funcionando",
       items: [
         "Introdução - Boas-Vindas",
@@ -28,8 +28,8 @@ export const MethodologySection = () => {
     },
     {
       week: 2,
-      title: "Automacoes e Primeiros Resultados",
-      outcome: "Resultado: Automacoes basicas rodando no seu negocio",
+      title: "Automações e Primeiros Resultados",
+      outcome: "Resultado: Automações básicas rodando no seu negócio",
       items: [
         "Como Mudamos o Jogo da Nossa Empresa com IA e Automação",
         "Engenharia de Prompt: Entenda a estrutura ideal para gerar resultados 10x melhores",
@@ -43,7 +43,7 @@ export const MethodologySection = () => {
     {
       week: 3,
       title: "Arsenal de Ferramentas de IA",
-      outcome: "Resultado: Suas proprias ferramentas de IA construidas e operando",
+      outcome: "Resultado: Suas próprias ferramentas de IA construídas e operando",
       badge: "MAIS POPULAR",
       items: [
         "As Melhores LLMs",
@@ -59,7 +59,7 @@ export const MethodologySection = () => {
     {
       week: 4,
       title: "Marketing Automatizado - Fundamentos",
-      outcome: "Resultado: Pipeline de conteudo automatizado gerando posts",
+      outcome: "Resultado: Pipeline de conteúdo automatizado gerando posts",
       items: [
         "Estratégia de Crescimento Orgânico",
         "Como Fazer o Algoritmo Trabalhar Por Você",
@@ -70,7 +70,7 @@ export const MethodologySection = () => {
     },
     {
       week: 5,
-      title: "Marketing Automatizado (Avancado)",
+      title: "Marketing Automatizado (Avançado)",
       outcome: "Resultado: Agentes inteligentes ativos no seu fluxo de trabalho",
       items: [
         "Construa Experiências Interativas no Lovable com Efeitos Profissionais",
@@ -97,8 +97,8 @@ export const MethodologySection = () => {
     },
     {
       week: 7,
-      title: "Agentes Inteligentes e Assistentes Avancados",
-      outcome: "Resultado: Agentes avancados com memoria e personalizacao ativa",
+      title: "Agentes Inteligentes e Assistentes Avançados",
+      outcome: "Resultado: Agentes avançados com memória e personalização ativa",
       items: [
         "A Automação de Follow-up que Converte",
         "Chatbot [Nível 3] - Mais de 90% das pessoas pensarão que é uma pessoa",
@@ -110,8 +110,8 @@ export const MethodologySection = () => {
     },
     {
       week: 8,
-      title: "Sistemas de Escala e Otimizacao",
-      outcome: "Resultado: Avatares de IA e segundo cerebro operacional configurados",
+      title: "Sistemas de Escala e Otimização",
+      outcome: "Resultado: Avatares de IA e segundo cérebro operacional configurados",
       items: [
         "Avatares de IA - O Futuro da Produção de Conteúdo",
         "Criando seu Primeiro Clone de IA",
@@ -124,7 +124,7 @@ export const MethodologySection = () => {
     {
       week: 9,
       title: "BI e Dashboard Executivo",
-      outcome: "Resultado: Dashboard executivo com metricas em tempo real",
+      outcome: "Resultado: Dashboard executivo com métricas em tempo real",
       items: [
         "Carrosséis Para as Redes Sociais com IA",
         "Carrosséis que Se Publicam Sozinhos em Todas as Redes (Blotato)",
@@ -138,9 +138,9 @@ export const MethodologySection = () => {
     },
     {
       week: 10,
-      title: "Monetizacao e Aquisicao de Clientes",
-      outcome: "Resultado: Operacao completa no piloto automatico",
-      badge: "AVANCADO",
+      title: "Monetização e Aquisição de Clientes",
+      outcome: "Resultado: Operação completa no piloto automático",
+      badge: "AVANÇADO",
       items: [
         "Pesquisa de Anúncios Lucrativos dos Concorrentes",
         "Anúncios Estáticos que Geram Vendas",
@@ -166,11 +166,11 @@ export const MethodologySection = () => {
             10 Módulos &middot; 75 Aulas Práticas
           </span>
           <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-6 leading-tight">
-            O Que Voce Tera Construido{" "}
+            O Que Você Terá Construído{" "}
             <span className="gradient-text">em 10 Semanas</span>
           </h2>
           <p className="text-body-lg text-[hsl(215,12%,65%)] max-w-3xl mx-auto leading-relaxed">
-            O roteiro exato de 75 aulas que levou um musico e uma executiva de tech a R$ 2,5 milhoes. Cada modulo entrega implementacoes praticas que funcionam no seu negocio — no seu ritmo.
+            O roteiro exato de 75 aulas que levou um músico e uma executiva de tech a R$ 2,5 milhões. Cada módulo entrega implementações práticas que funcionam no seu negócio — no seu ritmo.
           </p>
         </div>
 
@@ -240,7 +240,7 @@ export const MethodologySection = () => {
             <h3 className="text-2xl font-bold text-foreground">1 Ano de Acesso Completo</h3>
           </div>
           <p className="text-[hsl(215,12%,65%)] leading-relaxed max-w-2xl mx-auto">
-            As aulas seguem uma ordem estrategica para que voce construa cada peca do sistema na sequencia certa. Voce tem 1 ano completo para implementar tudo no seu ritmo.
+            As aulas seguem uma ordem estratégica para que você construa cada peça do sistema na sequência certa. Você tem 1 ano completo para implementar tudo no seu ritmo.
           </p>
         </div>
 
@@ -267,7 +267,7 @@ export const MethodologySection = () => {
               onClick={() => setPopupOpen(true)}
               className="relative overflow-hidden w-full sm:w-auto min-h-[52px] bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
-              QUERO COMECAR AGORA
+              QUERO COMEÇAR AGORA
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <p className="text-sm text-[hsl(215,10%,45%)]">

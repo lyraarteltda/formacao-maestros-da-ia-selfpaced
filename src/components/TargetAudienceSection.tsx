@@ -130,19 +130,19 @@ export const TargetAudienceSection = () => {
         {/* Highlighted Features */}
         <div className="mb-16 sm:mb-24">
           <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-8 sm:mb-12 text-center leading-tight">
-            <span className="gradient-text">Alem das 75 Aulas, Voce Tambem Recebe:</span>
+            <span className="gradient-text">Além das 75 Aulas, Você Também Recebe:</span>
           </h2>
           <div className="space-y-3 sm:space-y-4">
             {[
               {
                 icon: Folder,
                 title: "Folder de Projetos",
-                description: "Acesso ao nosso pipeline de empresas buscando automacao com IA. Todos os dias inumeras empresas preenchem nossa aplicacao e atendemos apenas 5% delas. As outras 95%? Oportunidades para um Maestro como voce."
+                description: "Acesso ao nosso pipeline de empresas buscando automação com IA. Todos os dias inúmeras empresas preenchem nossa aplicação e atendemos apenas 5% delas. As outras 95%? Oportunidades para um Maestro como você."
               },
               {
                 icon: Lock,
                 title: "Arquivos Confidenciais",
-                description: "Todos os sistemas, automacoes, estrategias e numeros da nossa empresa. A mesma operacao que nos demanda menos de 30 minutos por dia e faturou mais de R$ 2,5 milhoes."
+                description: "Todos os sistemas, automações, estratégias e números da nossa empresa. A mesma operação que nos demanda menos de 30 minutos por dia e faturou mais de R$ 2,5 milhões."
               }
             ].map((feature, index) => (
               <div key={index} className="card-elevated p-4 sm:p-6 md:p-8 border-emerald-500/20">

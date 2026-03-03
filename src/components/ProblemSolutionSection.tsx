@@ -49,10 +49,10 @@ export const ProblemSolutionSection = () => {
           <div className="card-elevated p-5 sm:p-8 md:p-10 border-emerald-500/20 mb-6 sm:mb-8">
             <div className="space-y-6">
               <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]">
-                Se voce ja testou dezenas de ferramentas de IA e nao conseguiu transformar isso em resultado concreto, nos entendemos — porque passamos pelo mesmo. O problema nao e voce. E a falta de um sistema estruturado que conecte tudo.
+                Se você já testou dezenas de ferramentas de IA e não conseguiu transformar isso em resultado concreto, nós entendemos — porque passamos pelo mesmo. O problema não é você. É a falta de um sistema estruturado que conecte tudo.
               </p>
               <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]">
-                Voce nao precisa de mais uma ferramenta. Precisa de um <span className="text-foreground font-semibold">SISTEMA</span>. Testado, validado com R$ 2,5 milhoes em vendas reais, documentado em 75 aulas praticas — pronto para copiar e implementar.
+                Você não precisa de mais uma ferramenta. Precisa de um <span className="text-foreground font-semibold">SISTEMA</span>. Testado, validado com R$ 2,5 milhões em vendas reais, documentado em 75 aulas práticas — pronto para copiar e implementar.
               </p>
             </div>
           </div>
@@ -73,7 +73,7 @@ export const ProblemSolutionSection = () => {
               onClick={() => setPopupOpen(true)}
               className="relative overflow-hidden w-full sm:w-auto min-h-[52px] bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
-              QUERO AUTOMATIZAR MEU NEGOCIO
+              QUERO AUTOMATIZAR MEU NEGÓCIO
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <p className="text-sm text-[hsl(215,10%,45%)]">

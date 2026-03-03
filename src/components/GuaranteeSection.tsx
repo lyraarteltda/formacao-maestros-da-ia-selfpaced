@@ -48,19 +48,19 @@ export const GuaranteeSection = () => {
                 </div>
                 <div className="space-y-4">
                   <p className="text-sm md:text-base text-[hsl(215,12%,65%)] leading-relaxed">
-                    Acesse as aulas. Explore os agentes de IA. Teste os templates de automacao. Se nos primeiros 7 dias voce concluir que a formacao nao vale o investimento, envie um email para contato@lyraarte.com e devolvemos 100% do valor.{" "}
-                    <span className="font-semibold text-foreground">Sem perguntas. Sem formularios. Sem espera.</span>
+                    Acesse as aulas. Explore os agentes de IA. Teste os templates de automação. Se nos primeiros 7 dias você concluir que a formação não vale o investimento, envie um email para contato@lyraarte.com e devolvemos 100% do valor.{" "}
+                    <span className="font-semibold text-foreground">Sem perguntas. Sem formulários. Sem espera.</span>
                   </p>
                   <p className="text-sm md:text-base text-[hsl(215,12%,65%)] leading-relaxed">
-                    Assumimos esse risco porque conhecemos o conteudo. Quem implementa, gera resultado — e estamos confiantes o suficiente para colocar nosso dinheiro onde esta nossa promessa.
+                    Assumimos esse risco porque conhecemos o conteúdo. Quem implementa, gera resultado — e estamos confiantes o suficiente para colocar nosso dinheiro onde está nossa promessa.
                   </p>
                   <p className="text-sm md:text-base text-[hsl(215,12%,65%)] leading-relaxed">
-                    Em 7 dias voce tera concluido os primeiros 2 modulos, configurado seu primeiro agente de IA, e ativado sua primeira automacao. Se nada disso funcionar para o seu negocio, o reembolso e imediato.
+                    Em 7 dias você terá concluído os primeiros 2 módulos, configurado seu primeiro agente de IA, e ativado sua primeira automação. Se nada disso funcionar para o seu negócio, o reembolso é imediato.
                   </p>
                 </div>
                 <div className="mt-4 flex items-center gap-2 text-emerald-400">
                   <CheckCircle2 className="w-5 h-5" />
-                  <span className="text-sm font-medium">O risco e nosso. A decisao e sua.</span>
+                  <span className="text-sm font-medium">O risco é nosso. A decisão é sua.</span>
                 </div>
               </div>
             </div>
@@ -75,7 +75,7 @@ export const GuaranteeSection = () => {
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-amber-400/40" />
               </div>
               <p className="text-xs text-[hsl(215,10%,45%)] mt-2 uppercase tracking-wider">
-                Fundadores da Formacao Maestros da IA
+                Fundadores da Formação Maestros da IA
               </p>
             </div>
           </div>
@@ -96,7 +96,7 @@ export const GuaranteeSection = () => {
           <span className="w-1 h-1 rounded-full bg-white/10" />
           <div className="flex items-center gap-2 text-[hsl(215,12%,65%)]">
             <CheckCircle2 className="w-4 h-4 text-emerald-500/60" />
-            <span className="text-sm">Satisfacao Garantida</span>
+            <span className="text-sm">Satisfação Garantida</span>
           </div>
           <span className="w-1 h-1 rounded-full bg-white/10" />
           <div className="flex items-center gap-2 text-[hsl(215,12%,65%)]">

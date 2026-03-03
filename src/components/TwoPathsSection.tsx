@@ -26,7 +26,7 @@ export const TwoPathsSection = () => {
         >
           <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-4">
             Daqui a 12 Meses:{" "}
-            <span className="gradient-text">Duas Realidades Possiveis</span>
+            <span className="gradient-text">Duas Realidades Possíveis</span>
           </h2>
         </motion.div>
 
@@ -45,7 +45,7 @@ export const TwoPathsSection = () => {
                 <span className="text-red-400 font-bold text-sm uppercase tracking-wider">Realidade A</span>
               </div>
               <p className="text-base sm:text-lg leading-relaxed text-[hsl(215,12%,65%)]">
-                E marco de 2027. Voce ainda responde mensagens de clientes manualmente. Seu concorrente — aquele que voce achava que estava atras — fechou 3x mais contratos no ultimo trimestre usando agentes de IA no WhatsApp. Voce abre o LinkedIn e ve profissionais cobrando R$ 5.000 por automacao. Voce sabe que poderia fazer o mesmo. Mas nao comecou.
+                É março de 2027. Você ainda responde mensagens de clientes manualmente. Seu concorrente — aquele que você achava que estava atrás — fechou 3x mais contratos no último trimestre usando agentes de IA no WhatsApp. Você abre o LinkedIn e vê profissionais cobrando R$ 5.000 por automação. Você sabe que poderia fazer o mesmo. Mas não começou.
               </p>
             </div>
           </motion.div>
@@ -64,7 +64,7 @@ export const TwoPathsSection = () => {
                 <span className="text-emerald-400 font-bold text-sm uppercase tracking-wider">Realidade B</span>
               </div>
               <p className="text-base sm:text-lg leading-relaxed text-[hsl(215,12%,65%)]">
-                E marco de 2027. Voce abre seu dashboard de manha e ve as vendas que entraram enquanto dormia. Seu chatbot qualificou 12 leads ontem a noite. Sua automacao de conteudo publicou 4 posts em 3 plataformas. Voce toma cafe, revisa os numeros em 20 minutos, e segue com o seu dia. A operacao roda sozinha.
+                É março de 2027. Você abre seu dashboard de manhã e vê as vendas que entraram enquanto dormia. Seu chatbot qualificou 12 leads ontem à noite. Sua automação de conteúdo publicou 4 posts em 3 plataformas. Você toma café, revisa os números em 20 minutos, e segue com o seu dia. A operação roda sozinha.
               </p>
             </div>
           </motion.div>
@@ -79,7 +79,7 @@ export const TwoPathsSection = () => {
           className="text-center mt-10"
         >
           <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)] max-w-3xl mx-auto mb-8">
-            A diferenca entre essas duas realidades nao e talento, dinheiro ou experiencia tecnica. E acesso ao sistema certo — e a decisao de agir enquanto ainda e cedo.
+            A diferença entre essas duas realidades não é talento, dinheiro ou experiência técnica. É acesso ao sistema certo — e a decisão de agir enquanto ainda é cedo.
           </p>
 
           <div className="flex flex-col items-center gap-3">
