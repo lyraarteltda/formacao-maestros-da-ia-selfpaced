@@ -254,7 +254,8 @@ export const MethodologySection = () => {
             className="w-full md:w-auto text-sm md:text-lg px-4 md:px-10"
             onClick={() => setPopupOpen(true)}
           >
-            QUERO CONSTRUIR MEU EXÉRCITO DE AGENTES
+            <span className="block md:hidden">QUERO COMEÇAR AGORA</span>
+            <span className="hidden md:block">QUERO CONSTRUIR MEU EXÉRCITO DE AGENTES</span>
           </Button>
         </div>
       </div>

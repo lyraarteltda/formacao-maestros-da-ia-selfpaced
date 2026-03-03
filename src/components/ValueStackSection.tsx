@@ -112,7 +112,7 @@ export const ValueStackSection = () => {
               {deliverables.map((item, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-start justify-between gap-4 pb-4 border-b border-border/50 last:border-0 last:pb-0"
+                  className="flex flex-col md:flex-row items-start md:justify-between gap-2 md:gap-4 pb-4 border-b border-border/50 last:border-0 last:pb-0"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -127,7 +127,7 @@ export const ValueStackSection = () => {
                       <p className="text-muted-foreground text-sm mt-1">{item.subtitle}</p>
                     </div>
                   </div>
-                  <span className="text-muted-foreground font-medium whitespace-nowrap text-sm">{item.value}</span>
+                  <span className="text-muted-foreground font-medium text-xs md:text-sm md:whitespace-nowrap">{item.value}</span>
                 </motion.div>
               ))}
             </div>
@@ -145,7 +145,7 @@ export const ValueStackSection = () => {
                 {bonuses.map((item, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-start justify-between gap-4"
+                    className="flex flex-col md:flex-row items-start md:justify-between gap-2 md:gap-4"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -158,7 +158,7 @@ export const ValueStackSection = () => {
                         <p className="text-muted-foreground text-sm mt-1">{item.subtitle}</p>
                       </div>
                     </div>
-                    <span className="text-muted-foreground font-medium whitespace-nowrap text-sm">{item.value}</span>
+                    <span className="text-muted-foreground font-medium text-xs md:text-sm md:whitespace-nowrap ml-9 md:ml-0">{item.value}</span>
                   </motion.div>
                 ))}
               </div>

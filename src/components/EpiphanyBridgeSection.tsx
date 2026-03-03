@@ -145,7 +145,8 @@ export const EpiphanyBridgeSection = () => {
             className="w-full md:w-auto text-sm md:text-lg px-4 md:px-10"
             onClick={() => setPopupOpen(true)}
           >
-            QUERO O FRAMEWORK MAESTRO COMPLETO
+            <span className="block md:hidden">QUERO O FRAMEWORK</span>
+            <span className="hidden md:block">QUERO O FRAMEWORK MAESTRO COMPLETO</span>
           </Button>
           <p className="text-sm text-muted-foreground mt-3">
             Acesso imediato + Garantia de Execução de 90 dias
