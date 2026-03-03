@@ -17,7 +17,7 @@ export const HeroSection = () => {
 
   return (
     <section 
-      className="min-h-[75vh] flex flex-col relative overflow-hidden bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
+      className="min-h-[auto] md:min-h-[75vh] flex flex-col relative overflow-hidden bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
       style={{
         backgroundImage: `url(${heroBackground})`
       }}
@@ -41,33 +41,30 @@ export const HeroSection = () => {
       </nav>
 
       {/* Hero Content */}
-      <div className="flex-1 flex items-center justify-center relative z-20 section-padding pt-4 md:pt-16 lg:pt-20">
+      <div className="flex-1 flex items-center justify-center relative z-20 px-4 pt-4 pb-6 md:px-12 md:pt-10 md:pb-10 lg:px-24">
         <div className="container mx-auto text-center max-w-4xl">
           {/* Badge */}
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
-            <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-2 backdrop-blur-sm">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-4 md:mb-6">
+            <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-3 py-1.5 md:px-4 md:py-2 backdrop-blur-sm">
               <Users className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">+500 alunos | Método validado</span>
+              <span className="text-xs md:text-sm font-medium text-primary">+500 alunos | Método validado</span>
             </div>
           </div>
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 leading-tight">
-            <span className="gradient-text">
-              Para Empreendedores Sobrecarregados: O Framework Maestro Que Transformou um Simples Curso de Violão em R$ 2,5 Milhões
-            </span>{" "}
-            — Com Funcionários Digitais Que Trabalham Enquanto Você Dorme
+          <h1 className="text-[1.75rem] md:text-[2.5rem] lg:text-[3rem] font-bold mb-3 md:mb-4 leading-snug text-foreground">
+            Para Empreendedores Sobrecarregados: O Framework Maestro Que Transformou um Simples Curso de Violão em R$ 2,5 Milhões — Com Funcionários Digitais Que Trabalham Enquanto Você Dorme
           </h1>
           
-          <p className="text-base md:text-lg lg:text-xl text-primary-foreground/80 mb-6 md:mb-8 font-medium leading-relaxed">
+          <p className="text-sm md:text-base lg:text-lg text-gray-300 mb-5 md:mb-6 font-medium leading-relaxed">
             Não importa se você vende e-books, consultoria ou produtos físicos. Veja como plugar esta mesma Equipe de Elite no seu negócio hoje. Você não está comprando um curso. Está instalando um exército de funcionários digitais — agentes autônomos que fazem sua prospecção, atendimento, vendas, conteúdo e suporte 24 horas por dia, sem nunca pedir férias, aumento ou reclamar. O mesmo sistema documentado que dois empreendedores comuns usaram para faturar R$ 2,5 milhões em 15 meses, trabalhando menos de 30 minutos por dia. Pronto para você copiar e ativar no seu negócio.
           </p>
 
           {/* CTA Button */}
-          <div className="mb-6">
+          <div className="mb-4 md:mb-6">
             <Button 
               variant="cta" 
               size="xl" 
-              className="w-full md:w-auto text-sm md:text-lg px-4 md:px-10"
+              className="w-full md:w-auto text-sm md:text-lg px-6 py-4 md:px-10 md:py-4"
               onClick={() => setPopupOpen(true)}
             >
               QUERO INSTALAR MEU EXÉRCITO DE FUNCIONÁRIOS DIGITAIS
@@ -75,7 +72,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Trust Badges */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm text-primary-foreground/70">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-6 text-xs md:text-sm text-gray-400">
             <div className="flex items-center gap-1.5">
               <Shield className="w-4 h-4 text-primary" />
               <span>Garantia de Execução de 90 dias</span>
