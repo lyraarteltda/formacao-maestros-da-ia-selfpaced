@@ -90,7 +90,7 @@ export const ParticleBackground = () => {
           if (distance < 100) {
             const opacity = Math.max(0, (100 - distance) / 100) * 0.2;
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(16, 185, 129, ${opacity})`;
+            ctx.strokeStyle = `rgba(34, 197, 94, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
@@ -106,9 +106,9 @@ export const ParticleBackground = () => {
           particle.x, particle.y, 0,
           particle.x, particle.y, particle.size * 3
         );
-        gradient.addColorStop(0, `rgba(16, 185, 129, ${particle.opacity * 0.8})`);
-        gradient.addColorStop(0.5, `rgba(16, 185, 129, ${particle.opacity * 0.3})`);
-        gradient.addColorStop(1, 'rgba(16, 185, 129, 0)');
+        gradient.addColorStop(0, `rgba(34, 197, 94, ${particle.opacity * 0.8})`);
+        gradient.addColorStop(0.5, `rgba(34, 197, 94, ${particle.opacity * 0.3})`);
+        gradient.addColorStop(1, 'rgba(34, 197, 94, 0)');
 
         ctx.beginPath();
         ctx.fillStyle = gradient;
@@ -117,13 +117,13 @@ export const ParticleBackground = () => {
 
         // Inner particle
         ctx.beginPath();
-        ctx.fillStyle = `rgba(16, 185, 129, ${particle.opacity})`;
+        ctx.fillStyle = `rgba(34, 197, 94, ${particle.opacity})`;
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
 
         // Core highlight
         ctx.beginPath();
-        ctx.fillStyle = `rgba(110, 231, 183, ${particle.opacity * 0.8})`;
+        ctx.fillStyle = `rgba(134, 239, 172, ${particle.opacity * 0.8})`;
         ctx.arc(particle.x, particle.y, particle.size * 0.5, 0, Math.PI * 2);
         ctx.fill();
       });

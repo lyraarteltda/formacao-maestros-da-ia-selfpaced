@@ -1,279 +1,257 @@
 import { useState } from "react";
-import { Calendar, ArrowRight } from "lucide-react";
+import { Wrench, TrendingUp, Bot, Coins, CheckCircle, ChevronDown, ChevronUp, Calendar, Star, Zap } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CTAPopup } from "@/components/CTAPopup";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 export const MethodologySection = () => {
+  const [showFullCurriculum, setShowFullCurriculum] = useState(false);
   const [popupOpen, setPopupOpen] = useState(false);
+
+  const transformationBlocks = [
+    {
+      icon: Wrench,
+      weeks: "MÓDULOS 1-3",
+      title: "FUNDAMENTOS + PRIMEIRO AGENTE",
+      description: "Configure seu ambiente e tenha seu primeiro agente autônomo funcionando em 24 horas",
+      includes: "Setup completo + Primeiro agente ativo"
+    },
+    {
+      icon: TrendingUp,
+      weeks: "MÓDULOS 4-6",
+      title: "MARKETING & VENDAS AUTÔNOMOS",
+      description: "Agentes de conteúdo, tráfego e vendas trabalhando no piloto automático",
+      includes: "Agente de Vendas WhatsApp + Pipeline automatizado"
+    },
+    {
+      icon: Bot,
+      weeks: "MÓDULOS 7-8",
+      title: "AGENTES AVANÇADOS + ESCALA",
+      description: "Agentes com memória, contexto e personalização — sua orquestra completa",
+      includes: "Agentes inteligentes + Segundo cérebro operacional"
+    },
+    {
+      icon: Coins,
+      weeks: "MÓDULOS 9-10",
+      title: "DASHBOARD CEO + MONETIZAÇÃO",
+      description: "Visão executiva em tempo real e operação no piloto automático total",
+      includes: "Dashboard completo + Estratégia de monetização"
+    }
+  ];
+
   const weeklyContent = [
     {
       week: 1,
       title: "Fundamentos da IA e Setup Estratégico",
-      outcome: "Resultado: Seu ambiente de IA configurado e primeiro agente funcionando",
-      items: [
-        "Introdução - Boas-Vindas",
-        "Fundamentos da IA: Como funciona, onde aplicar e oportunidades de lucro",
-        "Como Transformar IA em Vantagem Competitiva",
-        "A Ferramenta de Automações Mais Robusta do Mercado",
-        "A Plataforma Mais Veloz Para Criar Seus Agentes de IA",
-        "Preparando Seu Arsenal IA",
-        "Introdução ao n8n",
-        "Criando seu primeiro agente de IA [n8n]",
-        "Como conectar ferramentas do google no n8n sem ter um domínio",
-        "Introdução ao make.com",
-        "Criando seu Email Assistant [make.com]",
-        "Como conectar ferramentas do google no make sem ter um domínio"
-      ]
+      outcome: "Você sai com: Ambiente configurado + primeiro agente autônomo funcionando em 24 horas",
+      badge: null,
+      items: ["Fundamentos da IA: Como funciona, onde aplicar e oportunidades de lucro", "Visão estratégica: Como usar IA como vantagem competitiva", "Setup do Ambiente: Configure contas, ferramentas e integrações", "Plataformas Essenciais: Make, n8n", "Primeira Automação: Aprenda a implementar seu primeiro workflow do zero dentro do seu negócio"]
     },
     {
       week: 2,
-      title: "Automações e Primeiros Resultados",
-      outcome: "Resultado: Automações básicas rodando no seu negócio",
-      items: [
-        "Como Mudamos o Jogo da Nossa Empresa com IA e Automação",
-        "Engenharia de Prompt: Entenda a estrutura ideal para gerar resultados 10x melhores",
-        "Crie sua primeira automação no Manychat",
-        "Conceitos Essenciais: APIs, Webhooks e Https requests",
-        "Use qualquer modelo de LLM no seu WhatsApp [n8n]",
-        "Automatize suas Postagens nas Redes Sociais [make.com]",
-        "As 2 Melhores Ferramentas Para Automatizar Seus Posts (Blotato x Metricool)"
-      ]
+      title: "Automações Básicas e Primeiros Resultados",
+      outcome: "Você sai com: Automações rodando e economizando tempo real",
+      badge: null,
+      items: ["Ferramentas e Plataformas de IA/Automação: OpenRouter, Fal.ai, Manychat, Metricool, Airtable…", "Engenharia de Prompt: Entenda a estrutura ideal para gerar resultados 10x melhores", "Automação Nível 2: Crie automações mais elaboradas e coloque-as para trabalhar por você"]
     },
     {
       week: 3,
       title: "Arsenal de Ferramentas de IA",
-      outcome: "Resultado: Suas próprias ferramentas de IA construídas e operando",
+      outcome: "Você sai com: Suas próprias ferramentas de IA construídas e operando",
       badge: "MAIS POPULAR",
-      items: [
-        "As Melhores LLMs",
-        "3 Ferramentas que Substituem uma Equipe Inteira: Lovable, GitHub e Netlify",
-        "Setup do Ambiente: Lovable, Github e Netlify",
-        "Nosso Agente Copywriter (100% validado) - RAG Iniciante",
-        "Criando sua Primeira Página no Lovable (HTML + Domínio Próprio)",
-        "Como Editar Seus Sites no Lovable",
-        "Captura de Leads com Pop-up no Lovable + n8n",
-        "Como Usar Templates Prontos (Make, n8n, JSON)"
-      ]
+      items: ["TOP 15 Ferramentas de IA: Lovable, Netlify, GitHub, 21st.dev, ChatGPT, Claude, Gemini, Grok, VEO3, Runway… (atualizadas frequentemente)", "Assistentes Personalizados: Crie assistentes específicos para seu negócio com GPTs e Projetos (Claude)", "Automação de Postagem: Reduza o trabalho de redes sociais ao máximo", "Templates Prontos: Copie e cole automações que já validamos"]
     },
     {
       week: 4,
       title: "Marketing Automatizado - Fundamentos",
-      outcome: "Resultado: Pipeline de conteúdo automatizado gerando posts",
-      items: [
-        "Estratégia de Crescimento Orgânico",
-        "Como Fazer o Algoritmo Trabalhar Por Você",
-        "Criando Seu Agente Roteirista",
-        "A Habilidade que Você Precisa Dominar",
-        "Geração de Vídeos com Automação"
-      ]
+      outcome: "Você sai com: Pipeline de conteúdo automatizado publicando sem você",
+      badge: null,
+      items: ["Funil de Marketing Automatizado: Da captação à conversão", "Produção de vídeos com IA: VEO3, Runway, HeyGen…", "100% da Produção de Conteúdo Automatizada: Instagram, TikTok, YouTube"]
     },
     {
       week: 5,
-      title: "Marketing Automatizado (Avançado)",
-      outcome: "Resultado: Agentes inteligentes ativos no seu fluxo de trabalho",
-      items: [
-        "Construa Experiências Interativas no Lovable com Efeitos Profissionais",
-        "Como Criar Formulários com Alta Taxa de Resposta",
-        "Como Vender Mais com Um Time de Vendas Menor (Qualificação de Leads) - n8n",
-        "Automatize a Extração de Dados do Gerenciador de Anúncios [Meta Ads] - make.com",
-        "Lógica Condicional: A Base de Toda Decisão Automatizada",
-        "O Gestor de Tráfego Que Nunca Dorme [Meta Ads]"
-      ]
+      title: "Marketing Automatizado - Avançado",
+      outcome: "Você sai com: Agentes inteligentes ativos no seu fluxo de trabalho",
+      badge: null,
+      items: ["Análise Qualificatória: IA para selecionar Smart Leads pós-formulários", "Agente de Gestão de Tráfego: Facebook Ads otimizado automaticamente por IA"]
     },
     {
       week: 6,
-      title: "Vendas e CRM Inteligente",
-      outcome: "Resultado: Chatbot no WhatsApp qualificando leads 24/7",
+      title: "Sales Automation e CRM Inteligente",
+      outcome: "Você sai com: Agente de Vendas no WhatsApp qualificando e vendendo 24/7",
       badge: "MAIOR ROI",
-      items: [
-        "Criando Sistemas de Automação do WhatsApp",
-        "Como Extrair Informações da Web com Agentes Inteligentes",
-        "O Que É Possível Fazer ao Conectar Agentes Detetives com Automações",
-        "Como Projetar Um Sistema Autônomo de Captação de Clientes",
-        "Chatbot [Nível 1] - Atendimento no Whatsapp",
-        "Chatbot [Nível 2] - Escuta de Áudios e Mensagens de Voz com IA"
-      ]
+      items: ["Agente SDR com IA: Prospecção e qualificação automatizada", "Recuperação de Carrinho: Converta clientes perdidos automaticamente", "CRM Inteligente: Abordagem e segmentação automática de leads", "Follow-up Personalizado: Mensagens customizadas em escala", "Chatbot com voz: Clone sua voz ou gere respostas automáticas e personalizadas em áudio para seus clientes"]
     },
     {
       week: 7,
       title: "Agentes Inteligentes e Assistentes Avançados",
-      outcome: "Resultado: Agentes avançados com memória e personalização ativa",
-      items: [
-        "A Automação de Follow-up que Converte",
-        "Chatbot [Nível 3] - Mais de 90% das pessoas pensarão que é uma pessoa",
-        "Como Personalizar a Inteligência Artificial - RAG",
-        "RAG {Nível 1.1} - Agente de Análise de Dados",
-        "RAG {Nível 1.2} - Agente com Dados da Empresa",
-        "Como Criar um Agente de RAG em 5 minutos"
-      ]
+      outcome: "Você sai com: Agentes com memória, contexto e personalização",
+      badge: null,
+      items: ["Agente de Vendas Completo: Da apresentação ao fechamento", "Assistente de Atendimento: Suporte Personalizado 24/7 com IA", "Databases Inteligentes (Vetoriais) e RAG: Armazenamento de conversas para respostas humanizadas"]
     },
     {
       week: 8,
       title: "Sistemas de Escala e Otimização",
-      outcome: "Resultado: Avatares de IA e segundo cérebro operacional configurados",
-      items: [
-        "Avatares de IA - O Futuro da Produção de Conteúdo",
-        "Criando seu Primeiro Clone de IA",
-        "Conteúdo 100% Automatizado com Avatares de IA",
-        "Como Grandes Empresas Armazenam Informações?",
-        "Alimentando sua Database (Pinecone)",
-        "Criando um Segundo Cérebro Confiável - RAG {Nível 2}"
-      ]
+      outcome: "Você sai com: Avatares de IA e segundo cérebro operacional",
+      badge: null,
+      items: ["Sistemas de Escala: Multiplique resultados sem aumentar equipe", "Otimização Contínua: IA que analisa e melhora seus processos automaticamente", "Relatório de Desempenho Automatizado: Monitore o desempenho de sua equipe e seus agentes"]
     },
     {
       week: 9,
-      title: "BI e Dashboard Executivo",
-      outcome: "Resultado: Dashboard executivo com métricas em tempo real",
-      items: [
-        "Carrosséis Para as Redes Sociais com IA",
-        "Carrosséis que Se Publicam Sozinhos em Todas as Redes (Blotato)",
-        "Posts de Forma 100% Automática (Metricool)",
-        "Como Criar Seu Próprio CRM com IA (Supabase + Lovable)",
-        "Sistema Inteligente que Captura e Organiza Leads no CRM",
-        "Como Unir Todos os Dados da Empresa em 1 Só Lugar",
-        "Automação Infinita + Extraindo os Dados da Meta",
-        "Dashboard em Tempo Real - (1/2)"
-      ]
+      title: "Business Intelligence e Dashboard Executivo",
+      outcome: "Você sai com: Dashboard com métricas em tempo real — visão de CEO",
+      badge: null,
+      items: ["BI com IA Avançado: Análises preditivas da operação com sugestões automáticas de otimização, projeções de receita e identificação de gargalos", "Dashboard CEO Completo: Métricas em tempo real, KPIs automatizados, alertas inteligentes e relatórios executivos que se geram sozinhos", "Conselho de IA (AI Board): Crie um board de diretores AI para receber insights estratégicos, análise de cenários e recomendações de crescimento", "Análise Competitiva Automatizada: Monitore concorrentes, preços e tendências de mercado automaticamente"]
     },
     {
       week: 10,
       title: "Monetização e Aquisição de Clientes",
-      outcome: "Resultado: Operação completa no piloto automático",
+      outcome: "Você sai com: Operação no piloto automático + estratégia de monetização ativa",
       badge: "AVANÇADO",
-      items: [
-        "Pesquisa de Anúncios Lucrativos dos Concorrentes",
-        "Anúncios Estáticos que Geram Vendas",
-        "Relatório de Movimentos Estratégicos dos Competidores",
-        "Sistema de Inteligência Competitiva 100% Completo",
-        "A Dashboard Absoluta",
-        "Seu Time de Agentes de IA",
-        "Seu Assistente Pessoal de Alto Nível",
-        "Um Exército de Agentes no Seu Whatsapp",
-        "Memória Infinita Para Seus Agentes de IA",
-        "O Conselho de Diretores AI Perfeito Para sua Empresa",
-        "Encerramento"
-      ]
+      items: ["Prospecção de Clientes Automatizada: Como buscar clientes para sua empresa/nicho de forma 100% automatizada", "Pitch de Vendas: Apresentações com IA que convertem", "Folder de Projetos: Acesso exclusivo ao nosso formulário com propostas de empresas buscando automatizar seus negócios"]
     }
   ];
 
   return (
-    <section className="section-padding bg-background">
-      <div className="container mx-auto max-w-5xl">
-        {/* Section Header */}
-        <div className="text-center mb-10 sm:mb-16">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide uppercase mb-6">
-            10 Módulos &middot; 75 Aulas Práticas
-          </span>
-          <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-6 leading-tight">
-            O Que Você Terá Construído{" "}
-            <span className="gradient-text">em 10 Semanas</span>
+    <section className="py-12 md:py-16 bg-background">
+      <div className="container mx-auto max-w-6xl">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+            O Roteiro Exato Que Transformou R$ 2.300/Mês em{" "}
+            <span className="gradient-text">R$ 2,5 Milhões</span>
           </h2>
-          <p className="text-body-lg text-[hsl(215,12%,65%)] max-w-3xl mx-auto leading-relaxed">
-            O roteiro exato de 75 aulas que levou um músico e uma executiva de tech a R$ 2,5 milhões. Cada módulo entrega implementações práticas que funcionam no seu negócio — no seu ritmo.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-3">
+            Cada módulo entrega agentes e automações funcionando no seu negócio — no seu ritmo. Você não estuda IA. Você INSTALA funcionários digitais.
           </p>
+          <span className="inline-block text-sm font-bold text-primary bg-primary/10 px-4 py-2 rounded-full">
+            10 Módulos · O Framework Maestro Completo de Agentes Autônomos
+          </span>
         </div>
 
-        {/* Progress bar showing 10 modules */}
-        <div className="flex items-center gap-1 mb-12 max-w-2xl mx-auto">
-          {weeklyContent.map((_, i) => (
-            <div key={i} className="flex-1 h-1.5 rounded-full bg-emerald-500/20 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-full" />
-            </div>
+        {/* 4 Transformation Blocks */}
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          {transformationBlocks.map((block, index) => (
+            <motion.div
+              key={index}
+              className="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/30 transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 * index }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-gradient-primary rounded-lg flex-shrink-0">
+                  <block.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded-full">
+                      {block.weeks}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{block.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed mb-3">{block.description}</p>
+                  <div className="flex items-center gap-2 text-sm text-primary">
+                    <CheckCircle className="w-4 h-4" />
+                    <span className="font-medium">Inclui: {block.includes}</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Accordion Curriculum */}
-        <Accordion type="single" collapsible className="space-y-3">
-          {weeklyContent.map((content, index) => (
-            <AccordionItem
-              key={index}
-              value={`module-${index}`}
-              className="border-0 card-base p-0 overflow-hidden data-[state=open]:border-emerald-500/30 data-[state=open]:bg-[hsl(220,16%,8%)]"
-            >
-              <AccordionTrigger className="w-full p-0 hover:no-underline [&>svg]:text-[hsl(215,10%,45%)] [&>svg]:w-5 [&>svg]:h-5 [&>svg]:mr-5 [&>svg]:md:mr-6">
-                <div className="flex items-center gap-4 md:gap-6 p-5 md:p-6 w-full">
-                  {/* Module Number Badge */}
-                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
-                    <span className="text-emerald-400 font-bold text-base sm:text-xl font-mono">{String(content.week).padStart(2, '0')}</span>
-                  </div>
+        {/* Expandable Full Curriculum */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <button
+            onClick={() => setShowFullCurriculum(!showFullCurriculum)}
+            className="w-full bg-card hover:bg-muted/50 border border-border rounded-xl p-4 flex items-center justify-center gap-2 transition-all group"
+          >
+            {showFullCurriculum ? (
+              <ChevronUp className="w-5 h-5 text-primary" />
+            ) : (
+              <ChevronDown className="w-5 h-5 text-primary" />
+            )}
+            <span className="font-medium text-foreground">
+              {showFullCurriculum ? "Ocultar currículo detalhado" : "▼ Ver currículo completo — 10 módulos detalhados"}
+            </span>
+          </button>
 
-                  {/* Title + Meta */}
-                  <div className="flex-1 text-left">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">{content.title}</h3>
-                      {content.badge && (
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-wider mb-1">
-                          {content.badge}
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-sm text-[hsl(215,10%,45%)]">{content.items.length} aulas</p>
-                    {content.outcome && (
-                      <p className="text-xs text-emerald-400/70 mt-1">{content.outcome}</p>
-                    )}
+          <AnimatePresence>
+            {showFullCurriculum && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="mt-6 space-y-4">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Calendar className="w-6 h-6 text-primary" />
+                    <h3 className="text-xl font-bold text-foreground">O Framework Maestro — 10 Módulos</h3>
                   </div>
-                </div>
-              </AccordionTrigger>
-
-              {/* Expanded lesson list */}
-              <AccordionContent className="px-4 sm:px-5 md:px-6 pb-5 sm:pb-6">
-                <div className="ml-[3.5rem] sm:ml-[4.5rem] md:ml-[5.5rem] space-y-0">
-                  {content.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-center gap-3 py-2.5 border-b border-border/30 last:border-0 group/item">
-                      <div className="w-6 h-6 rounded-md bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
-                        <span className="text-xs text-emerald-400/70 font-mono font-medium">{String(itemIndex + 1).padStart(2, '0')}</span>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    Cada módulo entrega agentes funcionando. Você tem 1 ano completo para implementar no seu ritmo.
+                  </p>
+                  
+                  {weeklyContent.map((content, index) => (
+                    <div key={index} className="bg-muted/30 p-4 rounded-lg border border-border/30">
+                      <div className="flex items-start gap-3">
+                        <div className="p-2 bg-gradient-primary rounded-lg flex-shrink-0">
+                          <span className="text-white font-bold text-sm">{String(content.week).padStart(2, '0')}</span>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex flex-wrap items-center gap-2 mb-1">
+                            <h4 className="font-bold text-foreground">{content.title}</h4>
+                            {content.badge && (
+                              <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full flex items-center gap-1">
+                                {content.badge === "MAIS POPULAR" && <Star className="w-3 h-3" />}
+                                {content.badge === "MAIOR ROI" && <TrendingUp className="w-3 h-3" />}
+                                {content.badge === "AVANÇADO" && <Zap className="w-3 h-3" />}
+                                {content.badge}
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-sm text-primary font-semibold mb-2">{content.outcome}</p>
+                          <ul className="space-y-1">
+                            {content.items.map((item, itemIndex) => (
+                              <li key={itemIndex} className="flex items-start gap-2 text-sm">
+                                <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                                <span className="text-muted-foreground">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
-                      <span className="text-sm sm:text-base text-foreground/80 leading-relaxed group-hover/item:text-foreground transition-colors">{item}</span>
                     </div>
                   ))}
                 </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-
-        {/* Overview Card */}
-        <div className="mt-8 sm:mt-12 card-elevated p-5 sm:p-8 md:p-10 text-center border-emerald-500/20">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Calendar className="w-7 h-7 text-emerald-400" />
-            <h3 className="text-2xl font-bold text-foreground">1 Ano de Acesso Completo</h3>
-          </div>
-          <p className="text-[hsl(215,12%,65%)] leading-relaxed max-w-2xl mx-auto">
-            As aulas seguem uma ordem estratégica para que você construa cada peça do sistema na sequência certa. Você tem 1 ano completo para implementar tudo no seu ritmo.
-          </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
-        {/* Content Evolution badges */}
-        <div className="mt-8 sm:mt-12 flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-4 text-center">
-          <span className="text-sm text-[hsl(215,10%,45%)]">Conteúdo que evolui:</span>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
-              Novos Agentes
+        {/* Tags */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
+          {["Novos Agentes Mensais", "Automações Atualizadas", "1 Ano de Acesso"].map((tag) => (
+            <span key={tag} className="text-sm font-medium text-primary bg-primary/10 border border-primary/20 px-4 py-2 rounded-full">
+              {tag}
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
-              Automações Atualizadas
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
-              1 Ano de Acesso
-            </span>
-          </div>
+          ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-8 sm:mt-12">
-          <div className="flex flex-col items-center gap-3">
-            <Button
-              onClick={() => setPopupOpen(true)}
-              className="relative overflow-hidden w-full sm:w-auto min-h-[52px] bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
-            >
-              QUERO COMEÇAR AGORA
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <p className="text-sm text-[hsl(215,10%,45%)]">
-              Acesso imediato + Garantia de 7 dias
-            </p>
-          </div>
+        <div className="text-center">
+          <Button
+            variant="cta"
+            size="xl"
+            className="w-full md:w-auto text-sm md:text-lg px-4 md:px-10"
+            onClick={() => setPopupOpen(true)}
+          >
+            QUERO CONSTRUIR MEU EXÉRCITO DE AGENTES
+          </Button>
         </div>
       </div>
 

@@ -1,59 +1,102 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { CTAPopup } from "@/components/CTAPopup";
+import { Shield } from "lucide-react";
 
 export const FinalCTASection = () => {
   const [popupOpen, setPopupOpen] = useState(false);
 
   return (
-    <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 bg-gradient-to-br from-emerald-700 via-emerald-600 to-emerald-700 relative overflow-hidden">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.05),transparent_50%)]" />
-
-      <div className="container mx-auto text-center max-w-4xl relative z-10">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-5 sm:mb-6 text-white leading-tight">
-          Cada Dia Sem Este Sistema é Um Dia de Oportunidades Perdidas
+    <section className="section-padding bg-gradient-primary text-primary-foreground">
+      <div className="container mx-auto max-w-4xl">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white text-center leading-tight">
+          Você Está a Uma Decisão de Distância de Ter Um Exército de Funcionários Digitais Trabalhando Por Você
         </h2>
+        
+        <div className="text-left text-white/90 text-lg leading-relaxed space-y-6 mb-10">
+          <p>
+            Vamos recapitular. Você leu até aqui — isso já te coloca entre os empreendedores mais sérios do Brasil. Agora você sabe:
+          </p>
 
-        <p className="text-base sm:text-lg md:text-xl mb-4 text-white/80 max-w-3xl mx-auto leading-relaxed">
-          Enquanto você analisa esta página, outros profissionais estão ativando agentes de IA que vendem, automatizam e escalam por eles. Estão colocando automações para rodar enquanto dormem. Estão construindo negócios que funcionam 24 horas por dia — com menos de 30 minutos de trabalho.
-        </p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-2">
+              <span className="text-primary-foreground mt-1">•</span>
+              <span>Que existe O Framework Maestro — um sistema documentado de agentes autônomos que gerou R$ 2,5 milhões em 15 meses — criado por um músico e uma administradora que não sabiam programar</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-foreground mt-1">•</span>
+              <span>Que esse sistema funciona em qualquer nicho — nós provamos com um simples curso de VIOLÃO</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-foreground mt-1">•</span>
+              <span>Que cada agente substitui um funcionário de R$ 2.000 a R$ 4.000/mês e trabalha 24 horas sem folga</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-foreground mt-1">•</span>
+              <span>Que você não precisa programar, não precisa de equipe, e não precisa de experiência prévia</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-foreground mt-1">•</span>
+              <span>Que seu primeiro agente roda em 24 horas — no Módulo 1</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-foreground mt-1">•</span>
+              <span>Que você pode copiar cada agente, cada automação, cada workflow — e ativar no seu negócio</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-foreground mt-1">•</span>
+              <span>Que você tem 90 dias para implementar e ver resultado — ou recebe 100% de volta + 1 hora de consultoria gratuita</span>
+            </li>
+          </ul>
 
-        <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-white font-semibold">
-          A diferença entre quem lidera e quem fica para trás não é talento. É acesso ao sistema certo. E hoje, esse acesso custa R$ 997.
-        </p>
+          <p>
+            A maioria do mercado é escrava da tecnologia. Trabalham PARA os algoritmos. Nós somos os Maestros que regem a IA para trabalhar PARA NÓS. E agora a porta da nossa tribo está aberta para você.
+          </p>
 
-        {/* Pricing reminder */}
-        <div className="mb-8">
-          <span className="text-lg text-white/50 line-through">De R$ 2.997</span>
-          <span className="text-lg sm:text-2xl md:text-3xl text-white font-bold ml-2 sm:ml-3">por 12x de R$ 97,42 ou R$ 997 à vista</span>
-          <p className="text-sm text-white/60 mt-2">
-            Preço de lançamento — valor sobe para R$ 1.497 após o encerramento da oferta.
+          <p className="text-white font-semibold text-xl text-center">
+            Programadores digitam código e torcem para funcionar. Maestros apontam a batuta e assistem o sistema executar.
+          </p>
+
+          <p>
+            A única pergunta que resta é: você vai continuar acordando às 3 da manhã em suor frio respondendo leads manualmente... ou vai tomar a decisão que separa operadores de Maestros?
           </p>
         </div>
 
-        <div className="flex flex-col items-center gap-3">
-          <Button
+        {/* Price */}
+        <div className="text-center mb-6">
+          <p className="text-white/70 text-lg line-through mb-1">De R$ 2.997</p>
+          <p className="text-white text-4xl md:text-5xl font-black mb-1">12x de R$ 97,42</p>
+          <p className="text-white/80 text-lg">ou R$ 997 à vista</p>
+          <p className="text-white/60 text-sm mt-2">Preço de lançamento — valor sobe para R$ 1.497 após o encerramento. Bônus exclusivos por tempo limitado.</p>
+        </div>
+        
+        {/* CTA */}
+        <div className="flex flex-col items-center gap-2 mb-10">
+          <Button 
+            variant="cta" 
+            size="xl" 
+            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 border-primary-foreground font-bold text-sm md:text-lg px-4 md:px-10 py-4 md:py-6 h-auto w-full md:w-auto"
             onClick={() => setPopupOpen(true)}
-            className="w-full sm:w-auto min-h-[52px] bg-white text-emerald-700 hover:bg-white/95 font-bold text-base sm:text-lg md:text-xl px-10 md:px-14 py-5 md:py-6 h-auto rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
           >
-            GARANTIR MEU ACESSO AGORA
-            <ArrowRight className="w-5 h-5 ml-2" />
+            EU ESCOLHO SER MAESTRO — GARANTIR MEU ACESSO AGORA
           </Button>
-          <p className="text-sm text-white/60">
-            Acesso imediato · Garantia de 7 dias · 75 aulas práticas · 12x de R$ 97,42
+          <p className="text-sm text-white/70 mt-2 text-center">
+            Acesso imediato · Garantia de Execução de 90 dias · 11+ agentes autônomos · 12x de R$ 97,42
           </p>
         </div>
-
-        {/* P.S. */}
-        <div className="mt-10 sm:mt-16 max-w-2xl mx-auto bg-white/[0.06] backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/[0.1]">
-          <p className="text-sm text-white/70 leading-relaxed text-left">
-            <span className="font-bold text-white">P.S.</span> — Se você leu até aqui, já sabe que precisa de IA no seu negócio. A pergunta não é "se" — é "quando". E a resposta é agora, enquanto o preço ainda é R$ 997. Esse é o mesmo sistema que gerou R$ 2,5 milhões em 15 meses. As mesmas 75 aulas. Os mesmos agentes de IA. As mesmas automações. Tudo pronto para usar, no seu ritmo, com autonomia total. Daqui a 6 meses, você pode estar comemorando seus resultados — ou desejando ter começado hoje. A decisão é sua.
-          </p>
-        </div>
-
+        
         <CTAPopup open={popupOpen} onOpenChange={setPopupOpen} />
+        
+        {/* P.S. Section */}
+        <div className="pt-8 border-t border-white/20 space-y-6">
+          <p className="text-left text-white/90 text-lg leading-relaxed">
+            <span className="font-bold text-white">P.S.</span> — Você já sabe que precisa de IA no seu negócio. Todo mundo sabe. A diferença é que agora você tem acesso ao FRAMEWORK MAESTRO — não a mais uma ferramenta, não a mais um curso teórico, mas ao exército completo de funcionários digitais que transformou um simples curso de violão em R$ 2,5 milhões. Os mesmos agentes. As mesmas automações. Cada um com nome, função e resultado documentado. Prontos para você copiar, ativar, e assistir seu negócio operar de uma forma que você nunca achou possível. E o melhor: seu primeiro agente roda em 24 horas. Não daqui a semanas. <span className="font-bold text-white">Amanhã.</span> Daqui a 12 meses, você pode ser o Maestro que rege sua orquestra de agentes e vive a vida que projetou — ou pode ser a mesma pessoa lendo outra página de vendas, suando às 3 da manhã respondendo mensagens. A decisão é só sua. Mas O Framework Maestro está aqui. A Garantia de Execução é de 90 dias. E a tribo dos Maestros está esperando por você.
+          </p>
+
+          <p className="text-left text-white/90 text-lg leading-relaxed">
+            <span className="font-bold text-white">P.P.S.</span> — Lembra do Agente de Vendas que você copiou de graça lá em cima? Aquilo é UM agente. Na Formação, você recebe mais de 10 — cada um mais poderoso que o anterior, todos trabalhando juntos como uma orquestra afinada. Se aquele agente grátis já te impressionou... <span className="font-bold text-white">imagine O Framework Maestro completo.</span>
+          </p>
+        </div>
       </div>
     </section>
   );

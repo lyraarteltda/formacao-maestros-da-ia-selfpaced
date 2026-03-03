@@ -1,206 +1,183 @@
-import { useState } from "react";
-import { Check, GraduationCap, Bot, Copy, Wrench, FolderOpen, RefreshCw, ArrowRight } from "lucide-react";
+import { Check, Gift, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { CTAPopup } from "@/components/CTAPopup";
-
-type StackItem = {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  isMain?: boolean;
-};
-
-const stackItems: StackItem[] = [
-  {
-    icon: <GraduationCap className="w-6 h-6" />,
-    title: "Formação Completa — 75 Aulas Práticas em 10 Módulos",
-    description: "Do zero ao avançado. Cada aula entrega uma implementação prática que funciona no seu negócio no mesmo dia. Uma consultoria de IA cobra R$ 300/hora — são 75 implementações que você faz sozinho.",
-    isMain: true,
-  },
-  {
-    icon: <Bot className="w-6 h-6" />,
-    title: "Todos os Nossos Agentes de IA — Os Mesmos que Geraram R$ 2,5M",
-    description: "Prontos para ativar. Os mesmos agentes que rodam nossa operação real — vendas, atendimento, conteúdo, análise de dados. Cada agente custaria R$ 500+ se contratado como serviço.",
-  },
-  {
-    icon: <Copy className="w-6 h-6" />,
-    title: 'Templates de Automação "Copie, Cole e Fature"',
-    description: "Cada template substitui horas de trabalho manual. Nossos alunos reportam economia de 15-20 horas por semana após implementação. Funciona no n8n, Make.com, ManyChat e mais.",
-  },
-  {
-    icon: <Wrench className="w-6 h-6" />,
-    title: "Arsenal IA: +100 Prompts, Códigos e Atalhos Testados em Batalha",
-    description: "15 meses de pesquisa, teste e otimização — condensados para você ativar em minutos. Os recursos que nos economizam 6 horas por dia na operação.",
-  },
-  {
-    icon: <FolderOpen className="w-6 h-6" />,
-    title: "Arquivos Confidenciais — O Código-Fonte da Nossa Operação",
-    description: "Funil completo, números reais de vendas, margens, automações exatas. O tipo de acesso que normalmente custa R$ 20.000+ em consultoria estratégica.",
-  },
-  {
-    icon: <RefreshCw className="w-6 h-6" />,
-    title: "1 Ano de Atualizações de Conteúdo",
-    description: "Sempre que validamos um novo agente ou automação na nossa operação, adicionamos à formação. Você acompanha a evolução da IA em tempo real.",
-  },
-];
 
 export const ValueStackSection = () => {
-  const [popupOpen, setPopupOpen] = useState(false);
+  const trialCloses = [
+    "Se tudo que você recebesse fosse o Agente de Vendas no WhatsApp — que substitui um vendedor de R$ 3.000/mês e trabalha 24 horas sem folga — só isso já valeria R$ 997? (Você sabe que sim. E a gente nem começou.)",
+    "Se além disso você recebesse o Agente de Conteúdo que publica em 3 plataformas sozinho, o Agente de Suporte que resolve 90% dos chamados, e o Agente Dashboard que te dá visão de CEO em 1 tela... só isso já valeria R$ 997? (Outro sim. Continue.)",
+    "Se além de TUDO isso você recebesse TODOS os outros agentes — Copywriter, Gestor de Tráfego, Recuperador de Carrinho, Prospector, Analista de Concorrência, Roteirista, Gerador de Vídeos — cada um substituindo um funcionário de R$ 2.000 a R$ 4.000/mês... só isso já valeria R$ 997? (A essa altura, a pergunta é quase absurda.)",
+    "E se eu te dissesse que você recebe TUDO isso — mais os 10 módulos de implementação, mais os templates de automação, mais o Arsenal IA com +100 recursos testados, mais Os Arquivos Confidenciais da operação de R$ 2,5M, mais 1 ano de atualizações, mais os bônus exclusivos... Tudo. Por R$ 997. Uma vez. Sem mensalidade. Sem taxa. Sem surpresa."
+  ];
+
+  const deliverables = [
+    {
+      text: "O Framework Maestro: 11+ Agentes Autônomos de IA",
+      subtitle: "Cada um substituindo um funcionário de R$ 2.000 a R$ 4.000/mês. Prontos para copiar e ativar. Primeiro agente rodando em 24 horas.",
+      value: "R$ 354.000/ano em salários"
+    },
+    {
+      text: "10 Módulos de Implementação Prática",
+      subtitle: "Do zero ao piloto automático. Cada módulo entrega agentes funcionando.",
+      value: "R$ 22.500 em consultoria"
+    },
+    {
+      text: "Templates Copie, Cole e Ative",
+      subtitle: "Automações prontas para n8n, Make, ManyChat e mais.",
+      value: "R$ 39.000/ano"
+    },
+    {
+      text: "Arsenal IA: +100 Recursos Testados",
+      subtitle: "Prompts, códigos, atalhos otimizados em 15 meses de operação real.",
+      value: "R$ 5.000 + 15 meses"
+    },
+    {
+      text: "Os Arquivos Confidenciais de R$2,5M",
+      subtitle: "Números reais, funil completo, margens, custos, prompts e scripts exatos de vendas.",
+      value: "R$ 20.000+"
+    },
+    {
+      text: "1 Ano de Atualizações",
+      subtitle: "Novos agentes e automações sempre que validamos na operação.",
+      value: "Inestimável"
+    }
+  ];
+
+  const bonuses = [
+    {
+      text: "O Cofre de Projetos 'Copiar e Colar'",
+      subtitle: "Pipeline de clientes buscando automação + projetos prontos para implementar em 15 minutos (primeiros 100 alunos)",
+      value: "R$ 997"
+    },
+    {
+      text: "Os Arquivos Confidenciais de R$2,5M: Prompts e Scripts Exatos",
+      subtitle: "Bastidores completos incluindo erros, testes que falharam e os scripts reais que geraram vendas",
+      value: "R$ 1.497"
+    }
+  ];
 
   return (
-    <section className="section-padding bg-background relative overflow-hidden">
-      {/* Subtle emerald radial glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-emerald-500/[0.03] rounded-full blur-[120px]" />
-      </div>
-
-      <div className="container mx-auto max-w-4xl relative z-10">
-        {/* "If All" Close — rewritten with real anchors */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto mb-16 space-y-6"
-        >
-          <p className="text-body-lg leading-relaxed text-[hsl(215,12%,65%)] text-center">
-            Se tudo que você recebesse fossem as <span className="text-foreground font-semibold">75 aulas práticas</span> — as mesmas que nossos alunos premium pagaram R$ 2.997 para acessar — só isso já valeria R$ 997?
-          </p>
-          <p className="text-body-lg leading-relaxed text-[hsl(215,12%,65%)] text-center">
-            Se tudo que você recebesse fossem os <span className="text-foreground font-semibold">agentes de IA que rodam nossa operação real</span> — agentes que custariam R$ 5.000+ se contratados como serviço — só isso já valeria R$ 997?
-          </p>
-          <p className="text-body-lg leading-relaxed text-[hsl(215,12%,65%)] text-center">
-            Se tudo que você recebesse fossem os <span className="text-foreground font-semibold">templates de automação que levamos 15 meses para construir e testar</span> — cada um substituindo horas de trabalho manual — só isso já valeria R$ 997?
-          </p>
-          <p className="text-xl md:text-2xl leading-relaxed text-foreground font-bold text-center">
-            Você está recebendo TUDO isso. E muito mais. Tudo por R$ 997.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide uppercase mb-6">
-            O Que Está Incluído
-          </span>
-          <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-4">
-            <span className="gradient-text">O Mesmo Conteúdo Que Alunos Premium Pagaram R$ 2.997 Para Acessar</span>
-          </h2>
-          <p className="text-body-lg text-[hsl(215,12%,65%)] max-w-2xl mx-auto">
-            A versão Premium inclui chamadas ao vivo com Arthur e Lyria. Mas os alunos que mais cresceram foram os que mais executaram o conteúdo — não os que mais usaram a mentoria. Por isso criamos esta versão: o mesmo sistema, para quem tem a disciplina de implementar com autonomia.
-          </p>
-        </motion.div>
-
-        {/* Value Stack */}
-        <div className="space-y-3 mb-10">
-          {stackItems.map((item, index) => (
+    <section className="section-padding bg-gradient-to-b from-card via-background to-card">
+      <div className="container mx-auto max-w-4xl">
+        {/* Trial Closes */}
+        <div className="space-y-6 mb-16">
+          {trialCloses.map((text, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className={`card-base p-4 sm:p-5 md:p-6 flex items-start gap-3 sm:gap-4 ${
-                item.isMain ? "border-emerald-500/30 bg-emerald-500/[0.03]" : ""
-              }`}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
+              className="bg-card border border-border/50 rounded-xl p-6 md:p-8"
             >
-              {/* Icon */}
-              <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                item.isMain ? "bg-emerald-500 text-white" : "bg-[hsl(220,16%,12%)] text-emerald-400"
-              }`}>
-                {item.icon}
-              </div>
-
-              {/* Content */}
-              <div className="flex-1 min-w-0">
-                <h3 className={`font-bold text-base md:text-lg mb-1 ${
-                  item.isMain ? "text-emerald-400" : "text-foreground"
-                }`}>
-                  {item.title}
-                </h3>
-                <p className="text-sm text-[hsl(215,12%,65%)] leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
+              <p className="text-lg md:text-xl leading-relaxed text-muted-foreground italic">
+                "{text}"
+              </p>
             </motion.div>
           ))}
         </div>
 
-        {/* Price Reveal */}
+        {/* Section Header */}
         <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-2 mb-6">
+            <Sparkles className="w-5 h-5 text-primary" />
+            <span className="text-sm font-semibold text-primary">O Que Está Incluído na Sua Formação</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+            O Framework Maestro Completo —{" "}
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              Pronto Para Copiar e Ativar
+            </span>
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            A Formação te entrega a orquestra completa: todos os agentes, a partitura (módulos), e o manual do regente. Você tem TUDO para reger sua operação. Para quem quer Arthur e Lyria como regentes ao lado, ajustando cada agente em tempo real, existe a Mentoria Premium — mas o sistema é o mesmo. A decisão é só sobre velocidade e acompanhamento.
+          </p>
+        </motion.div>
+
+        {/* Deliverables Stack */}
+        <motion.div
+          className="bg-card border border-border rounded-2xl overflow-hidden shadow-xl mb-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <div className="card-elevated p-5 sm:p-8 md:p-12 text-center border-emerald-500/30">
-            {/* Real anchor */}
-            <p className="text-[hsl(215,12%,65%)] leading-relaxed max-w-2xl mx-auto mb-6">
-              Nossos alunos Premium investiram R$ 2.997 pelo mesmo conteúdo + chamadas ao vivo. Você economiza R$ 2.000 porque não precisa do nosso tempo pessoal. Só do nosso sistema.
-            </p>
-            <p className="text-foreground font-semibold mb-8">
-              Mesmo conteúdo. Mesmo sistema. Para quem executa com autonomia total.
-            </p>
-
-            {/* Final Price */}
-            <p className="text-sm text-[hsl(215,10%,45%)] mb-2">Você paga hoje</p>
-            <div className="mb-2">
-              <span className="text-lg text-[hsl(215,10%,45%)] line-through">De R$ 2.997</span>
-            </div>
-            <p className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text font-mono mb-2">R$ 997</p>
-            <p className="text-base sm:text-lg text-[hsl(215,12%,65%)] mb-4">
-              ou <span className="text-emerald-400 font-semibold">12x de R$ 97,42</span>
-            </p>
-
-            {/* Scarcity */}
-            <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 rounded-full px-5 py-2 mb-8">
-              <span className="text-amber-400/80 font-semibold text-sm">
-                Preço de lançamento: R$ 997. Após o encerramento, o valor sobe para R$ 1.497.
-              </span>
-            </div>
-
-            {/* CTA */}
-            <div className="flex flex-col items-center gap-3">
-              <Button
-                onClick={() => setPopupOpen(true)}
-                className="w-full max-w-md bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
-              >
-                GARANTIR ACESSO POR R$ 997
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <p className="text-sm text-[hsl(215,10%,45%)]">
-                Garantia incondicional de 7 dias — se não for para você, devolvemos 100%.
-              </p>
-            </div>
-
-            {/* Offer Checklist */}
-            <div className="mt-8 pt-6 border-t border-emerald-500/10 text-left max-w-md mx-auto">
-              {[
-                "75 Aulas Práticas (10 Módulos Progressivos)",
-                "Todos os Nossos Agentes de IA Prontos Para Usar",
-                'Templates de Automação "Copie e Cole"',
-                "Arsenal IA: +100 Ferramentas e Prompts",
-                "Arquivos Confidenciais (Números Reais + Estratégias de R$ 2,5M)",
-                "1 Ano de Acesso Completo",
-                "Atualizações de Conteúdo (Novos Agentes e Automações)",
-                "Garantia Incondicional de 7 Dias",
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-2.5 py-1.5">
-                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                  <span className="text-sm text-foreground/80">{item}</span>
-                </div>
+          <div className="p-6 md:p-8">
+            <div className="space-y-4">
+              {deliverables.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-start justify-between gap-4 pb-4 border-b border-border/50 last:border-0 last:pb-0"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.1 * index }}
+                >
+                  <div className="flex items-start gap-3 flex-1">
+                    <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-green-500" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-foreground font-medium leading-tight">{item.text}</p>
+                      <p className="text-muted-foreground text-sm mt-1">{item.subtitle}</p>
+                    </div>
+                  </div>
+                  <span className="text-muted-foreground font-medium whitespace-nowrap text-sm">{item.value}</span>
+                </motion.div>
               ))}
+            </div>
+
+            {/* Bonus Section */}
+            <div className="mt-6 pt-6 border-t-2 border-dashed border-primary/30">
+              <div className="flex items-center gap-2 mb-4">
+                <Gift className="w-5 h-5 text-primary" />
+                <span className="text-sm font-bold text-primary uppercase tracking-wide">Bônus Exclusivos</span>
+                <span className="ml-auto bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded-full">
+                  GRÁTIS HOJE
+                </span>
+              </div>
+              <div className="space-y-3 bg-primary/5 rounded-xl p-4">
+                {bonuses.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-start justify-between gap-4"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.6 + 0.1 * index }}
+                  >
+                    <div className="flex items-start gap-3 flex-1">
+                      <span className="text-xl mt-0.5">🎁</span>
+                      <div>
+                        <p className="text-foreground font-medium">{item.text}</p>
+                        <p className="text-muted-foreground text-sm mt-1">{item.subtitle}</p>
+                      </div>
+                    </div>
+                    <span className="text-muted-foreground font-medium whitespace-nowrap text-sm">{item.value}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </motion.div>
-      </div>
 
-      <CTAPopup open={popupOpen} onOpenChange={setPopupOpen} />
+        {/* Anchor */}
+        <div className="bg-gradient-primary p-1 rounded-xl">
+          <div className="bg-background rounded-lg p-6 md:p-8 text-center">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Investimento real para montar sozinho: <span className="text-destructive font-bold line-through">R$ 4.997 a R$ 9.997</span>
+            </p>
+            <p className="text-xl md:text-2xl gradient-text font-bold mt-2">
+              Seu investimento com O Framework Maestro: R$ 997
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

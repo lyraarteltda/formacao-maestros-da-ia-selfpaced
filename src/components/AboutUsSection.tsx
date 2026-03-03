@@ -1,136 +1,139 @@
 import { motion } from "framer-motion";
 
 export const AboutUsSection = () => {
-  return (
-    <section className="section-padding bg-gradient-to-b from-background to-[hsl(220,18%,6%)] relative overflow-hidden">
-      {/* Ambient background effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-emerald-500/[0.03] rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-emerald-500/[0.02] rounded-full blur-[100px]" />
-      </div>
+  const founders = [
+    {
+      name: "Arthur Endo",
+      title: "Co-Fundador | O Maestro Criativo",
+      description: "Músico premiado com 3 CDs e turnês internacionais. Trouxe a criatividade, a disciplina de palco — e a prova viva de que você NÃO precisa ser técnico para dominar agentes de IA."
+    },
+    {
+      name: "Lyria Zoccal",
+      title: "Co-Fundadora | A Engenheira da Orquestra",
+      description: "Administradora com experiência em grandes empresas de tech. Trouxe a mente analítica e a obsessão por processos — a engenheira por trás da orquestra."
+    }
+  ];
 
-      <div className="container mx-auto max-w-6xl relative z-10">
-        {/* Section Header */}
+  const timeline = [
+    { label: "Início", text: "Curso de violão + R$ 2.300/mês + frustração" },
+    { label: "Mês 3", text: "Epifania: parar de programar e começar a ORQUESTRAR" },
+    { label: "Mês 4", text: "Primeiro agente autônomo de vendas ativo" },
+    { label: "Mês 6", text: "7 agentes trabalhando em sincronia" },
+    { label: "Mês 15", text: "R$ 2,5 milhões faturados" },
+    { label: "Agora", text: "Documentamos tudo e estamos entregando O Framework Maestro para você" }
+  ];
+
+  return (
+    <section className="py-20 px-4 bg-gradient-to-b from-background via-secondary/20 to-background">
+      <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10 sm:mb-16"
+          className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide uppercase mb-6">
-            Nossa História
-          </span>
-          <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-4">
-            De Curso de Violão a{" "}
-            <span className="gradient-text">R$2,5 Milhões com IA</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
+            Quem Somos: Um Músico e Uma Administradora Que Provaram Que Você Não Precisa Saber Programar Para Faturar R$ 2,5 Milhões Com IA
           </h2>
-          <p className="text-body-lg text-[hsl(215,12%,65%)] max-w-2xl mx-auto">
-            Conheça Arthur e Lyria — uma história real de transformação
+        </motion.div>
+
+        {/* Story */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="max-w-4xl mx-auto mb-16 space-y-6"
+        >
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+            Antes de te contar o que funcionou, você precisa saber o que <span className="text-primary font-semibold">NÃO funcionou</span>. Porque a história real não é bonita — e esse é exatamente o nosso maior diferencial.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+            Arthur é músico premiado internacionalmente, com 3 CDs gravados e turnês pela Europa. Não sabia escrever uma linha de código. Lyria é formada em Administração, com anos de experiência em grandes empresas de tecnologia. Quando decidimos criar um negócio digital juntos, achávamos que nossa experiência combinada seria suficiente.
+          </p>
+          <p className="text-xl md:text-2xl font-bold text-foreground text-center">
+            Estávamos errados.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+            Nosso primeiro ano foi um desastre silencioso. Contratamos uma consultoria de marketing digital por R$ 8.000 que nos entregou um PDF genérico e sumiu. Investimos R$ 12.000 em ferramentas de automação que nunca conseguimos integrar — ficaram ali, cobrando mensalidade e juntando poeira digital. Contratamos um freelancer de IA que prometeu 'revolucionar a operação' e entregou um chatbot que respondia 'Não entendi' para 70% das perguntas.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+            Arthur — o músico, lembra? — passou 3 meses tentando aprender a programar sozinho assistindo tutoriais no YouTube. Resultado: um script quebrado e frustração acumulada. Lyria, com toda sua experiência em tech, tentou montar um funil de vendas complexo que levou 6 semanas e converteu ZERO.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed text-primary font-semibold text-center">
+            Nosso produto era um curso de VIOLÃO. Não de tecnologia. Não de IA.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+            Teve um momento em que Arthur sentou na mesa da sala e disse para Lyria: 'Talvez a gente devesse desistir dessa parte digital e eu voltar a dar aula presencial.' O faturamento naquele mês tinha sido R$ 2.300. As contas somavam R$ 7.000.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+            Mas Lyria disse algo que mudou tudo: <span className="text-primary font-semibold">'A gente não está errando na DIREÇÃO. Está errando no MÉTODO. A gente está tentando PROGRAMAR quando deveria estar ORQUESTRANDO.'</span>
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+            Nessa noite, tivemos a epifania que vale milhões: nós não precisávamos aprender a programar. Precisávamos aprender a <span className="text-primary font-semibold">REGER</span>. Como um maestro de orquestra.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+            Paramos de tentar 'usar ferramentas de IA' e começamos a <span className="text-primary font-semibold">CONSTRUIR O FRAMEWORK MAESTRO</span> — nosso sistema de agentes autônomos.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed text-foreground font-semibold">
+            Em 30 dias, criamos nosso primeiro agente autônomo de vendas. Em 90 dias, tínhamos 7 agentes trabalhando em sincronia. Em 15 meses: R$ 2,5 milhões faturados. Trabalhando menos de 30 minutos por dia. Com um curso de VIOLÃO.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
-          {/* Left Column - Founders Photo + Timeline */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-8"
-          >
-            {/* Founders Photo */}
-            <div className="relative group">
-              <div className="absolute -inset-2 bg-emerald-500/[0.08] rounded-3xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/[0.06]">
-                <img
-                  src="/lovable-uploads/f3b2c877-3564-40ef-8dab-1ee449dbc40a.png"
-                  alt="Arthur Endo & Lyria Zoccal"
-                  className="w-full object-cover"
-                />
-              </div>
-              <div className="mt-4 text-center">
-                <p className="text-lg font-semibold text-foreground">Arthur Endo & Lyria Zoccal</p>
-                <p className="text-sm text-[hsl(215,10%,45%)]">Fundadores da Lyra Academy</p>
-              </div>
-
-              {/* Founder Credentials */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
-                <div className="card-base p-4 border-emerald-500/10">
-                  <p className="text-sm font-semibold text-emerald-400 mb-1">Arthur Endo</p>
-                  <p className="text-xs text-[hsl(215,12%,65%)] leading-relaxed">Músico premiado internacionalmente com 3 CDs gravados e diversas turnês internacionais. Trouxe a criatividade e visão artística para o mundo da IA.</p>
-                </div>
-                <div className="card-base p-4 border-emerald-500/10">
-                  <p className="text-sm font-semibold text-emerald-400 mb-1">Lyria Zoccal</p>
-                  <p className="text-xs text-[hsl(215,12%,65%)] leading-relaxed">Formada em Administração, com experiência em grandes empresas de tecnologia e desenvolvimento de software. Trouxe a mentalidade de negócios e tech para a operação.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Clean Horizontal Timeline */}
-            <div className="card-base p-4 sm:p-6 md:p-8">
-              <div className="grid grid-cols-4 gap-2 sm:gap-4 relative">
-                {/* Connecting line */}
-                <div className="absolute top-6 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-emerald-500/40 via-emerald-500/20 to-emerald-500/40" />
-
-                {[
-                  { year: "Início", label: "Curso de violão" },
-                  { year: "6 meses", label: "Implementação de sistemas de IA" },
-                  { year: "12 meses", label: "2,5 milhões faturados" },
-                  { year: "Agora", label: "Ensinando o sistema que criamos" },
-                ].map((step, i) => (
-                  <div key={i} className="flex flex-col items-center relative z-10">
-                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-[hsl(220,16%,10%)] border-2 border-emerald-500/40 flex items-center justify-center mb-2 sm:mb-3">
-                      <span className="text-emerald-400 font-bold text-[8px] sm:text-[10px] font-mono text-center leading-tight">{step.year}</span>
-                    </div>
-                    <p className="font-semibold text-[10px] sm:text-xs text-foreground text-center leading-tight">{step.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right Column - Feel/Felt/Found Narrative */}
-          <div className="space-y-4 sm:space-y-6">
-            {/* Feel Paragraph */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
-            >
-              <p className="text-body-lg leading-relaxed text-foreground/90">
-                Nós entendemos como você se <span className="text-emerald-400 font-bold">SENTE</span>. Ver todo mundo falando de IA, testar mil ferramentas, mas nunca conseguir transformar isso em lucro real. A sensação de estar ficando para trás enquanto outros parecem estar ganhando milhões...
-              </p>
-            </motion.div>
-
-            {/* Felt Paragraph */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
-            >
-              <p className="text-body-lg leading-relaxed text-foreground/90">
-                Nós <span className="text-emerald-400 font-bold">SENTÍAMOS</span> exatamente assim. Quando começamos, não sabíamos nada de IA. Nosso escritório era a mesa da sala. Nosso primeiro produto era um curso de <span className="text-emerald-400 font-semibold">VIOLÃO</span>, não de tecnologia. Ninguém olhava para nós e pensava "esses dois vão faturar milhões com inteligência artificial."
-              </p>
-            </motion.div>
-
-            {/* Found Paragraph */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="card-base p-4 sm:p-6 hover:border-emerald-500/20"
-            >
-              <p className="text-body-lg leading-relaxed text-foreground/90">
-                Mas então <span className="text-emerald-400 font-bold">DESCOBRIMOS</span> algo: o segredo não era a ferramenta, era o <span className="text-emerald-400 font-bold">SISTEMA</span>. Criamos um método de automação que funcionava em qualquer nicho. Aplicamos no curso de violão e fizemos <span className="text-emerald-400 font-bold">R$2,5 milhões em 15 meses</span>, trabalhando menos de 30 minutos por dia. Documentamos cada agente, cada automação, cada workflow — e agora estamos entregando esse sistema inteiro para você implementar com autonomia total.
-              </p>
-            </motion.div>
+        {/* Timeline */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-4xl mx-auto mb-16"
+        >
+          <div className="grid gap-4">
+            {timeline.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="flex items-start gap-4 bg-card border border-border/50 rounded-xl p-4 hover:border-primary/50 transition-all duration-300"
+              >
+                <span className="bg-primary/20 text-primary font-bold text-sm px-3 py-1 rounded-full flex-shrink-0 mt-0.5">
+                  {item.label}
+                </span>
+                <p className="text-muted-foreground font-medium">{item.text}</p>
+              </motion.div>
+            ))}
           </div>
+        </motion.div>
+
+        {/* Founders Cards */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {founders.map((founder, index) => (
+            <motion.div
+              key={founder.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="relative group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative bg-card border border-border rounded-2xl p-8 h-full hover:border-primary/50 transition-all duration-300 shadow-lg">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-bold mb-2 text-foreground">
+                    {founder.name}
+                  </h3>
+                  <p className="text-sm text-primary font-semibold mb-4">
+                    {founder.title}
+                  </p>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">{founder.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

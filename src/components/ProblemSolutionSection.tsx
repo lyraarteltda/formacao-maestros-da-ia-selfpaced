@@ -1,117 +1,116 @@
 import { useState } from "react";
-import { ArrowRight, Zap } from "lucide-react";
+import MatrixBackground from "./MatrixBackground";
+import { AlertTriangle, Bot, FileText, Megaphone, HeadphonesIcon, BarChart3, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTAPopup } from "@/components/CTAPopup";
 
 export const ProblemSolutionSection = () => {
   const [popupOpen, setPopupOpen] = useState(false);
 
-  const competitorItems = [
-    "Automatizar 90% do processo de vendas",
-    "Produzir conteúdo em escala para atrair clientes organicamente",
-    "Produzir 100 criativos por dia para escalar o tráfego pago",
-    "Reduzir custos operacionais e maximizar o lucro",
-    "Analisar métricas e otimizar funis como um analista de dados profissional",
-    "E muito mais…"
+  const agentPoints = [
+    {
+      icon: Bot,
+      text: "Agentes de vendas estão respondendo leads no WhatsApp às 3h da manhã — qualificando, negociando e fechando — sem humano envolvido. Cada agente desses substitui um vendedor de R$ 3.000/mês."
+    },
+    {
+      icon: FileText,
+      text: "Agentes de conteúdo estão produzindo e publicando em 3 plataformas simultaneamente — posts, legendas, hashtags e agendamento. Substituem um social media de R$ 2.500/mês."
+    },
+    {
+      icon: Megaphone,
+      text: "Agentes de tráfego estão criando 100 criativos por dia e otimizando campanhas em tempo real. Substituem um gestor de tráfego de R$ 4.000/mês."
+    },
+    {
+      icon: HeadphonesIcon,
+      text: "Agentes de suporte estão resolvendo 90% dos chamados sem interromper ninguém. Substituem um atendente de R$ 2.000/mês."
+    },
+    {
+      icon: BarChart3,
+      text: "Agentes de dados estão analisando métricas e gerando relatórios executivos automaticamente. Substituem um analista de R$ 3.500/mês."
+    },
+    {
+      icon: Zap,
+      text: "E novos agentes estão sendo ativados toda semana, ampliando a vantagem."
+    }
   ];
 
   return (
     <section className="section-padding bg-background relative overflow-hidden" data-section="problem-solution">
-      {/* Subtle ambient glow instead of MatrixBackground */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-emerald-500/[0.03] rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-emerald-500/[0.02] rounded-full blur-[100px]" />
-      </div>
-
+      <MatrixBackground />
       <div className="container mx-auto max-w-6xl relative z-10">
-        {/* Competitors Section */}
-        <div className="text-center mb-10 sm:mb-16">
-          <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-6 sm:mb-8 leading-tight">
-            Enquanto Você Lê Esta Página, Seus Concorrentes Estão Usando Robôs Para:
+        {/* Urgency Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-destructive/20 border border-destructive/30 rounded-full px-4 py-2 mb-6">
+            <AlertTriangle className="w-4 h-4 text-destructive" />
+            <span className="text-sm font-medium text-destructive">Atenção</span>
+          </div>
+          
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-tight">
+            Enquanto Você Lê Esta Página, Seus Concorrentes Já Têm{" "}
+            <span className="gradient-text">Funcionários Digitais Trabalhando Por Eles</span>
           </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 max-w-5xl mx-auto">
-            {competitorItems.map((item, i) => (
-              <div key={i} className="card-base p-4 sm:p-6 group">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Zap className="w-4 h-4 text-emerald-400" />
+          
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
+            {agentPoints.map((point, index) => (
+              <div key={index} className="p-6 rounded-lg bg-card border border-destructive/20 hover:border-destructive/40 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-destructive/10 rounded-lg flex-shrink-0">
+                    <point.icon className="w-6 h-6 text-destructive" />
                   </div>
-                  <p className="text-sm sm:text-base text-foreground/90 font-medium leading-relaxed text-left">{item}</p>
+                  <p className="text-foreground font-medium text-left">{point.text}</p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* Problem Statement */}
-        <div className="max-w-4xl mx-auto mb-10 sm:mb-16">
-          <div className="card-elevated p-5 sm:p-8 md:p-10 border-emerald-500/20 mb-6 sm:mb-8">
-            <div className="space-y-6">
-              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]">
-                Se você já testou dezenas de ferramentas de IA e não conseguiu transformar isso em resultado concreto, nós entendemos — porque passamos pelo mesmo. O problema não é você. É a falta de um sistema estruturado que conecte tudo.
+          {/* Cost comparison */}
+          <div className="bg-gradient-primary p-1 rounded-xl max-w-4xl mx-auto mb-12">
+            <div className="bg-background rounded-lg p-8 text-center">
+              <p className="text-lg md:text-xl leading-relaxed text-foreground font-semibold">
+                Faz a conta: só esses 5 agentes substituem <span className="gradient-text">R$ 15.000/mês</span> em folha de pagamento. <span className="gradient-text">R$ 180.000 por ano.</span>
               </p>
-              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]">
-                Você não precisa de mais uma ferramenta. Precisa de um <span className="text-foreground font-semibold">SISTEMA</span>. Testado, validado com R$ 2,5 milhões em vendas reais, documentado em 75 aulas práticas — pronto para copiar e implementar.
+              <p className="text-xl md:text-2xl mt-4 gradient-text font-bold">
+                O sistema inteiro custa R$ 997.
               </p>
             </div>
           </div>
-
-          {/* Cost of Inaction */}
-          <div className="card-base p-5 sm:p-8 border-l-4 border-l-red-500/60">
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]">
-              Se você continua no modo manual por mais 6 meses, quanto vai perder em vendas que poderiam ser automatizadas? Quanto vai gastar em funcionários fazendo trabalho que um agente de IA faz em segundos?{" "}
-              <span className="text-emerald-400 font-semibold">O custo de NÃO agir é infinitamente maior que R$ 997.</span>
-            </p>
-          </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <div className="flex flex-col items-center gap-3">
-            <Button
-              onClick={() => setPopupOpen(true)}
-              className="relative overflow-hidden w-full sm:w-auto min-h-[52px] bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-base md:text-lg px-10 md:px-14 py-4 md:py-5 h-auto rounded-xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.45)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
-            >
-              QUERO AUTOMATIZAR MEU NEGÓCIO
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <p className="text-sm text-[hsl(215,10%,45%)]">
-              Acesso imediato + Garantia de 7 dias
-            </p>
-          </div>
-        </div>
-
-        {/* Solution / Authority Section */}
-        <div className="max-w-5xl mx-auto mt-16 sm:mt-24">
-          <h2 className="text-heading-2 sm:text-heading-1 md:text-display font-bold mb-6 sm:mb-8 text-center leading-tight">
-            A Formação de Quem Construiu Resultados Reais —{" "}
-            <span className="gradient-text">Sem Vender Ilusões</span>
-          </h2>
-
+        {/* Solution Section */}
+        <div className="max-w-5xl mx-auto">
           <div className="space-y-8">
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]">
-              Arthur é músico premiado internacionalmente, com 3 CDs gravados e turnês pela Europa. Lyria é formada em Administração, com anos de experiência em grandes empresas de tecnologia e desenvolvimento de software. Nenhum de nós era especialista em IA. Quando começamos, tentamos consultorias genéricas, investimos em ferramentas caras, contratamos equipes que prometeram resultados e entregaram planilhas.
+            <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+              Se você já testou dezenas de ferramentas de IA e não conseguiu transformar isso em resultado real, nós entendemos — porque passamos exatamente pela mesma frustração. Gastamos dinheiro com ferramentas que prometiam revolução e entregavam confusão. O problema nunca foi você. O problema é que ferramentas isoladas não geram resultado. O que gera resultado é um <span className="text-primary font-semibold">SISTEMA</span> — onde cada agente tem uma função clara, cada automação está conectada à próxima, e tudo roda junto como uma orquestra afinada.
             </p>
-
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]">
-              Enquanto muitos "gurus" enriquecem vendendo promessas vazias, nós fizemos o oposto: montamos um negócio do zero e, em apenas 15 meses, alcançamos{" "}
-              <span className="text-emerald-400 font-semibold">R$ 2,5 milhões em vendas</span> de infoprodutos de música — um dos mercados onde o público é mais resistente a investir. Nosso produto se tornou o único curso de violão com 5 estrelas entre os TOP 10 da Hotmart.
+            
+            <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+              Você não precisa de mais uma ferramenta. Você precisa do sistema que já gerou{" "}
+              <span className="text-primary font-semibold">R$ 2,5 milhões em vendas reais</span>. Documentado. Testado. Pronto para copiar.
             </p>
-
-            <div className="card-elevated p-5 sm:p-8 md:p-10 border-emerald-500/30">
-              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-foreground font-semibold">
-                Mas aqui está o ponto que muda tudo:
+            
+            <div className="bg-card p-8 rounded-xl border border-border/50">
+              <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+                Cada dia que você passa sem implementar seus agentes, você perde horas da sua vida e dinheiro para concorrentes que já estão usando IA. Faça uma conta rápida: contratar um dev básico (R$ 5.000) e um copywriter (R$ 4.000) por apenas 1 mês = <span className="text-primary font-semibold">R$ 9.000</span>. O sistema inteiro — que faz o trabalho deles pronto e funcionando 24 horas — custa <span className="text-primary font-semibold">R$ 997</span>.
               </p>
-              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)] mt-4">
-                <span className="text-emerald-400 font-bold">Percebemos que não foi a mentoria que nos fez chegar a R$ 2,5 milhões. Foi o SISTEMA.</span> Os agentes de IA. As automações. Os templates. O passo a passo que criamos e seguimos religiosamente. A mentoria foi só cereja no bolo — o bolo é o sistema. E agora estamos entregando esse bolo inteiro para você.
+              <p className="text-xl md:text-2xl font-bold text-foreground mt-4 text-center">
+                O custo de <span className="gradient-text">NÃO agir</span> é 9x maior que o custo de agir.
               </p>
             </div>
 
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[hsl(215,12%,65%)]">
-              Documentamos cada agente, cada automação, cada workflow que usamos na operação real. R$ 2,5 milhões em 15 meses, trabalhando menos de 30 minutos por dia. Agora estamos entregando esse sistema inteiro para você implementar com{" "}
-              <span className="text-emerald-400 font-semibold">autonomia total</span>.
-            </p>
+            {/* CTA */}
+            <div className="text-center pt-4">
+              <Button 
+                variant="cta" 
+                size="xl" 
+                className="w-full md:w-auto text-sm md:text-lg px-4 md:px-10"
+                onClick={() => setPopupOpen(true)}
+              >
+                QUERO MEU EXÉRCITO DE FUNCIONÁRIOS DIGITAIS
+              </Button>
+              <p className="text-sm text-muted-foreground mt-3">
+                Acesso imediato + Garantia de Execução de 90 dias
+              </p>
+            </div>
           </div>
         </div>
       </div>
