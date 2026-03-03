@@ -96,11 +96,15 @@ export const TargetAudienceSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-card">
+    <section className="py-8 md:py-16 px-4 md:px-8 lg:px-16 bg-card">
       <div className="container mx-auto max-w-6xl">
         {/* Target Audience */}
         <div className="mb-20">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-center leading-tight">
+          <h2 className="block md:hidden text-xl font-bold mb-4 text-center leading-tight">
+            Você Já Está à Frente de{" "}
+            <span className="gradient-text">99% do Mercado</span>
+          </h2>
+          <h2 className="hidden md:block text-3xl lg:text-4xl font-bold mb-4 text-center leading-tight">
             O Fato de Você Estar Aqui Já Te Coloca à Frente de{" "}
             <span className="gradient-text">99% do Mercado Brasileiro</span>
           </h2>
@@ -127,7 +131,11 @@ export const TargetAudienceSection = () => {
 
         {/* Deliverables Section */}
         <div className="mb-20">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-center leading-tight">
+          <h2 className="block md:hidden text-xl font-bold mb-4 text-center leading-tight">
+            Seus Funcionários Digitais —{" "}
+            <span className="gradient-text">Prontos Para Ativar</span>
+          </h2>
+          <h2 className="hidden md:block text-3xl lg:text-4xl font-bold mb-4 text-center leading-tight">
             Seu Exército de Funcionários Digitais —{" "}
             <span className="gradient-text">Com Nome, Função e Salário Que Você Economiza</span>
           </h2>

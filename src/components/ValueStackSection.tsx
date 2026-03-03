@@ -56,7 +56,7 @@ export const ValueStackSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-b from-card via-background to-card">
+    <section className="py-8 md:py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-card via-background to-card">
       <div className="container mx-auto max-w-4xl">
         {/* Trial Closes */}
         <div className="space-y-6 mb-16">

@@ -9,7 +9,7 @@ export const TripleGuaranteeSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-b from-background via-card/50 to-background" data-section="dual-guarantee">
+    <section className="py-8 md:py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-background via-card/50 to-background" data-section="dual-guarantee">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -17,7 +17,13 @@ export const TripleGuaranteeSection = () => {
             <BadgeCheck className="w-5 h-5 text-green-500" />
             <span className="text-sm font-semibold text-green-500">O Risco É 100% Nosso</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center leading-tight">
+          <h2 className="block md:hidden text-xl font-bold mb-4 text-center leading-tight">
+            Garantia de 90 Dias —{" "}
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              Risco Zero Para Você
+            </span>
+          </h2>
+          <h2 className="hidden md:block text-4xl lg:text-5xl font-bold mb-4 text-center leading-tight">
             Garantia de Execução de 90 Dias —{" "}
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               O Risco É 100% Nosso

@@ -31,7 +31,7 @@ export const PricingSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-b from-background via-card to-background" data-section="pricing">
+    <section className="py-8 md:py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-background via-card to-background" data-section="pricing">
       <div className="container mx-auto">
         {/* Section Header */}
         <motion.div 
@@ -128,7 +128,8 @@ export const PricingSection = () => {
               className="w-full md:w-auto px-6 md:px-10 text-sm md:text-lg group" 
               onClick={() => setPopupOpen(true)}
             >
-              GARANTIR MEU ACESSO AO FRAMEWORK MAESTRO POR R$ 997
+              <span className="block md:hidden">GARANTIR MEU ACESSO POR R$ 997</span>
+              <span className="hidden md:block">GARANTIR MEU ACESSO AO FRAMEWORK MAESTRO POR R$ 997</span>
             </Button>
             <p className="text-sm text-muted-foreground">
               Garantia de Execução de 90 dias — veja os detalhes abaixo.

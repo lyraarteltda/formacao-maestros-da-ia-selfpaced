@@ -22,7 +22,7 @@ export const HowItWorksSection = () => {
     description: "Suporte diário e networking com outros maestros"
   }];
   return (
-    <section className="section-padding">
+    <section className="py-8 md:py-16 px-4 md:px-8 lg:px-16">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

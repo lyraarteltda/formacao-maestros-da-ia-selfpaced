@@ -57,10 +57,13 @@ export const VideoTeaserSection = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-br from-primary/10 via-background to-accent/10 relative overflow-hidden border-y border-primary/20">
+    <section className="py-8 md:py-16 bg-gradient-to-br from-primary/10 via-background to-accent/10 relative overflow-hidden border-y border-primary/20">
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 gradient-text">
+        <h2 className="block md:hidden text-xl font-bold text-center mb-4 gradient-text">
+          Veja O Framework Maestro Por Dentro
+        </h2>
+        <h2 className="hidden md:block text-4xl lg:text-5xl font-bold text-center mb-4 gradient-text">
           Veja O Framework Maestro Por Dentro — Antes de Decidir
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground text-center max-w-4xl mx-auto mb-12 leading-relaxed">

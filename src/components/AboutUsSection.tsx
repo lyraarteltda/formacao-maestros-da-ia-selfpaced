@@ -24,7 +24,7 @@ export const AboutUsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background via-secondary/20 to-background">
+    <section className="py-8 md:py-16 px-4 bg-gradient-to-b from-background via-secondary/20 to-background">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,10 @@ export const AboutUsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
+          <h2 className="block md:hidden text-xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
+            De Músico e Administradora a R$ 2,5M Com IA
+          </h2>
+          <h2 className="hidden md:block text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
             Quem Somos: Um Músico e Uma Administradora Que Provaram Que Você Não Precisa Saber Programar Para Faturar R$ 2,5 Milhões Com IA
           </h2>
         </motion.div>

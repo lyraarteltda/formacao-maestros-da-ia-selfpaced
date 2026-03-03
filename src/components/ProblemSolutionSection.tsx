@@ -35,7 +35,7 @@ export const ProblemSolutionSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-background relative overflow-hidden" data-section="problem-solution">
+    <section className="py-8 md:py-16 px-4 md:px-8 lg:px-16 bg-background relative overflow-hidden" data-section="problem-solution">
       <MatrixBackground />
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Urgency Section */}
@@ -45,7 +45,11 @@ export const ProblemSolutionSection = () => {
             <span className="text-sm font-medium text-destructive">Atenção</span>
           </div>
           
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-tight">
+          <h2 className="block md:hidden text-xl font-bold mb-8 leading-tight">
+            Seus Concorrentes Já Têm{" "}
+            <span className="gradient-text">Funcionários Digitais</span>
+          </h2>
+          <h2 className="hidden md:block text-3xl lg:text-4xl font-bold mb-8 leading-tight">
             Enquanto Você Lê Esta Página, Seus Concorrentes Já Têm{" "}
             <span className="gradient-text">Funcionários Digitais Trabalhando Por Eles</span>
           </h2>
@@ -105,7 +109,8 @@ export const ProblemSolutionSection = () => {
                 className="w-full md:w-auto text-sm md:text-lg px-4 md:px-10"
                 onClick={() => setPopupOpen(true)}
               >
-                QUERO MEU EXÉRCITO DE FUNCIONÁRIOS DIGITAIS
+                <span className="block md:hidden">QUERO MEUS FUNCIONÁRIOS DIGITAIS</span>
+                <span className="hidden md:block">QUERO MEU EXÉRCITO DE FUNCIONÁRIOS DIGITAIS</span>
               </Button>
               <p className="text-sm text-muted-foreground mt-3">
                 Acesso imediato + Garantia de Execução de 90 dias

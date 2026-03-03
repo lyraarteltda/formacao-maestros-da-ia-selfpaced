@@ -7,9 +7,12 @@ export const FinalCTASection = () => {
   const [popupOpen, setPopupOpen] = useState(false);
 
   return (
-    <section className="section-padding bg-gradient-primary text-primary-foreground">
+    <section className="py-8 md:py-16 px-4 md:px-8 lg:px-16 bg-gradient-primary text-primary-foreground">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white text-center leading-tight">
+        <h2 className="block md:hidden text-xl font-bold mb-8 text-white text-center leading-tight">
+          Sua Decisão: Ter Funcionários Digitais Trabalhando Por Você
+        </h2>
+        <h2 className="hidden md:block text-4xl lg:text-5xl font-bold mb-8 text-white text-center leading-tight">
           Você Está a Uma Decisão de Distância de Ter Um Exército de Funcionários Digitais Trabalhando Por Você
         </h2>
         
@@ -78,7 +81,8 @@ export const FinalCTASection = () => {
             className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 border-primary-foreground font-bold text-sm md:text-lg px-4 md:px-10 py-4 md:py-6 h-auto w-full md:w-auto"
             onClick={() => setPopupOpen(true)}
           >
-            EU ESCOLHO SER MAESTRO — GARANTIR MEU ACESSO AGORA
+            <span className="block md:hidden">GARANTIR MEU ACESSO AGORA</span>
+            <span className="hidden md:block">EU ESCOLHO SER MAESTRO — GARANTIR MEU ACESSO AGORA</span>
           </Button>
           <p className="text-sm text-white/70 mt-2 text-center">
             Acesso imediato · Garantia de Execução de 90 dias · 11+ agentes autônomos · 12x de R$ 97,42

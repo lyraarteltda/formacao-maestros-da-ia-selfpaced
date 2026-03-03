@@ -113,11 +113,15 @@ export const MethodologySection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-background">
+    <section className="py-8 md:py-16 px-4 md:px-8 lg:px-16 bg-background">
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+          <h2 className="block md:hidden text-xl font-bold mb-4 leading-tight">
+            De R$ 2.300/Mês a{" "}
+            <span className="gradient-text">R$ 2,5 Milhões</span>
+          </h2>
+          <h2 className="hidden md:block text-3xl lg:text-4xl font-bold mb-4 leading-tight">
             O Roteiro Exato Que Transformou R$ 2.300/Mês em{" "}
             <span className="gradient-text">R$ 2,5 Milhões</span>
           </h2>

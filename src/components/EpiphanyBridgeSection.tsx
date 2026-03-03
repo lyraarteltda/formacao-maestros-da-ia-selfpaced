@@ -26,7 +26,7 @@ export const EpiphanyBridgeSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 px-4 bg-gradient-to-b from-background via-secondary/20 to-background">
+    <section className="py-8 md:py-16 px-4 bg-gradient-to-b from-background via-secondary/20 to-background">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,11 @@ export const EpiphanyBridgeSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-tight">
+          <h2 className="block md:hidden text-xl font-bold mb-8 leading-tight">
+            97% Usam IA Sem Resultado.{" "}
+            <span className="gradient-text">Os 3% Fazem Diferente.</span>
+          </h2>
+          <h2 className="hidden md:block text-3xl lg:text-4xl font-bold mb-8 leading-tight">
             Por Que 97% Das Pessoas Que "Usam IA"{" "}
             <span className="gradient-text">Não Geram Resultado Nenhum</span>{" "}
             — E O Que Os Outros 3% Fazem Diferente
