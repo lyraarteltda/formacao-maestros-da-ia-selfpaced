@@ -71,15 +71,19 @@ export const HeroSection = () => {
 
           {/* CTA Button */}
           <div className="mb-4 md:mb-6">
-            <Button 
-              variant="cta" 
-              size="xl" 
+            <Button
+              variant="cta"
+              size="xl"
               className="w-full md:w-auto text-sm md:text-lg px-6 py-4 md:px-10 md:py-4"
               onClick={() => setPopupOpen(true)}
             >
               <span className="block md:hidden">QUERO COMEÇAR AGORA</span>
               <span className="hidden md:block">QUERO INSTALAR MEU EXÉRCITO DE FUNCIONÁRIOS DIGITAIS</span>
             </Button>
+            <p className="text-[11px] md:text-xs text-gray-400 max-w-md mx-auto text-center mt-3">
+              Ao clicar, você concorda em receber mensagens da Maestros da IA e aceita nossa{" "}
+              <a href="https://politica.maestrosdaia.com/" className="underline hover:text-gray-300 transition-colors">Política de Privacidade</a>.
+            </p>
           </div>
 
           {/* Trust Badges */}

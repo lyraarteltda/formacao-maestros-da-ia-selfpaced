@@ -20,7 +20,7 @@ export const Footer = () => {
           </p>
           
           <p>
-            Ao adquirir este produto, você concorda com os nossos Termos de Uso e Política de Privacidade.
+            Ao adquirir este produto, você concorda com os nossos Termos de Uso e <a href="https://politica.maestrosdaia.com/" className="underline hover:text-foreground transition-colors">Política de Privacidade</a>.
           </p>
           
           <p>

@@ -122,10 +122,10 @@ export const PricingSection = () => {
 
           {/* CTA Button */}
           <div className="flex flex-col items-center gap-3 mb-8">
-            <Button 
-              variant="cta" 
-              size="xl" 
-              className="w-full md:w-auto px-6 md:px-10 text-sm md:text-lg group" 
+            <Button
+              variant="cta"
+              size="xl"
+              className="w-full md:w-auto px-6 md:px-10 text-sm md:text-lg group"
               onClick={() => setPopupOpen(true)}
             >
               <span className="block md:hidden">GARANTIR MEU ACESSO POR R$ 997</span>
@@ -133,6 +133,10 @@ export const PricingSection = () => {
             </Button>
             <p className="text-sm text-muted-foreground">
               Garantia de Execução de 90 dias — veja os detalhes abaixo.
+            </p>
+            <p className="text-xs text-muted-foreground/70 max-w-md text-center mt-1">
+              Ao clicar no botão, você concorda em receber mensagens da Maestros da IA pelo WhatsApp e e-mail, e declara que leu e aceita nossa{" "}
+              <a href="https://politica.maestrosdaia.com/" className="underline hover:text-muted-foreground transition-colors">Política de Privacidade</a>.
             </p>
           </div>
 
